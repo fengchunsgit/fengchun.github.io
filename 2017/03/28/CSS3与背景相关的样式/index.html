@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSS3,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="5.1 CSS3背景 background-origin设置元素背景图片的原始起始位置。 语法：1background-origin ： border-box | padding-box | content-box; 参数分别表示背景图片是从边框，还是内边距（默认值），或者是内容区域开始显示。 效果如下：  需要注意的是，如果背景不是no-repeat，这个属性无效，它会从边框开始显示。 5.2">
+<meta name="keywords" content="CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3与背景相关的样式">
+<meta property="og:url" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/index.html">
+<meta property="og:site_name" content="fengchunsgit">
+<meta property="og:description" content="5.1 CSS3背景 background-origin设置元素背景图片的原始起始位置。 语法：1background-origin ： border-box | padding-box | content-box; 参数分别表示背景图片是从边框，还是内边距（默认值），或者是内容区域开始显示。 效果如下：  需要注意的是，如果背景不是no-repeat，这个属性无效，它会从边框开始显示。 5.2">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/background-origin.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/border-clip.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/poker7.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/poker8.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/poker9.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/poker.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/nav.jpg">
+<meta property="og:updated_time" content="2019-10-16T09:53:38.839Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3与背景相关的样式">
+<meta name="twitter:description" content="5.1 CSS3背景 background-origin设置元素背景图片的原始起始位置。 语法：1background-origin ： border-box | padding-box | content-box; 参数分别表示背景图片是从边框，还是内边距（默认值），或者是内容区域开始显示。 效果如下：  需要注意的是，如果背景不是no-repeat，这个属性无效，它会从边框开始显示。 5.2">
+<meta name="twitter:image" content="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/images/background-origin.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/">
+
+
+
+
+
+  <title>CSS3与背景相关的样式 | fengchunsgit</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fengchunsgit</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于我">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-文章列表">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            文章列表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSS3与背景相关的样式</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T09:46:53+08:00">
+                2017-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="5-1-CSS3背景-background-origin"><a href="#5-1-CSS3背景-background-origin" class="headerlink" title="5.1 CSS3背景 background-origin"></a>5.1 CSS3背景 background-origin</h1><p>设置元素背景图片的<strong>原始起始位置</strong>。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-origin ： border-box | padding-box | content-box;</span><br></pre></td></tr></table></figure></p>
+<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
+<p>效果如下：</p>
+<p><img src="images/background-origin.jpg" alt="background-origin"></p>
+<p>需要注意的是，如果背景不是<code>no-repeat</code>，这个属性无效，它会从边框开始显示。</p>
+<h1 id="5-2-CSS3背景-background-clip"><a href="#5-2-CSS3背景-background-clip" class="headerlink" title="5.2 CSS3背景 background-clip"></a>5.2 CSS3背景 background-clip</h1><p>用来将背景图片做适当的裁剪以适应实际需要。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-clip ： border-box | padding-box | content-box | no-clip</span><br></pre></td></tr></table></figure></p>
+<p>参数分别表示从<code>边框</code>、或<code>内填充</code>，或者<code>内容区域</code>向外裁剪背景。<code>no-clip</code>表示不裁切，和参数<code>border-box</code>显示同样的效果。<code>backgroud-clip</code>默认值为<code>border-box</code>。</p>
+<p>效果如下图所示：</p>
+<p><img src="images/border-clip.jpg" alt="border-clip"></p>
+<h1 id="5-3-CSS3背景-background-size"><a href="#5-3-CSS3背景-background-size" class="headerlink" title="5.3 CSS3背景 background-size"></a>5.3 CSS3背景 background-size</h1><p>设置背景图片的大小，以长度值或百分比显示，还可以通过 <code>cover</code> 和 <code>contain</code> 来对图片进行伸缩。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</span><br></pre></td></tr></table></figure></p>
+<p>取值说明：</p>
+<ul>
+<li><p>1、<code>auto</code> ：默认值，不改变背景图片的原始高度和宽度；</p>
+</li>
+<li><p>2、&lt;长度值&gt;：成对出现如 <code>200px 50px</code>，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；</p>
+</li>
+<li><p>3、&lt;百分比&gt;：<code>0％~100％</code> 之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上；</p>
+</li>
+<li><p>4、<code>cover</code> ：顾名思义为覆盖，即将背景图片等比缩放以<code>填满整个容器</code>；</p>
+</li>
+<li><p>5、<code>contain</code> ：容纳，即将背景图片等比缩放至<code>某一边紧贴容器边缘为止</code>。</p>
+</li>
+</ul>
+<h1 id="5-4-CSS3背景-multiple-backgrounds"><a href="#5-4-CSS3背景-multiple-backgrounds" class="headerlink" title="5.4 CSS3背景 multiple backgrounds"></a>5.4 CSS3背景 multiple backgrounds</h1><p>多重背景，也就是<code>CSS2</code>里<code>background</code>的属性外加<code>origin</code>、<code>clip</code>和<code>size</code>组成的新<code>background</code>的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如<code>background-repeat</code>只有一个），表明所有背景图片应用该属性值。</p>
+<p>语法缩写如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...</span><br></pre></td></tr></table></figure></p>
+<p>可以把上面的缩写拆解成以下形式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:url1</span>,<span class="selector-tag">url2</span>,...,<span class="selector-tag">urlN</span>;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-repeat</span> : <span class="selector-tag">repeat1</span>,<span class="selector-tag">repeat2</span>,...,<span class="selector-tag">repeatN</span>;</span><br><span class="line"><span class="selector-tag">backround-position</span> : <span class="selector-tag">position1</span>,<span class="selector-tag">position2</span>,...,<span class="selector-tag">positionN</span>;</span><br><span class="line"><span class="selector-tag">background-size</span> : <span class="selector-tag">size1</span>,<span class="selector-tag">size2</span>,...,<span class="selector-tag">sizeN</span>;</span><br><span class="line"><span class="selector-tag">background-attachment</span> : <span class="selector-tag">attachment1</span>,<span class="selector-tag">attachment2</span>,...,<span class="selector-tag">attachmentN</span>;</span><br><span class="line"><span class="selector-tag">background-clip</span> : <span class="selector-tag">clip1</span>,<span class="selector-tag">clip2</span>,...,<span class="selector-tag">clipN</span>;</span><br><span class="line"><span class="selector-tag">background-origin</span> : <span class="selector-tag">origin1</span>,<span class="selector-tag">origin2</span>,...,<span class="selector-tag">originN</span>;</span><br><span class="line"><span class="selector-tag">background-color</span> : <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ul>
+<li>1、用逗号隔开每组 <code>background</code> 的缩写值；</li>
+<li>2、如果有 <code>size</code> 值，需要紧跟 <code>position</code> 并且用 <code>&quot;/&quot;</code> 隔开，<code>background</code>值可以为；</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-position:left top,right bottom //左上角，右下角等</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3、如果有多个背景图片，而其他属性只有一个（例如 <code>background-repeat</code> 只有一个），表明所有背景图片应用该属性值。</li>
+<li>4、<code>background-color</code> 只能设置一个。<br>举例：</li>
+</ul>
+<p>有三张单独的图片：</p>
+<p><img src="images/poker7.jpg" alt="poker7"></p>
+<p><img src="images/poker8.jpg" alt="poker8"></p>
+<p><img src="images/poker9.jpg" alt="poker9"></p>
+<p>使用多背景技术实现：</p>
+<p><img src="images/poker.jpg" alt="poker"></p>
+<h1 id="练习制作如下一个导航条"><a href="#练习制作如下一个导航条" class="headerlink" title="练习制作如下一个导航条"></a>练习制作如下一个导航条</h1><p><img src="images/nav.jpg" alt="nav"></p>
+<p><a href="nav.html">源码</a></p>
+<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
+<li>1、制作导航圆角</li>
+</ul>
+<blockquote>
+<p>提示：使用border-radius实现圆角</p>
+</blockquote>
+<ul>
+<li>2、制作导航立体风格</li>
+</ul>
+<blockquote>
+<p>提示：使用box-shadow实现立体风格</p>
+</blockquote>
+<ul>
+<li>3、制作导航分隔线</li>
+</ul>
+<blockquote>
+<p>提示：使用渐变与伪元素制作</p>
+</blockquote>
+<ul>
+<li>4、删除第一个和最后一个导航分隔线</li>
+</ul>
+<blockquote>
+<p>提示：使用伪元素删除第一个和最后一个分隔线</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/27/text/" rel="next" title="text&font 文字与字体">
+                <i class="fa fa-chevron-left"></i> text&font 文字与字体
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/30/CSS3选择器/" rel="prev" title="CSS3选择器">
+                CSS3选择器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">fengchunsgit</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fengchunsgit" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/4d85778eb08d" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-1-CSS3背景-background-origin"><span class="nav-number">1.</span> <span class="nav-text">5.1 CSS3背景 background-origin</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-2-CSS3背景-background-clip"><span class="nav-number">2.</span> <span class="nav-text">5.2 CSS3背景 background-clip</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-3-CSS3背景-background-size"><span class="nav-number">3.</span> <span class="nav-text">5.3 CSS3背景 background-size</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-4-CSS3背景-multiple-backgrounds"><span class="nav-number">4.</span> <span class="nav-text">5.4 CSS3背景 multiple backgrounds</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习制作如下一个导航条"><span class="nav-number">5.</span> <span class="nav-text">练习制作如下一个导航条</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#要求"><span class="nav-number">5.1.</span> <span class="nav-text">要求</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fengchunsgit</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
