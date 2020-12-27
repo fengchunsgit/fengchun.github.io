@@ -291,6 +291,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2020/12/27/tableau笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/12/27/tableau笔记/" itemprop="url">tableau笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-27T16:12:18+08:00">
+                2020-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="tableau文件类型"><a href="#tableau文件类型" class="headerlink" title="tableau文件类型"></a>tableau文件类型</h1><p>Tableau中的数据分析结果可以以各种格式保存并保存和分发。这些各种格式被称为不同的文件类型，并且它们由不同的扩展标识。它们的格式取决于它们的生产方式和使用目的。它们都存储为XML文件，可以打开和编辑。<br>每种文件类型及其用法的描述如下:<br>|文件类型|文件扩展名|目的|<br>|—-|:-:|:-|<br>|Tableau工作簿|.twb|它包含工作簿中每个工作表和仪表板的信息。它包含在每个视图中使用的字段的详细信息以及应用于度量的聚合的公式。它还应用了格式和样式。它还包含数据源连接信息和为该连接创建的任何元数据信息。|<br>|Tableau打包工作簿|.twbx|此文件格式包含工作簿的详细信息以及在分析中使用的本地数据。其目的是与其他Tableau桌面或Tableau读者用户共享，前提是它不需要来自服务器的数据。|<br>|Tableau数据源|.tds|用于创建tableau报表的连接的详细信息存储在此文件中。 在连接细节中，它存储源类型(excel / relational / sap等)以及列的数据类型。|<br>|Tableau打包的数据源|.tdsx|此文件与添加数据以及连接详细信息的.tds文件类似。|<br>|Tableau数据提取|.tde|此文件包含高度压缩的柱状数据格式的.twb文件中使用的数据。这有助于存储优化。它还保存在分析中应用的聚合计算。此文件应刷新以从源获取更新的数据。|<br>|Tableau书签|.tbm|这些文件包含一个易于共享以粘贴到其他工作簿中的工作表。<br>|Tableau偏好设置|.tps|此文件存储所有工作簿中使用的颜色首选项。它主要用于在用户之间保持一致的外观和感觉。|</p>
+<h1 id="tableau-数据类型"><a href="#tableau-数据类型" class="headerlink" title="tableau 数据类型"></a>tableau 数据类型</h1><p>作为数据分析工具，Tableau将每个数据分为四个类别之一，即 - String，Number，Boolean和datetime。从源加载数据后，tableau会自动分配数据类型，但如果满足数据转换规则，也可以更改某些数据类型。此外，用户必须指定计算字段的数据类型。<br>Tableau支持的数据类型的描述如下:<br>|数据类型|描述|例子|<br>|:-:|:-:|:-:|<br>|STRING|任何零个或多个字符的序列。 它们用单引号括起来。 引号本身可以通过写两次来包含在字符串中。|\’Hello\’ \’Quoted\’ \’quote\’|<br>|NUMBER|这些是整数或浮点数。 建议在计算中使用浮点数的四舍五入。|3 142.58|<br>|BOOLEAN|它们是逻辑值。|TRUE FALSE|<br>|DATE &amp; DATETIME |Tableau以几乎所有格式识别日期。 但是，如果我们需要强制tableau将字符串识别为日期，那么我们在数据之前放一个＃符号。|“02/01/2015” “＃3 March 1982”| </p>
+<h1 id="tableau-术语"><a href="#tableau-术语" class="headerlink" title="tableau 术语"></a>tableau 术语</h1><p>作为强大的数据可视化工具，Tableau有许多独特的术语和定义。在开始使用Tableau中的功能之前，我们需要熟悉它们的含义。以下术语列表是全面的，并解释最常用的术语。<br>|术语|含义|<br>|—|—|<br>|alias|可以分配给字段或维度成员的备用名称。|<br>|bin|用户定义的数据源中的度量分组。|<br>|bookmark|Tableau存储库中“书签”文件夹中包含单个工作表的.tbm文件。 很像Web浏览器书签，.tbm文件是快速显示不同分析的一种方便的方法。|<br>|calculated field|通过使用公式修改数据源中的现有字段创建的新字段。|<br>|crosstab|文本表视图。 使用文本表显示与维成员关联的数字。|<br>|dashboard|在单个页面上排列的几个视图的组合。 使用仪表板同时比较和监视各种数据。|<br>|data pane|工作簿左侧的窗格，其中显示与Tableau连接的数据源的字段。 字段分为维和度量的<br>数据窗格还显示自定义字段，如计算，合并字段和组。 通过将字段从“数据”窗格拖动到作为每个工作表的一部分的各个货架上，可以构建数据视图。|<br>|data Source page|可在其中设置数据源的页面。 “数据源”页面通常由四个主要区域组成:左窗格，联接区域，预览区域和元数据区域。|<br>|dimension|分类数据字段。 维度通常保存离散数据，例如无法聚合的层次结构和成员。 维度的示例包括日期，客户名称和客户群。<br>|extract|可用于提高性能和离线分析的数据源的已保存子集。 您可以通过定义包含提取中所需数据的过滤器和限制来创建提取。|<br>|filters shelf|工作簿左侧的架子，您可以使用它通过使用度量和维度过滤视图来从视图中排除数据。|<br>|format pane|一个窗格，其中包含控制整个工作表的格式设置，以及视图中的各个字段。 打开时，“格式”窗格将显示在工作簿的左侧。|<br>|level of detail (LOD) expression|支持除视图级别之外的维度上的聚合的语法。 使用详细信息表达式级别，可以将一个或多个维附加到任何聚合表达式。|<br>|marks|视图的一部分，可视地表示数据源中的一行或多行。 标记可以是例如条，线或正方形。 您可以控制标记的类型，颜色和大小。|<br>|marks card|视图左侧的卡片，您可以拖动字段以控制标记属性，如类型，颜色，大小，形状，标签，工具提示和详细信息。|<br>|pages shelf|视图左侧的架子，可用于根据离散或连续字段中的成员和值将视图拆分为一系列页面。 向页面货架添加字段就像在Rows货架上添加一个字段，只是为每个新行创建了一个新页面。|<br>|rows shelf|工作簿顶部的架子，可用于创建数据表的行。 货架接受任何数量的尺寸和措施。 在“行”功能区上放置尺寸时，Tableaus会为该尺寸的成员创建标题。 将度量放在“行”功能区上时，Tableau会为该度量创建定量轴。|<br>|shelves|命名区域在视图的左侧和顶部。 通过将字段放在货架上来构建视图。 有些货架仅在选择某些标记类型时可用。 例如，仅当您选择形状标记类型时，形状支架才可用。|<br>|workbook|具有.twb扩展名的文件，其中包含一个或多个工作表(可能还包括仪表板和故事)。|<br>|worksheet|通过将字段拖动到货架上来创建数据视图的工作表。|</p>
+<h1 id="tableau-数据源"><a href="#tableau-数据源" class="headerlink" title="tableau 数据源"></a>tableau 数据源</h1><p>Tableau可以连接到广泛使用的所有常用数据源.Tableau的本机连接器可以连接到以下类型的数据源。</p>
+<ul>
+<li><strong>文件系统</strong>，如<code>CSV</code>，Excel等。</li>
+<li><strong>关系系统</strong>如Oracle，Sql Server，DB2等。</li>
+<li><strong>云系统</strong>如Windows Azure，Google BigQuery等。</li>
+<li><strong>其他源</strong>使用ODBC。<h2 id="连接Live"><a href="#连接Live" class="headerlink" title="连接Live"></a>连接Live</h2>连接实时特性用于实时数据分析。在这种情况下，Tableau连接到实时数据源并继续读取数据。所以分析的结果是第二次，最新的变化反映在结果中。但在不利方面它负担源系统，因为它必须继续发送数据到Tableau。<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2>Tableau还可以通过将内存缓存在内存中来处理内存中的数据，并在分析数据时不再连接到源。当然，根据内存的可用性，缓存的数据量将有限制。<h2 id="组合数据源"><a href="#组合数据源" class="headerlink" title="组合数据源"></a>组合数据源</h2>Tableau可以同时连接到不同的数据源。例如，在单个工作簿中，您可以通过定义多个连接来连接到平面文件和关系源。 这用于数据混合，这是Tableau中非常独特的功能。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2018/10/12/python数据分析概述/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1815,250 +1977,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/08/CSS3用户界面与其他重要属性/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/08/CSS3用户界面与其他重要属性/" itemprop="url">CSS3用户界面与其他重要属性</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T19:41:40+08:00">
-                2017-04-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS3</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="自由缩放属性resize"><a href="#自由缩放属性resize" class="headerlink" title="自由缩放属性resize"></a>自由缩放属性resize</h1><p>为了增强用户体验，CSS3增加了很多新的属性，其中<code>resize</code>就是一个重要的属性，它允许用户通过拖动的方式来修改元素的尺寸来改变元素的大小。任何拥有<code>overflow</code>属性的任何容器元素都可以使用。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize: none | both | horizontal | vertical | inherit</span><br></pre></td></tr></table></figure>
-<h2 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>none</code></td>
-<td>用户不能拖动元素修改尺寸大小。</td>
-</tr>
-<tr>
-<td><code>both</code></td>
-<td>用户可以拖动元素，同时修改元素的宽度和高度</td>
-</tr>
-<tr>
-<td><code>horizontal</code></td>
-<td>用户可以拖动元素，仅可以修改元素的宽度，但不能修改元素的高度。</td>
-</tr>
-<tr>
-<td><code>vertical</code></td>
-<td>用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。</td>
-</tr>
-<tr>
-<td><code>inherit</code></td>
-<td>继承父元素的resize属性值。</td>
-</tr>
-</tbody>
-</table>
-<p>例如：</p>
-<p>通过<code>resize</code>属性，让文本域可以沿水平方向拖大。代码为：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-moz-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-o-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-ms-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">resize</span>: horizontal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="CSS3外轮廓属性"><a href="#CSS3外轮廓属性" class="headerlink" title="CSS3外轮廓属性"></a>CSS3外轮廓属性</h1><p>外轮廓<code>outline</code>在页面中呈现的效果和边框<code>border</code>呈现的效果极其相似，但和元素边框<code>border</code>完全不同，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，<code>只有元素获取到焦点或者被激活时呈现</code>。</p>
-<p><code>outline</code>属性早在CSS2中就出现了，主要是用来在元素周围绘制一条轮廓线，可以起到突出元素的作用。但是并未得到各主流浏览器的广泛支持，在CSS3中对<code>outline</code>作了一定的扩展，在以前的基础上增加新特性。</p>
-<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit</span><br></pre></td></tr></table></figure>
-<p>从语法中可以看出<code>outline</code>和<code>border</code>边框属性的使用方法极其类似。<code>outline-color</code>相当于<code>border-color、outline-style</code>相当于<code>border-style</code>，而<code>outline-width</code>相当于<code>border-width</code>，只不过CSS3给outline属性增加了一个<code>outline-offset</code>属性。</p>
-<h2 id="属性值-1"><a href="#属性值-1" class="headerlink" title="属性值"></a>属性值</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>outline-color</td>
-<td>定义轮廓线的颜色，属性值为CSS中定义的颜色值。在实际应用中，可以将此参数省略，省略时此参数的默认值为黑色。</td>
-</tr>
-<tr>
-<td>outline-style</td>
-<td>定义轮廓线的样式，属性为CSS中定义线的样式。在实际应用中，可以将此参数省略，省略时此参数的默认值为none，省略后不对该轮廓线进行任何绘制。</td>
-</tr>
-<tr>
-<td>outline-width</td>
-<td>定义轮廓线的宽度，属性值可以为一个宽度值。在实际应用中，可以将此参数省略，省略时此参数的默认值为medium，表示绘制中等宽度的轮廓线。</td>
-</tr>
-<tr>
-<td>outline-offset</td>
-<td>定义轮廓边框的偏移位置的数值，此值可以取负数值。当此参数的值为正数值，表示轮廓边框向外偏离多少个像素；当此参数的值为负数值，表示轮廓边框向内偏移多少个像素。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>元素继承父元素的outline效果。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="CSS生成内容content"><a href="#CSS生成内容content" class="headerlink" title="CSS生成内容content"></a>CSS生成内容content</h1><p>在Web中插入内容，在CSS2.1时代依靠的是JavaScript来实现。但进入CSS3进代之后我们可以通过CSS3的伪类<code>:before</code>，<code>:after</code>和CSS3的伪元素<code>::before</code>、<code>::after</code>来实现，其关键是依靠CSS3中的<code>content</code>属性来实现。不过这个属性对于<code>img</code>和<code>input</code>元素不起作用。</p>
-<p><code>conten</code>t配合CSS的伪类或者伪元素，一般可以做以下四件事情：</p>
-<table>
-<thead>
-<tr>
-<th>功能</th>
-<th>功能说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>none</td>
-<td>不生成任何内容</td>
-</tr>
-<tr>
-<td>attr</td>
-<td>插入标签属性值</td>
-</tr>
-<tr>
-<td>url</td>
-<td>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</td>
-</tr>
-<tr>
-<td>string</td>
-<td>插入字符串</td>
-</tr>
-</tbody>
-</table>
-<h2 id="实例展示"><a href="#实例展示" class="headerlink" title="实例展示"></a>实例展示</h2><p>在CSS中有一种清除浮动的方法叫<code>clearfix</code>。而这个<code>clearfix</code>方法就中就使用了<code>content</code>，只不过只是在这里插入了一个空格。如下所示：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:””;</span><br><span class="line">  <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>:both;</span><br><span class="line">  <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面这个示例是最常见的，也是最简单的，我们再来看一个插入元素属性值的方法。</p>
-<p>假设我们有一个元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"##"</span> <span class="attr">title</span>=<span class="string">"我是一个title属性值，我插在你的后面"</span>&gt;</span>我是元素<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>可以通过<code>:after</code>和<code>content:attr(title)</code>将元素的<code>title</code>值插入到元素内容<code>我是元素</code>之后：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">attr</span>(title);</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#f00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2109,7 +2027,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2120,7 +2038,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2131,7 +2049,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

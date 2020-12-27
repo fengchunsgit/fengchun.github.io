@@ -291,6 +291,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/03/Emmet常用命令/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/03/Emmet常用命令/" itemprop="url">Emmet常用命令</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T20:07:14+08:00">
+                2017-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>使用Emmet插件能够大幅度提升编写HTML和CSS的效率，许多IDE也内置了Emmet，<a href="https://emmet.io/" target="_blank" rel="noopener">官方网站 emmet.io</a></p>
+</blockquote>
+<h2 id="html和css缩写"><a href="#html和css缩写" class="headerlink" title="html和css缩写"></a>html和css缩写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html:5 html5结构</span><br><span class="line">hdr header</span><br><span class="line">ftr footer</span><br><span class="line">bdrs10  border-radius: 10px;</span><br></pre></td></tr></table></figure>
+<h2 id="Emmet基本用法"><a href="#Emmet基本用法" class="headerlink" title="Emmet基本用法"></a>Emmet基本用法</h2><ul>
+<li>子元素 &gt; </li>
+<li>同级元素 + </li>
+<li>爬升 ^ </li>
+<li>重复 * </li>
+<li>调整组合顺序 () </li>
+</ul>
+<blockquote>
+<p>div&gt;ul&gt;li*3</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>div+div+p</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>div&gt;div^p</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>(header&gt;div&gt;ul&gt;li*4)+footer</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br><span class="line">  &lt;footer&gt;&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Emmet属性"><a href="#Emmet属性" class="headerlink" title="Emmet属性"></a>Emmet属性</h2><ul>
+<li>id # </li>
+<li>class . </li>
+<li>自定义属性 [] </li>
+<li>变量 $</li>
+<li>文字 {}</li>
+<li>无意义文字 lorem</li>
+</ul>
+<blockquote>
+<p>div#container.container[data-value]</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot; class=&quot;container&quot; data-value=&quot;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ul&gt;li.item$*5</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ul&gt;li.item-$*5</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item-1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>a{click me}</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&quot;&gt;click me&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>lorem10 创造10个无意义文字</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laborum.</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>tab键进行展开，跳转</li>
+<li>光标一定要在最后</li>
+<li>中间一定不能有空格</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/02/24/git速查表/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1175,7 +1376,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1186,7 +1387,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1197,7 +1398,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

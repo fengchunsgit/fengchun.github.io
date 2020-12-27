@@ -291,6 +291,250 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/08/CSS3用户界面与其他重要属性/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/08/CSS3用户界面与其他重要属性/" itemprop="url">CSS3用户界面与其他重要属性</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T19:41:40+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="自由缩放属性resize"><a href="#自由缩放属性resize" class="headerlink" title="自由缩放属性resize"></a>自由缩放属性resize</h1><p>为了增强用户体验，CSS3增加了很多新的属性，其中<code>resize</code>就是一个重要的属性，它允许用户通过拖动的方式来修改元素的尺寸来改变元素的大小。任何拥有<code>overflow</code>属性的任何容器元素都可以使用。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize: none | both | horizontal | vertical | inherit</span><br></pre></td></tr></table></figure>
+<h2 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h2><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>属性值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>用户不能拖动元素修改尺寸大小。</td>
+</tr>
+<tr>
+<td><code>both</code></td>
+<td>用户可以拖动元素，同时修改元素的宽度和高度</td>
+</tr>
+<tr>
+<td><code>horizontal</code></td>
+<td>用户可以拖动元素，仅可以修改元素的宽度，但不能修改元素的高度。</td>
+</tr>
+<tr>
+<td><code>vertical</code></td>
+<td>用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。</td>
+</tr>
+<tr>
+<td><code>inherit</code></td>
+<td>继承父元素的resize属性值。</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<p>通过<code>resize</code>属性，让文本域可以沿水平方向拖大。代码为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-moz-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-o-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-ms-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">resize</span>: horizontal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3外轮廓属性"><a href="#CSS3外轮廓属性" class="headerlink" title="CSS3外轮廓属性"></a>CSS3外轮廓属性</h1><p>外轮廓<code>outline</code>在页面中呈现的效果和边框<code>border</code>呈现的效果极其相似，但和元素边框<code>border</code>完全不同，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，<code>只有元素获取到焦点或者被激活时呈现</code>。</p>
+<p><code>outline</code>属性早在CSS2中就出现了，主要是用来在元素周围绘制一条轮廓线，可以起到突出元素的作用。但是并未得到各主流浏览器的广泛支持，在CSS3中对<code>outline</code>作了一定的扩展，在以前的基础上增加新特性。</p>
+<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit</span><br></pre></td></tr></table></figure>
+<p>从语法中可以看出<code>outline</code>和<code>border</code>边框属性的使用方法极其类似。<code>outline-color</code>相当于<code>border-color、outline-style</code>相当于<code>border-style</code>，而<code>outline-width</code>相当于<code>border-width</code>，只不过CSS3给outline属性增加了一个<code>outline-offset</code>属性。</p>
+<h2 id="属性值-1"><a href="#属性值-1" class="headerlink" title="属性值"></a>属性值</h2><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>属性值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>outline-color</td>
+<td>定义轮廓线的颜色，属性值为CSS中定义的颜色值。在实际应用中，可以将此参数省略，省略时此参数的默认值为黑色。</td>
+</tr>
+<tr>
+<td>outline-style</td>
+<td>定义轮廓线的样式，属性为CSS中定义线的样式。在实际应用中，可以将此参数省略，省略时此参数的默认值为none，省略后不对该轮廓线进行任何绘制。</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>定义轮廓线的宽度，属性值可以为一个宽度值。在实际应用中，可以将此参数省略，省略时此参数的默认值为medium，表示绘制中等宽度的轮廓线。</td>
+</tr>
+<tr>
+<td>outline-offset</td>
+<td>定义轮廓边框的偏移位置的数值，此值可以取负数值。当此参数的值为正数值，表示轮廓边框向外偏离多少个像素；当此参数的值为负数值，表示轮廓边框向内偏移多少个像素。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>元素继承父元素的outline效果。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS生成内容content"><a href="#CSS生成内容content" class="headerlink" title="CSS生成内容content"></a>CSS生成内容content</h1><p>在Web中插入内容，在CSS2.1时代依靠的是JavaScript来实现。但进入CSS3进代之后我们可以通过CSS3的伪类<code>:before</code>，<code>:after</code>和CSS3的伪元素<code>::before</code>、<code>::after</code>来实现，其关键是依靠CSS3中的<code>content</code>属性来实现。不过这个属性对于<code>img</code>和<code>input</code>元素不起作用。</p>
+<p><code>conten</code>t配合CSS的伪类或者伪元素，一般可以做以下四件事情：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>不生成任何内容</td>
+</tr>
+<tr>
+<td>attr</td>
+<td>插入标签属性值</td>
+</tr>
+<tr>
+<td>url</td>
+<td>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</td>
+</tr>
+<tr>
+<td>string</td>
+<td>插入字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实例展示"><a href="#实例展示" class="headerlink" title="实例展示"></a>实例展示</h2><p>在CSS中有一种清除浮动的方法叫<code>clearfix</code>。而这个<code>clearfix</code>方法就中就使用了<code>content</code>，只不过只是在这里插入了一个空格。如下所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:””;</span><br><span class="line">  <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>:both;</span><br><span class="line">  <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这个示例是最常见的，也是最简单的，我们再来看一个插入元素属性值的方法。</p>
+<p>假设我们有一个元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"##"</span> <span class="attr">title</span>=<span class="string">"我是一个title属性值，我插在你的后面"</span>&gt;</span>我是元素<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以通过<code>:after</code>和<code>content:attr(title)</code>将元素的<code>title</code>值插入到元素内容<code>我是元素</code>之后：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">attr</span>(title);</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#f00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/06/CSS3响应式设计/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2576,207 +2820,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/03/Emmet常用命令/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/03/Emmet常用命令/" itemprop="url">Emmet常用命令</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T20:07:14+08:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>使用Emmet插件能够大幅度提升编写HTML和CSS的效率，许多IDE也内置了Emmet，<a href="https://emmet.io/" target="_blank" rel="noopener">官方网站 emmet.io</a></p>
-</blockquote>
-<h2 id="html和css缩写"><a href="#html和css缩写" class="headerlink" title="html和css缩写"></a>html和css缩写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html:5 html5结构</span><br><span class="line">hdr header</span><br><span class="line">ftr footer</span><br><span class="line">bdrs10  border-radius: 10px;</span><br></pre></td></tr></table></figure>
-<h2 id="Emmet基本用法"><a href="#Emmet基本用法" class="headerlink" title="Emmet基本用法"></a>Emmet基本用法</h2><ul>
-<li>子元素 &gt; </li>
-<li>同级元素 + </li>
-<li>爬升 ^ </li>
-<li>重复 * </li>
-<li>调整组合顺序 () </li>
-</ul>
-<blockquote>
-<p>div&gt;ul&gt;li*3</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>div+div+p</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>div&gt;div^p</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>(header&gt;div&gt;ul&gt;li*4)+footer</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br><span class="line">  &lt;footer&gt;&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Emmet属性"><a href="#Emmet属性" class="headerlink" title="Emmet属性"></a>Emmet属性</h2><ul>
-<li>id # </li>
-<li>class . </li>
-<li>自定义属性 [] </li>
-<li>变量 $</li>
-<li>文字 {}</li>
-<li>无意义文字 lorem</li>
-</ul>
-<blockquote>
-<p>div#container.container[data-value]</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot; class=&quot;container&quot; data-value=&quot;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item$*5</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item-$*5</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item-1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>a{click me}</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&quot;&gt;click me&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>lorem10 创造10个无意义文字</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laborum.</span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
-<li>tab键进行展开，跳转</li>
-<li>光标一定要在最后</li>
-<li>中间一定不能有空格</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2827,7 +2870,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2838,7 +2881,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2849,7 +2892,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
