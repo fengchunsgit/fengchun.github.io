@@ -291,6 +291,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/24/CSS3颜色/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/24/CSS3颜色/" itemprop="url">CSS3颜色</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-24T20:19:00+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="3-1-CSS3颜色-颜色之RGBA"><a href="#3-1-CSS3颜色-颜色之RGBA" class="headerlink" title="3.1 CSS3颜色 颜色之RGBA"></a>3.1 CSS3颜色 颜色之RGBA</h1><p>RGB是一种色彩标准，是由红(R)、绿(G)、蓝(B)的变化以及相互叠加来得到各式各样的颜色。RGBA是在RGB的基础上增加了控制alpha透明度的参数。</p>
+<p>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color：rgba(R,G,B,A)</span><br></pre></td></tr></table></figure></p>
+<p>以上R、G、B三个参数，正整数值的取值范围为：0 - 255。百分数值的取值范围为：0.0% - 100.0%。超出范围的数值将被截至其最接近的取值极限。并非所有浏览器都支持使用百分数值。A为透明度参数，取值在0~1之间，不可为负值。</p>
+<p>代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color:rgba(100,120,60,0.5);</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-2-CSS3颜色-渐变色彩"><a href="#3-2-CSS3颜色-渐变色彩" class="headerlink" title="3.2 CSS3颜色 渐变色彩"></a>3.2 CSS3颜色 渐变色彩</h1><p>CSS3 Gradient 分为线性渐变(linear)和径向渐变(radial)。由于不同的渲染引擎实现渐变的语法不同，这里我们只针对线性渐变的 W3C 标准语法来分析其用法，其余大家可以查阅相关资料。W3C 语法已经得到了 IE10+、Firefox19.0+、Chrome26.0+ 和 Opera12.1+等浏览器的支持。</p>
+<p>这一小节我们来说一下线性渐变：</p>
+<p><img src="images/linear-gradient.jpg" alt="linear-gradient"></p>
+<p>参数：</p>
+<p>第一个参数:指定渐变方向，可以用“角度”的关键词或“英文”来表示：</p>
+<p><img src="images/color-english.jpg" alt="color-english"></p>
+<p>第一个参数省略时，默认为“180deg”，等同于“to bottom”。</p>
+<p>第二个和第三个参数，表示颜色的起始点和结束点，可以有多个颜色值。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(to</span> <span class="selector-tag">left</span>, <span class="selector-tag">red</span>, <span class="selector-tag">orange</span>,<span class="selector-tag">yellow</span>,<span class="selector-tag">green</span>,<span class="selector-tag">blue</span>,<span class="selector-tag">indigo</span>,<span class="selector-tag">violet</span>);</span><br></pre></td></tr></table></figure></p>
+<p><img src="images/color-demo.jpg" alt="color-demo"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/21/css3边框/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1751,7 +1905,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
