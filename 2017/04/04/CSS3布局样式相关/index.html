@@ -87,17 +87,17 @@
 <meta property="og:site_name" content="fengchunsgit">
 <meta property="og:description" content="CSS3 多列布局——Columns为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面，这种布局在报纸和杂志上都使用了几十年了，但要在Web页面上实现这样的效果还是有相当大的难度，庆幸的是，CSS3的多列布局可以轻松实现。接下来咱们一起学习多列布局相">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/cssbox3d.gif">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/box-sizing.jpg">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/flexbox.png">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/flexrow.jpg">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/flexcolumn.jpg">
-<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/flex.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/cssbox3d.gif">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/box-sizing.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexbox.png">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexrow.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexcolumn.jpg">
+<meta property="og:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flex.jpg">
 <meta property="og:updated_time" content="2019-10-16T09:53:38.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3布局样式相关">
 <meta name="twitter:description" content="CSS3 多列布局——Columns为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面，这种布局在报纸和杂志上都使用了几十年了，但要在Web页面上实现这样的效果还是有相当大的难度，庆幸的是，CSS3的多列布局可以轻松实现。接下来咱们一起学习多列布局相">
-<meta name="twitter:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/images/cssbox3d.gif">
+<meta name="twitter:image" content="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/cssbox3d.gif">
 
 
 
@@ -239,41 +239,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            Search
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
   
 </nav>
 
@@ -534,7 +502,7 @@
 <p>例如：将第一个标题跨越所有列，代码：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">column-span</span><span class="selector-pseudo">:all</span>;</span><br></pre></td></tr></table></figure>
 <h1 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h1><p>CSS中有一种基础设计模式叫盒模型，盒模型定义了Web页面中的元素中如何来解析。CSS中每一个元素都是一个盒模型，包括html和body标签元素。在盒模型中主要包括width、height、border、background、padding和margin这些属性，而且他们之间的层次关系可以相互影响，来看一张盒模型的3D展示图：</p>
-<p><img src="images/cssbox3d.gif" alt="cssbox3d.gif"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/cssbox3d.gif" alt="cssbox3d.gif"></p>
 <p>从图中可以看出padding属性和content属性层叠background-image属性，层叠background-color属性，这个是存在的，它们四者之间构成了Ｚ轴（垂直屏幕的坐标）多重层叠关系。但是border属性与margin属性、padding属性三者之间应该是平面上的并级关系，并不能构成Ｚ轴的层叠关系。</p>
 <h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>在CSS中盒模型被分为两种，<br>第一种是w3c的标准模型，另一种是IE的传统模型，它们相同之处都是对元素计算尺寸的模型，具体说不是对元素的width、height、padding和border以及元素实际尺寸的计算关系，它们不同之处是两者的计算方法不一致，原则上来说盒模型是分得很细的，这里所看到的主要是外盒模型和内盒模型，如下面计算公式所示：</p>
 <ul>
@@ -570,11 +538,11 @@
 </tbody>
 </table>
 <p>其中最为关键的是<code>box-sizing</code>中<code>content-box</code>和<code>border-box</code>两者的区别，他们之间的区别可以通过下图来展示，其对盒模型的不同解析：</p>
-<p><img src="images/box-sizing.jpg" alt="box-sizing.jpg"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/box-sizing.jpg" alt="box-sizing.jpg"></p>
 <h1 id="CSS3-伸缩布局"><a href="#CSS3-伸缩布局" class="headerlink" title="CSS3 伸缩布局"></a>CSS3 伸缩布局</h1><p>CSS3引入了一种新的布局模式——<code>Flexbox</code>布局，即<strong>伸缩布局盒模型</strong>（<code>Flexible Box</code>），用来提供一个更加有效的方式制定、调整和分布一个容器里项目布局，即使它们的大小是未知或者动态的，这里简称为<code>Flex</code>。</p>
 <p><code>Flexbox</code>布局常用于设计比较复杂的页面，可以轻松的实现屏幕和浏览器窗口大小发生变化时保持元素的相对位置和大小不变，同时减少了依赖于浮动布局实现元素位置的定义以及重置元素的大小。</p>
 <p><code>Flexbox</code>布局在定义伸缩项目大小时伸缩容器会预留一些可用空间，让你可以调节伸缩项目的相对大小和位置。例如，你可以确保伸缩容器中的多余空间平均分配多个伸缩项目，当然，如果你的伸缩容器没有足够大的空间放置伸缩项目时，浏览器会根据一定的比例减少伸缩项目的大小，使其不溢出伸缩容器。</p>
-<p><img src="images/flexbox.png" alt="flexbox.png"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexbox.png" alt="flexbox.png"></p>
 <p>综合而言，<code>Flexbox</code>布局功能主要具有以下几点：</p>
 <ul>
 <li><p>第一，屏幕和浏览器窗口大小发生改变也可以灵活调整布局；</p>
@@ -602,17 +570,17 @@
 <p>Flex项目是Flex容器的子元素。他们沿着主要轴和横轴定位。</p>
 <p>默认的是沿着水平轴排列一行。<br>你可以通过<code>flex-direction</code>来改变主轴方向修改为<code>column</code>，</p>
 <p>其默认值是<code>row</code>。</p>
-<p><img src="images/flexrow.jpg" alt="flexrow"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexrow.jpg" alt="flexrow"></p>
 <ul>
 <li>3.Flex项目列显示</li>
 </ul>
-<p><img src="images/flexcolumn.jpg" alt="flexcolumn"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexcolumn.jpg" alt="flexcolumn"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>4.Flex项目移动到顶部</li>
 </ul>
 <p>如何将flex项目移动到顶部，取决于主轴的方向。<br>如果它是垂直的方向通过<code>align-items</code>设置；<br>如果它是水平的方向通过<code>justify-content</code>设置。</p>
-<p><img src="images/flex.jpg" alt="flex"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flex.jpg" alt="flex"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: flex-start; </span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start; </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: flex-start; </span><br><span class="line">  <span class="attribute">align-items</span>: flex-start; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>5.Flex项目移到左边</li>
@@ -734,8 +702,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -750,7 +727,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -811,6 +788,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-多列布局——Columns"><span class="nav-number">1.</span> <span class="nav-text">CSS3 多列布局——Columns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">1.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-多列布局——column-width"><span class="nav-number">2.</span> <span class="nav-text">CSS3 多列布局——column-width</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-1"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-1"><span class="nav-number">2.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-多列布局——column-count"><span class="nav-number">3.</span> <span class="nav-text">CSS3 多列布局——column-count</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-2"><span class="nav-number">3.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-2"><span class="nav-number">3.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-列间距column-gap"><span class="nav-number">4.</span> <span class="nav-text">CSS3 列间距column-gap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-3"><span class="nav-number">4.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-3"><span class="nav-number">4.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-列表边框column-rule"><span class="nav-number">5.</span> <span class="nav-text">CSS3 列表边框column-rule</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-4"><span class="nav-number">5.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-4"><span class="nav-number">5.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-跨列设置column-span"><span class="nav-number">6.</span> <span class="nav-text">CSS3 跨列设置column-span</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-5"><span class="nav-number">6.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-5"><span class="nav-number">6.2.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-盒子模型"><span class="nav-number">7.</span> <span class="nav-text">CSS3 盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#box-sizing"><span class="nav-number">7.1.</span> <span class="nav-text">box-sizing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法-6"><span class="nav-number">7.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性-6"><span class="nav-number">7.3.</span> <span class="nav-text">属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3-伸缩布局"><span class="nav-number">8.</span> <span class="nav-text">CSS3 伸缩布局</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1018,323 +1011,6 @@
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 

@@ -228,41 +228,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            Search
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
   
 </nav>
 
@@ -291,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/27/text/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2019/03/10/原型设计-Axure-RP-交互设计/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -310,7 +278,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/27/text/" itemprop="url">text&font 文字与字体</a></h2>
+                <a class="post-title-link" href="/2019/03/10/原型设计-Axure-RP-交互设计/" itemprop="url">原型设计-Axure RP 交互设计</a></h2>
         
 
         <div class="post-meta">
@@ -322,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T16:39:59+08:00">
-                2017-03-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-10T17:56:38+08:00">
+                2019-03-10
               </time>
             
 
@@ -345,697 +313,18 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS3</span>
+                  <a href="/categories/产品/" itemprop="url" rel="index">
+                    <span itemprop="name">产品</span>
                   </a>
                 </span>
 
                 
                 
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="4-1-CSS3文字与字体-text-overflow-与-word-wrap"><a href="#4-1-CSS3文字与字体-text-overflow-与-word-wrap" class="headerlink" title="4.1 CSS3文字与字体 text-overflow 与 word-wrap"></a>4.1 CSS3文字与字体 text-overflow 与 word-wrap</h1><p><code>text-overflow</code>用来设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
-<p>语法：</p>
-<p><img src="images/text-overflow.jpg" alt="text-overflow"></p>
-<p>但是<code>text-overflow</code>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（<code>white-space:nowrap</code>）及溢出内容为隐藏（<code>overflow:hidden</code>），只有这样才能实现溢出文本显示省略号的效果，代码如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>;</span><br></pre></td></tr></table></figure>
-<p>同时，<code>word-wrap</code>也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。</p>
-<p>语法：</p>
-<p><img src="images/word-wrap.jpg" alt="word-warp"></p>
-<p><code>normal</code>为浏览器默认值，<code>break-word</code>设置在长单词或 <code>URL</code>地址内部进行换行，此属性不常用，用浏览器默认值即可。</p>
-<h1 id="4-2-CSS3文字与字体-嵌入字体-font-face"><a href="#4-2-CSS3文字与字体-嵌入字体-font-face" class="headerlink" title="4.2 CSS3文字与字体 嵌入字体@font-face"></a>4.2 CSS3文字与字体 嵌入字体@font-face</h1><p><code>@font-face</code>能够加载服务器端的字体文件，让浏览器端可以显示用户电脑里没有安装的字体。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family </span>: 字体名称;</span><br><span class="line">    <span class="attribute">src </span>: 字体文件在服务器上的相对或绝对路径;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样设置之后，就可以像使用普通字体一样在（font-*）中设置字体样式。</p>
-<p>比如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size </span>:<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">font-family </span>: <span class="string">"My Font"</span>;</span><br><span class="line">    <span class="comment">/*必须项，设置@font-face中font-family同样的值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="4-3-CSS3文字与字体-文本阴影text-shadow"><a href="#4-3-CSS3文字与字体-文本阴影text-shadow" class="headerlink" title="4.3 CSS3文字与字体 文本阴影text-shadow"></a>4.3 CSS3文字与字体 文本阴影text-shadow</h1><p><code>text-shadow</code>可以用来设置文本的阴影效果。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: <span class="selector-tag">X-Offset</span> <span class="selector-tag">Y-Offset</span> <span class="selector-tag">blur</span> <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure></p>
-<p><code>X-Offset</code>：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      </p>
-<p><code>Y-Offset</code>：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
-<p><code>Blur</code>：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
-<p><code>Color</code>：是指阴影的颜色，其可以使用<code>rgba</code>色。</p>
-<p>比如，我们可以用下面代码实现设置阴影效果。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/24/CSS3颜色/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
+                  , 
                 
-                <a class="post-title-link" href="/2017/03/24/CSS3颜色/" itemprop="url">CSS3颜色</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-24T20:19:00+08:00">
-                2017-03-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS3</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="3-1-CSS3颜色-颜色之RGBA"><a href="#3-1-CSS3颜色-颜色之RGBA" class="headerlink" title="3.1 CSS3颜色 颜色之RGBA"></a>3.1 CSS3颜色 颜色之RGBA</h1><p>RGB是一种色彩标准，是由红(R)、绿(G)、蓝(B)的变化以及相互叠加来得到各式各样的颜色。RGBA是在RGB的基础上增加了控制alpha透明度的参数。</p>
-<p>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color：rgba(R,G,B,A)</span><br></pre></td></tr></table></figure></p>
-<p>以上R、G、B三个参数，正整数值的取值范围为：0 - 255。百分数值的取值范围为：0.0% - 100.0%。超出范围的数值将被截至其最接近的取值极限。并非所有浏览器都支持使用百分数值。A为透明度参数，取值在0~1之间，不可为负值。</p>
-<p>代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color:rgba(100,120,60,0.5);</span><br></pre></td></tr></table></figure></p>
-<h1 id="3-2-CSS3颜色-渐变色彩"><a href="#3-2-CSS3颜色-渐变色彩" class="headerlink" title="3.2 CSS3颜色 渐变色彩"></a>3.2 CSS3颜色 渐变色彩</h1><p>CSS3 Gradient 分为线性渐变(linear)和径向渐变(radial)。由于不同的渲染引擎实现渐变的语法不同，这里我们只针对线性渐变的 W3C 标准语法来分析其用法，其余大家可以查阅相关资料。W3C 语法已经得到了 IE10+、Firefox19.0+、Chrome26.0+ 和 Opera12.1+等浏览器的支持。</p>
-<p>这一小节我们来说一下线性渐变：</p>
-<p><img src="images/linear-gradient.jpg" alt="linear-gradient"></p>
-<p>参数：</p>
-<p>第一个参数:指定渐变方向，可以用“角度”的关键词或“英文”来表示：</p>
-<p><img src="images/color-english.jpg" alt="color-english"></p>
-<p>第一个参数省略时，默认为“180deg”，等同于“to bottom”。</p>
-<p>第二个和第三个参数，表示颜色的起始点和结束点，可以有多个颜色值。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(to</span> <span class="selector-tag">left</span>, <span class="selector-tag">red</span>, <span class="selector-tag">orange</span>,<span class="selector-tag">yellow</span>,<span class="selector-tag">green</span>,<span class="selector-tag">blue</span>,<span class="selector-tag">indigo</span>,<span class="selector-tag">violet</span>);</span><br></pre></td></tr></table></figure></p>
-<p><img src="images/color-demo.jpg" alt="color-demo"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/21/css3边框/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/21/css3边框/" itemprop="url">css3边框</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T22:05:13+08:00">
-                2017-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS3</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="2-1-CSS3边框-圆角效果-border-radius"><a href="#2-1-CSS3边框-圆角效果-border-radius" class="headerlink" title="2.1 CSS3边框 圆角效果 border-radius"></a>2.1 CSS3边框 圆角效果 border-radius</h1><p> border-radius是向元素添加圆角边框。</p>
-<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius:10px; /* 所有角都使用半径为10px的圆角 */</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius: 5px 4px 3px 2px; /* 四个半径值分别是左上角、右上角、右下角和左下角，顺时针 */</span><br></pre></td></tr></table></figure>
-<p> 不要以为border-radius的值只能用px单位，你还可以用百分比或者em，但兼容性目前还不太好。</p>
-<ul>
-<li>实心上半圆：</li>
-</ul>
-<p>方法：把高度(height)设为宽度（width）的一半，并且只设置左上角和右上角的半径与元素的高度一致（大于也是可以的）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    height:50px;/*是width的一半*/</span><br><span class="line">    width:100px;</span><br><span class="line">    background:#9da;</span><br><span class="line">    border-radius:50px 50px 0 0;/*半径至少设置为height的值*/</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>实心圆：<br>方法：把宽度（width）与高度(height)值设置为一致（也就是正方形），并且四个圆角值都设置为它们值的一半。如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    height:100px;/*与width设置一致*/</span><br><span class="line">    width:100px;</span><br><span class="line">    background:#9da;</span><br><span class="line">    border-radius:50px;/*四个圆角值都设置为宽度或高度值的一半*/</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="2-2-CSS3边框-阴影-box-shadow（一）"><a href="#2-2-CSS3边框-阴影-box-shadow（一）" class="headerlink" title="2.2 CSS3边框 阴影 box-shadow（一）"></a>2.2 CSS3边框 阴影 box-shadow（一）</h1><p>box-shadow是向盒子添加阴影。支持添加一个或者多个。</p>
-<p>很简单的一段代码，就实现了投影效果，酷毙了。我们来看下语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式]</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意：inset 可以写在参数的第一个或最后一个，其它位置是无效的</strong></p>
-<ul>
-<li>为元素设置外阴影：</li>
-</ul>
-<p>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box_shadow&#123;</span><br><span class="line">  box-shadow:4px 2px 6px #333333; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>为元素设置内阴影：</li>
-</ul>
-<p>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box_shadow&#123;</span><br><span class="line">  box-shadow:4px 2px 6px #333333 inset; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>添加多个阴影：<br>以上的语法的介绍，就这么简单，如果添加多个阴影，只需用逗号隔开即可。如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box_shadow&#123;</span><br><span class="line">    box-shadow:4px 2px 6px #f00, -4px -2px 6px #000, 0px 0px 12px 5px #33CC00 inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="2-3-CSS3边框-阴影-box-shadow（二）"><a href="#2-3-CSS3边框-阴影-box-shadow（二）" class="headerlink" title="2.3 CSS3边框 阴影 box-shadow（二）"></a>2.3 CSS3边框 阴影 box-shadow（二）</h1><h2 id="阴影模糊半径与阴影扩展半径的区别"><a href="#阴影模糊半径与阴影扩展半径的区别" class="headerlink" title="阴影模糊半径与阴影扩展半径的区别"></a>阴影模糊半径与阴影扩展半径的区别</h2><ul>
-<li><p>阴影模糊半径：此参数可选，其值只能是为正值，如果其值为0时，表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊；</p>
-</li>
-<li><p>阴影扩展半径：此参数可选，其值可以是正负值，如果值为正，则整个阴影都延展扩大，反之值为负值时，则缩小；</p>
-</li>
-</ul>
-<h2 id="X轴偏移量和Y轴偏移量值可以设置为负数"><a href="#X轴偏移量和Y轴偏移量值可以设置为负数" class="headerlink" title="X轴偏移量和Y轴偏移量值可以设置为负数"></a>X轴偏移量和Y轴偏移量值可以设置为负数</h2><p>box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式];<br>X轴偏移量为负数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.boxshadow-outset&#123;</span><br><span class="line">    width:100px;</span><br><span class="line">    height:100px;</span><br><span class="line">    box-shadow:-4px 4px 6px #666;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Y轴偏移量为负数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.boxshadow-outset&#123;</span><br><span class="line">    width:100px;</span><br><span class="line">    height:100px;</span><br><span class="line">    box-shadow:4px -4px 6px #666;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="2-4-CSS3边框-为边框应用图片-border-image"><a href="#2-4-CSS3边框-为边框应用图片-border-image" class="headerlink" title="2.4 CSS3边框 为边框应用图片 border-image"></a>2.4 CSS3边框 为边框应用图片 border-image</h1><p>顾名思义就是为边框应用背景图片，它和我们常用的background属性比较相似。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background:url(xx.jpg) 10px 20px no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>但是又比背景图片复杂一些。</p>
-<blockquote>
-<p>想象一下：一个矩形，有四个边框。如果应用了边框图片，图片该怎么分&gt;布呢？ 图片会自动被切割分成四等分。用于四个边框。<br>可以理解为它是一个切片工具，会自动把用做边框的图片切割。怎么切割呢？为了方便理解，做了一张特殊的图片，由9个矩形（70<em>70像素）拼成&gt;的一张图（210</em>210像素），并标注好序号，是不是像传说中的九宫图，</p>
-</blockquote>
-<p>如下：</p>
-<p><img src="images/border-images.jpg" alt=""></p>
-<p>我们把上图当作边框图片 来应用一下， 看一看是什么效果</p>
-<p>根据border-image的语法：</p>
-<p><img src="images/border-images-use.jpg" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#border-image&#123;</span><br><span class="line">   background:#F4FFFA;</span><br><span class="line">   width:210px; height:210px; border:70px solid #ddd;</span><br><span class="line">   border-image:url(borderimg.png) 70 repeat  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="images/normal.jpg" alt="正常效果"></p>
-<p>从序号可以看出div的四个角分别对应了背景图片的四个角。而2,4,6,8 被重复。5在哪？因为是从四周向中心切割图片的所以，5显示不出来。</p>
-<p>而在chrome浏览器中5是存在的，下图的样子：</p>
-<p><img src="images/chrome.jpg" alt="chrome效果"></p>
-<ul>
-<li>repeat的意思就是重复，目前因为是刚好被整除，效果看不出来。如果改下DIV的宽高，再来看重复的效果：</li>
-</ul>
-<p><img src="images/repeat.jpg" alt="repeat"></p>
-<p>边角部分为裁掉了，可见repeat就是一直重复，然后超出部分剪裁掉，而且是居中开始重复。</p>
-<ul>
-<li>Round 参数：Round可以理解为圆满的铺满。为了实现圆满所以会压缩（或拉伸）；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#border-image &#123;</span><br><span class="line"></span><br><span class="line">     width:170px;</span><br><span class="line"></span><br><span class="line">     height:170px;</span><br><span class="line"></span><br><span class="line">     border:70px solid;</span><br><span class="line"></span><br><span class="line">     border-image:url(borderimg.png) 70 round;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>效果：</p>
-<p><img src="images/round.jpg" alt="round"></p>
-<p>可见图片被压扁了。</p>
-<ul>
-<li>Stretch 很好理解就是拉伸，有多长拉多长。有多远“滚”多远。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-image:url(borderimg.png) 70 stretch</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>看一下效果：</p>
-<p><img src="images/stretch.jpg" alt="stretch"></p>
-<p>2,4,6,8分别被拉伸显示。</p>
-<p><strong>注意：Chrome下，中间部分也会被拉伸，webkit浏览器对于round属性和repeat属性似乎没有区分，显示效果是一样的。</strong></p>
-<p>Firefox 26.0 下是可以准确区分的。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/15/canvas入门/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/15/canvas入门/" itemprop="url">canvas入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-15T23:37:18+08:00">
-                2017-03-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/canvas/" itemprop="url" rel="index">
-                    <span itemprop="name">canvas</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="创建canvas"><a href="#创建canvas" class="headerlink" title="创建canvas"></a>创建canvas</h1><ul>
-<li><p>HTML</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&apos;canvas&apos;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JavaScript</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">window.onload=function()&#123;</span><br><span class="line">  var canvas=document.getElementById(&apos;canvas&apos;)</span><br><span class="line">  var context=canvas.getContext(&apos;2d&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="绘制直线，多边形和七巧板"><a href="#绘制直线，多边形和七巧板" class="headerlink" title="绘制直线，多边形和七巧板"></a>绘制直线，多边形和七巧板</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot;&gt;</span><br><span class="line">  &lt;!-- 支持浏览器，不会显示canvas中的文字，可以用来兼容比较老的浏览器，提醒用户升级 --&gt;</span><br><span class="line">  您的浏览器不支持，请升级您的浏览器</span><br><span class="line">&lt;/canvas&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  window.onload = function () &#123;</span><br><span class="line">    var canvas = document.getElementById(&apos;canvas&apos;)</span><br><span class="line"></span><br><span class="line">    canvas.width = 1024</span><br><span class="line">    canvas.height = 768</span><br><span class="line">    var context = canvas.getContext(&apos;2d&apos;);</span><br><span class="line"></span><br><span class="line">    context.beginPath()</span><br><span class="line">    // draw a line</span><br><span class="line">    context.moveTo(100, 100) //state</span><br><span class="line">    context.lineTo(700, 700) //state</span><br><span class="line">    context.lineTo(100, 700)</span><br><span class="line">    context.lineTo(100, 100)</span><br><span class="line">    context.closePath()</span><br><span class="line">    context.lineWidth = 5</span><br><span class="line">    context.strokeStyle = &quot;red&quot;</span><br><span class="line"></span><br><span class="line">    // context.fillStyle=&quot;rgb(2,100,100)&quot;</span><br><span class="line">    // context.fill()</span><br><span class="line"></span><br><span class="line">    context.stroke() //draw</span><br><span class="line"></span><br><span class="line">    context.beginPath()</span><br><span class="line">    context.moveTo(200, 100)</span><br><span class="line">    context.lineTo(700, 600)</span><br><span class="line">    context.closePath()</span><br><span class="line"></span><br><span class="line">    context.strokeStyle = &quot;black&quot; //reset color canvas是基于状态的，因此会覆盖第一次绘制的红色三角形</span><br><span class="line">    context.stroke()</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>可以使用直线画一个七巧板</p>
-</blockquote>
-<h1 id="绘制弧和圆"><a href="#绘制弧和圆" class="headerlink" title="绘制弧和圆"></a>绘制弧和圆</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">context.arc(</span><br><span class="line">centerx,centery,radius,</span><br><span class="line">startingAngle,endingAngle,</span><br><span class="line">anticlockwise=false</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img4.mukewang.com/5af94a1e00016cb512800720.jpg" alt=""></p>
-<h1 id="电子钟绘制"><a href="#电子钟绘制" class="headerlink" title="电子钟绘制"></a>电子钟绘制</h1><ul>
-<li><p>数字点阵绘制<br><img src="https://img3.mukewang.com/5bed43540001ef5812800720.jpg" alt=""></p>
-</li>
-<li><p>小圆圆心计算方法</p>
-</li>
-</ul>
-<p><img src="https://img2.mukewang.com/5bed46ec0001ead612800720.jpg" alt=""></p>
-<h1 id="动画-Animation"><a href="#动画-Animation" class="headerlink" title="动画 Animation"></a>动画 Animation</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//最简单的动画实现</span><br><span class="line">//执行时间并不准确，不精确</span><br><span class="line">setInterval(</span><br><span class="line">function()&#123;</span><br><span class="line">    render();</span><br><span class="line">    update();</span><br><span class="line">&#125;,50)</span><br></pre></td></tr></table></figure>
-<h1 id="canvas小球滚动"><a href="#canvas小球滚动" class="headerlink" title="canvas小球滚动"></a>canvas小球滚动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  #canvas &#123;</span><br><span class="line">    border: 1px solid #000;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;canvasBall&lt;/title&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var ball = &#123;</span><br><span class="line">      x: 512,</span><br><span class="line">      y: 100,</span><br><span class="line">      r: 20,</span><br><span class="line">      g: 5,</span><br><span class="line">      vx: 10,</span><br><span class="line">      vy: -0,</span><br><span class="line">      color: &apos;#005588&apos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    window.onload = () =&gt; &#123;</span><br><span class="line">      var canvas = document.getElementById(&apos;canvas&apos;)</span><br><span class="line"></span><br><span class="line">      canvas.width = 1024</span><br><span class="line">      canvas.height = 768</span><br><span class="line"></span><br><span class="line">      var context = canvas.getContext(&apos;2d&apos;)</span><br><span class="line"></span><br><span class="line">      setInterval(() =&gt; &#123;</span><br><span class="line">        render(context)</span><br><span class="line">        update()</span><br><span class="line">      &#125;, 50);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function update() &#123;</span><br><span class="line">      ball.x += ball.vx</span><br><span class="line">      ball.y += ball.vy</span><br><span class="line">      ball.vy += ball.g</span><br><span class="line"></span><br><span class="line">      //碰到边界</span><br><span class="line">      if (ball.y &gt;= 768 - ball.r) &#123;</span><br><span class="line">        ball.y = 768 - ball.r</span><br><span class="line">        ball.vy = -ball.vy * 0.5 //损耗</span><br><span class="line">      &#125;</span><br><span class="line">      if (ball.x &gt;= 1024 - ball.r) &#123;</span><br><span class="line">        ball.x = 1024 - ball.r;</span><br><span class="line">        ball.vx = -ball.vx;</span><br><span class="line">      &#125;</span><br><span class="line">      if(ball.x&lt;ball.r)&#123;</span><br><span class="line">        ball.x=ball.r;</span><br><span class="line">        ball.vx=-ball.vx;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function render(cxt) &#123;</span><br><span class="line">      cxt.clearRect(0, 0, canvas.width, canvas.height)</span><br><span class="line"></span><br><span class="line">      cxt.fillStyle = ball.color</span><br><span class="line">      cxt.beginPath()</span><br><span class="line">      cxt.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI)</span><br><span class="line">      cxt.closePath()</span><br><span class="line"></span><br><span class="line">      cxt.fill()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/03/Emmet常用命令/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/03/Emmet常用命令/" itemprop="url">Emmet常用命令</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T20:07:14+08:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                  <a href="/categories/产品/笔记/" itemprop="url" rel="index">
                     <span itemprop="name">笔记</span>
                   </a>
                 </span>
@@ -1074,913 +363,867 @@
       
         
           
-            <blockquote>
-<p>使用Emmet插件能够大幅度提升编写HTML和CSS的效率，许多IDE也内置了Emmet，<a href="https://emmet.io/" target="_blank" rel="noopener">官方网站 emmet.io</a></p>
+            <h2 id="1-页面事件"><a href="#1-页面事件" class="headerlink" title="1 页面事件"></a>1 页面事件</h2><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件名称</th>
+<th style="text-align:left">事件说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">页面加载时事件</td>
+<td style="text-align:left">页面加载时事件</td>
+</tr>
+<tr>
+<td style="text-align:center">窗口尺寸改变时事件</td>
+<td style="text-align:left">浏览器窗口改变大小时，在调整浏览器窗口时发生，可多次发生</td>
+</tr>
+<tr>
+<td style="text-align:center">窗口滚动时事件</td>
+<td style="text-align:left">浏览器窗口滚动时事件</td>
+</tr>
+<tr>
+<td style="text-align:center">窗口向上滚动时事件</td>
+<td style="text-align:left">浏览器窗口向上滚动时发生</td>
+</tr>
+<tr>
+<td style="text-align:center">窗口向下滚动时事件</td>
+<td style="text-align:left">浏览器窗口向下滚动时发生</td>
+</tr>
+<tr>
+<td style="text-align:center">页面鼠标单击时事件</td>
+<td style="text-align:left">页面单击时事件，在空白区域，或者在没有添加“鼠标单击时”事件的元件上进行单击操作时，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">页面鼠标双击时事件</td>
+<td style="text-align:left">页面双击时事件，在空白区域，或者在没有添加“鼠标双击时”事件的元件上进行双击操作时，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">页面鼠标右击时事件</td>
+<td style="text-align:left">页面右击时事件，在空白区域，或者在没有添加“鼠标右击时”事件的元件上进行右击操作时，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">页面鼠标移动时事件</td>
+<td style="text-align:left">鼠标移动时事件，在空白区域，或者在没有添加“鼠标移动时”事件的元件上进行移动操作时，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">页面按键按下时事件</td>
+<td style="text-align:left">键盘按键按下时事件。在空白区域，或者在没有添加“键盘按下时”事件的元件上进行键盘按下操作，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">页面按键松开时事件</td>
+<td style="text-align:left">键盘按键松开时事件。在空白区域，或者在没有添加“键盘松开时”事件的元件上进行键盘松开操作，将会发生该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">自适应视图改变时事件</td>
+<td style="text-align:left">自适应视图更改时事件，当切换到另一视图时，发生一次，该事件可发生多次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-元件事件"><a href="#2-元件事件" class="headerlink" title="2 元件事件"></a>2 元件事件</h2><blockquote>
+<p>为元件添加事件的方法与页面添加事件的步骤一样，但针对不同的元件，事件类型有所不同。</p>
 </blockquote>
-<h2 id="html和css缩写"><a href="#html和css缩写" class="headerlink" title="html和css缩写"></a>html和css缩写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html:5 html5结构</span><br><span class="line">hdr header</span><br><span class="line">ftr footer</span><br><span class="line">bdrs10  border-radius: 10px;</span><br></pre></td></tr></table></figure>
-<h2 id="Emmet基本用法"><a href="#Emmet基本用法" class="headerlink" title="Emmet基本用法"></a>Emmet基本用法</h2><ul>
-<li>子元素 &gt; </li>
-<li>同级元素 + </li>
-<li>爬升 ^ </li>
-<li>重复 * </li>
-<li>调整组合顺序 () </li>
-</ul>
+<style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件名称</th>
+<th style="text-align:left">事件说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">鼠标单击时事件</td>
+<td style="text-align:left">内联框架元件、中继器元件不包含该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标移入时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标移出时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标双击时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标右击时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">按键按下时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">按键松开时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">移动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">显示时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">隐藏时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">获取焦点时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">失去焦点时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">文本改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">选项改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">选中改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">状态改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动开始时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动结束时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向左拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向右拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向上拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向下拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">载入时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">滚动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">尺寸改变时事件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h2><p>Axure函数的基本语法</p>
 <blockquote>
-<p>div&gt;ul&gt;li*3</p>
+<p>在axure交互设计时，函数可以用在条件公式和需要赋值的地方，其基本语法是用双方括号包含，变量值和函数用英文句号连接。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>div+div+p</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>div&gt;div^p</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>(header&gt;div&gt;ul&gt;li*4)+footer</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/header&gt;</span><br><span class="line">  &lt;footer&gt;&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Emmet属性"><a href="#Emmet属性" class="headerlink" title="Emmet属性"></a>Emmet属性</h2><ul>
-<li>id # </li>
-<li>class . </li>
-<li>自定义属性 [] </li>
-<li>变量 $</li>
-<li>文字 {}</li>
-<li>无意义文字 lorem</li>
-</ul>
-<blockquote>
-<p>div#container.container[data-value]</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot; class=&quot;container&quot; data-value=&quot;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item$*5</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ul&gt;li.item-$*5</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item-1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item-5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>a{click me}</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;&quot;&gt;click me&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>lorem10 创造10个无意义文字</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laborum.</span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
-<li>tab键进行展开，跳转</li>
-<li>光标一定要在最后</li>
-<li>中间一定不能有空格</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/02/24/git速查表/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/24/git速查表/" itemprop="url">git速查表</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-24T20:52:19+08:00">
-                2017-02-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h1><p><img src="https://raw.githubusercontent.com/fengchunsgit/blog/master/images/git.png" alt="git速查表"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/02/18/Markdown快速入门/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/18/Markdown快速入门/" itemprop="url">Markdown快速入门</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-18T17:00:52+08:00">
-                2017-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<h2 id="1、为什么要用Markdown，它有哪些优点"><a href="#1、为什么要用Markdown，它有哪些优点" class="headerlink" title="1、为什么要用Markdown，它有哪些优点"></a>1、为什么要用Markdown，它有哪些优点</h2><ul>
-<li>Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好的支持Markdown。完全采用Markdown编辑器的博客平台有Ghost和Typecho。</li>
-<li>写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版</li>
-<li>格式转换方便，Markdown 的文本你可以轻松转换为 html、pdf等。</li>
-<li>可以保存称纯文本，程序员做笔记很方便<h2 id="2、常用的Markdown-编辑器"><a href="#2、常用的Markdown-编辑器" class="headerlink" title="2、常用的Markdown 编辑器"></a>2、常用的Markdown 编辑器</h2></li>
-<li>VScode 跨平台，既能写代码，也能做笔记</li>
-<li>Atom Github出品</li>
-<li>有道云笔记 普通用户有3G空间，可以PC端，移动端自动同步<h2 id="3、Markdonw-常用语法"><a href="#3、Markdonw-常用语法" class="headerlink" title="3、Markdonw 常用语法"></a>3、Markdonw 常用语法</h2></li>
-</ul>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1 标题"></a>1 标题</h3><p>标题是每篇文章必备而且最常用的格式。</p>
-<p>在Markdown中，如果想将一段文字定义为标题，只需要在这段文字前面加上 #，再在 # 后加一个空格即可。还可增加二、三、四、五、六级标题，总共六级，只需要增加 # ，增加一个 # ，标题字号相应降低一级。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题 h1</span><br><span class="line">## 二级标题 h2</span><br><span class="line">### 三级标题 h3</span><br><span class="line">#### 四级标题 h4</span><br><span class="line">##### 五级标题 h5</span><br><span class="line">###### 六级标题 h6</span><br></pre></td></tr></table></figure></p>
-<p>效果:</p>
-<h1 id="一级标题-h1"><a href="#一级标题-h1" class="headerlink" title="一级标题 h1"></a>一级标题 h1</h1><h2 id="二级标题-h2"><a href="#二级标题-h2" class="headerlink" title="二级标题 h2"></a>二级标题 h2</h2><h3 id="三级标题-h3"><a href="#三级标题-h3" class="headerlink" title="三级标题 h3"></a>三级标题 h3</h3><h4 id="四级标题-h4"><a href="#四级标题-h4" class="headerlink" title="四级标题 h4"></a>四级标题 h4</h4><h5 id="五级标题-h5"><a href="#五级标题-h5" class="headerlink" title="五级标题 h5"></a>五级标题 h5</h5><h6 id="六级标题-h6"><a href="#六级标题-h6" class="headerlink" title="六级标题 h6"></a>六级标题 h6</h6><h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2 列表"></a>2 列表</h3><p>列表格式也很常用，它可以让你的文稿变得井井有条。</p>
-<p>在 Markdown 中，你只需要在文字前面加上 - 就可以了；如果你希望是有序列表，在文字前面加上 1. 2. 3. 即可。<br><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-1-%E5%88%97%E8%A1%A8.png"></p>
-<h3 id="3-引用"><a href="#3-引用" class="headerlink" title="3 引用"></a>3 引用</h3><p>如果你需要在文稿中引用一段别处的句子，那么就要用到「引用」格式。</p>
-<p>在引用文字前加上 &gt; 并与文字保留一个字符的空格，即可。<br><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-2%E5%BC%95%E7%94%A8.png"></p>
-<h3 id="4-粗体和斜体"><a href="#4-粗体和斜体" class="headerlink" title="4 粗体和斜体"></a>4 粗体和斜体</h3><p>Markdown 的粗体和斜体也非常简单：</p>
-<p>用两个 * 包含一段文本就是粗体的语法；</p>
-<p>用一个 * 包含一段文本就是斜体的语法。<br><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-3-%E7%B2%97%E4%BD%93%E6%96%9C%E4%BD%93.png"></p>
-<h3 id="5-链接与图片"><a href="#5-链接与图片" class="headerlink" title="5 链接与图片"></a>5 链接与图片</h3><p>链接：在 Markdown 中，插入链接只需要使用 <code>[显示文本](链接地址)</code>即可。</p>
-<p>图片：在 Markdown 中，插入图片只需要使用 <code>![显示文本](图片链接地址)</code>即可。</p>
-<p>也可以使用 <code>src</code> 标签,并设置 <code>width</code> , <code>height</code> 等属性调整图片大小<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://raw.githubusercontent.com/fengchunsgit/note/master/imgs</span></span></span><br><span class="line"><span class="tag"><span class="string">/2-4%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9B%BE%E7%89%87.png"</span> <span class="attr">width</span>=<span class="string">"600px"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-4%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9B%BE%E7%89%87.png"></p>
-<h3 id="6-分割线"><a href="#6-分割线" class="headerlink" title="6 分割线"></a>6 分割线</h3><p>分割线的语法只需要另起一行，连续输入三个星号 *** 即可分割两段文字内容。</p>
-<p>如图：</p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-5-%E5%88%86%E5%89%B2%E7%BA%BF.png"></p>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7 表格"></a>7 表格</h3><p>当你需要在Markdown文稿中键入表格，代码如下：</p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/2-6%E8%A1%A8%E6%A0%BC.png"></p>
-<h3 id="8-待办和清单"><a href="#8-待办和清单" class="headerlink" title="8 待办和清单"></a>8 待办和清单</h3><p>待办事项和清单在日常工作、生活中经常被使用。</p>
-<p>在Markdown中，你只需要在待办的事项文本或者清单文本前加上- [ ]、- [x]即可。</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 表示未完成，- [x] 表示已完成。</li>
-</ul>
-<p>注：键入字符与字符之间都要保留一个字符的空格。</p>
-<p>具体呈现如下：</p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/1-2%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B91.png"></p>
-<h3 id="9-流程图"><a href="#9-流程图" class="headerlink" title="9 流程图"></a>9 流程图</h3><p>在Markdown中，一段流程图语法以 “<code>开头，以 “</code> 结尾。</p>
-<p>在 “` 后另起一行，书写graph XX，用以确定将要绘制的流程图及其类型（XX表示流程图类型）。</p>
-<p>流程图分为竖向和横向两大类，竖向包括自上而下和自下而上两种顺序，横向包括从右到左和从左到右两种顺序。</p>
-<p>其对应语法分别为：graph TB/graph BT/graph RL/graph LR。</p>
-<p>TB - top bottom（自上而下）<br>BT - bottom top（自下而上）<br>RL - right left（从右到左）<br>LR - left right（从左到右）<br>简单示例如图：</p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png"></p>
-<h3 id="10-甘特图"><a href="#10-甘特图" class="headerlink" title="10 甘特图"></a>10 甘特图</h3><p>我们在工作中用甘特图作计划进度表、项目进度表再合适不过了。</p>
-<p>以如下甘特图为例说明，</p>
-<p>与流程图一样，Markdown中，甘特图的语法也是以 “<code>开头，以 “</code> 结尾。</p>
-<p>在 “` 后另起一行，书写 gantt ，用以确定将要绘制的是甘特图。</p>
-<p>标题的书写语法如下：</p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/%E7%94%981.png"></p>
-<p><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/%E7%94%982.png"></p>
-<p>dateFormat YYYY-MM-DD规定了时间轴，title （标题文本）表示甘特图标题。</p>
-<p>如需按项目进行划分，需键入section，空一个字符，再输入项目名称的文本（一个section和另一个section之间要空行）。</p>
-<p>每个大项目将拆解为若干个小任务，只需在section之后另起一行，直接输入小项目名称即可。</p>
-<p>更详细的甘特图语法，参见：<a href="http://knsv.github.io/mermaid/#styling39" target="_blank" rel="noopener">http://knsv.github.io/mermaid/#styling39</a></p>
-<h3 id="11-代码"><a href="#11-代码" class="headerlink" title="11 代码"></a>11 代码</h3><p>单行代码使用反单引号 `,即tab键上面的那个键（反单引号也称重音符，是西文字符，主要用于计算机相关领域。位置在键盘中数字键“1”的左边，其上档符号是“~ ”，使用Shift键可以换挡输入。由于计算机显示的原因，反单引号非常容易和单引号 ‘ 混淆。）</p>
-<p>多行代码使用两组，每组3个`，进行包裹，后面加语言名称，进行高亮显示<br><img src="https://raw.githubusercontent.com/fengchunsgit/note/master/imgs/1-1%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE.png"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'markdonw'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>语法主要参考有道笔记:</p>
-<p><a href="http://note.youdao.com/iyoudao/?p=2411" target="_blank" rel="noopener">【简明版】有道云笔记Markdown指南</a></p>
-<p><a href="http://note.youdao.com/iyoudao/?p=2445" target="_blank" rel="noopener">【进阶版】有道云笔记Markdown指南</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/02/10/响应式网站基础/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/10/响应式网站基础/" itemprop="url">响应式网站基础</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T09:35:11+08:00">
-                2017-02-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>响应式网站是一个设计理念，它是多项技术的综合体</p>
-<p><a href="https://alistapart.com/article/Responsive-web-design" target="_blank" rel="noopener">2010 年 <code>Ethan Marcotte</code> 发表了  Responsive web design 一文</a></p>
-<h2 id="响应式网站三要素"><a href="#响应式网站三要素" class="headerlink" title="响应式网站三要素"></a>响应式网站三要素</h2><ul>
-<li>flex image 流动图片</li>
-<li>flexble grid layout 流动网格</li>
-<li>media queries 媒体查询<h2 id="响应式网站优点"><a href="#响应式网站优点" class="headerlink" title="响应式网站优点"></a>响应式网站优点</h2></li>
-<li>减少工作量<ul>
-<li>网站、设计、代码、内容都只需要一份</li>
-<li>多出来的工作量只是js脚本</li>
-</ul>
-</li>
-<li>节省时间</li>
-<li>每个设备都得到正确的设计</li>
-<li>搜索优化</li>
-</ul>
-<h2 id="响应式网站缺点"><a href="#响应式网站缺点" class="headerlink" title="响应式网站缺点"></a>响应式网站缺点</h2><ul>
-<li>会加载更多的样式和脚本资源</li>
-<li>设计比较难精确定位和控制</li>
-<li>老版本浏览器兼容不好</li>
-</ul>
-<h2 id="国内外主流浏览器"><a href="#国内外主流浏览器" class="headerlink" title="国内外主流浏览器"></a>国内外主流浏览器</h2><p>查看浏览器占比，兼容性情况</p>
-<ul>
-<li><a href="https://caniuse.com/" target="_blank" rel="noopener">can i use</a></li>
-<li><a href="https://statcounter.com/" target="_blank" rel="noopener">statecounter</a><h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2></li>
-<li><p>css2 就出现了 </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="site.css" media="screen"/&gt;</span><br><span class="line">&lt;link rel="stylesheet" href="print.css" media="print"/&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>css3中进行了进一步增强，包含了更多的媒体类型和函数</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> all and (min-width:<span class="number">800px</span>) and (orientation: landscaape)&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* only 仅仅，只有</span></span><br><span class="line"><span class="comment">防止老旧的浏览器，不支持带媒体属性的查询，而应用到给定的样式</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>主要的媒体属性：<ul>
-<li>width：视口宽度</li>
-<li>height：视口高度</li>
-<li>device-width：渲染表面的宽度，就是设备屏幕的宽度</li>
-<li>device-height：渲染表面的高度，就是设备屏幕的高度</li>
-<li>orientation：检查设备处于横向还是纵向</li>
-<li>aspect-ratio：基于视口宽度和高度的宽高比。width/height，例如16/9,4/3</li>
-<li>device-aspect-ratio：渲染表面的宽度，就是设备屏幕的宽度</li>
-<li>color：每种颜色的位数bits 如min-color:16位，8位</li>
-<li>resolution：检测屏幕或者打印机的分辨率<h3 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h3></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>layout viewport 布局视口</li>
-<li>visual viewport 可视视口</li>
-<li>ideal viewport 理想视口</li>
-</ul>
-<h2 id="怎样分析设计图"><a href="#怎样分析设计图" class="headerlink" title="怎样分析设计图"></a>怎样分析设计图</h2><ul>
-<li>和设计师，产品经理交流网站如何交互，需求如何体现</li>
-<li>是否有相应的设计规范 字体，颜色，字号，间距等</li>
-<li>什么地方必须100%还原，那些地方可以灵活处理</li>
-<li>前端设计师，要有前端开发功底，前端开发，有一定的设计能力，便于前端设计与前端开发沟通</li>
-</ul>
-<h2 id="设计图案例"><a href="#设计图案例" class="headerlink" title="设计图案例"></a>设计图案例</h2><ul>
-<li>大屏幕 pc和平板用户</li>
-<li>中屏幕 小平板、大屏手机用户</li>
-<li>小屏幕 移动用户</li>
-</ul>
-<h2 id="响应式网站设计原则"><a href="#响应式网站设计原则" class="headerlink" title="响应式网站设计原则"></a>响应式网站设计原则</h2><p>为什么：兼容老的浏览器，让新的浏览器体验更好。移动终端，兼容性问题少一些</p>
-<ul>
-<li><p><strong>progressive enhancement</strong> 渐进增强</p>
-</li>
-<li><p><strong>graceful degradation</strong> 优雅降级</p>
-</li>
-</ul>
-<h3 id="优先小屏幕-or-大屏幕"><a href="#优先小屏幕-or-大屏幕" class="headerlink" title="优先小屏幕 or 大屏幕"></a>优先小屏幕 or 大屏幕</h3><p>根据用户群体和喜好进行选择</p>
-<h3 id="新的创业公司"><a href="#新的创业公司" class="headerlink" title="新的创业公司"></a>新的创业公司</h3><ul>
-<li>pc端：兼容最新chrome，firefox，ie</li>
-<li>移动端：兼容苹果，安卓自带浏览器，QQ浏览器，uc浏览器即可</li>
-</ul>
-<p>优先对最新版本chrome进行调试（调试简单，占比高）</p>
-<h3 id="断点的选择（宽度数值的选择）"><a href="#断点的选择（宽度数值的选择）" class="headerlink" title="断点的选择（宽度数值的选择）"></a>断点的选择（宽度数值的选择）</h3><ul>
-<li><p>不要针对某一特定设备去分类，下列做法不可取：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*iPhone 4 and 4S*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Portrait and Landscape*/</span></span><br><span class="line">@<span class="keyword">media</span> only screen</span><br><span class="line">	and (min-device-width:<span class="number">320px</span>)</span><br><span class="line">	and (max-device-width:<span class="number">480px</span>)</span><br><span class="line">	and (-webkit-min-device-pixel-ratio:<span class="number">2</span>)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*iPhone 5 and 5S*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Portrait and Landscape*/</span></span><br><span class="line">@<span class="keyword">media</span> only screen</span><br><span class="line">	and (min-device-width:<span class="number">320px</span>)</span><br><span class="line">	and (max-device-width:<span class="number">568px</span>)</span><br><span class="line">	and (-webkit-min-device-pixel-ratio:<span class="number">2</span>)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>正确分类</p>
-<ul>
-<li>0-480 小屏幕</li>
-<li>481-800 中屏幕</li>
-<li>801-1400 大屏幕</li>
-<li>1400+ 巨屏幕</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/02/05/vscode好用的插件/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/05/vscode好用的插件/" itemprop="url">vscode好用的插件</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-05T19:15:11+08:00">
-                2017-02-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近在使用 <code>vscode</code> ，记录下 <code>vscode</code> 一些插件及用法。</p>
-<h2 id="1-如何安装插件"><a href="#1-如何安装插件" class="headerlink" title="1 如何安装插件"></a>1 如何安装插件</h2><p>在最左侧的“扩展”中搜索并安装，简单方便，快捷键是<code>ctrl + shift + x</code>。</p>
-<h2 id="2-好用的插件"><a href="#2-好用的插件" class="headerlink" title="2 好用的插件"></a>2 好用的插件</h2><h3 id="2-1-代码拼写检查-Code-Spell-Checker"><a href="#2-1-代码拼写检查-Code-Spell-Checker" class="headerlink" title="2.1 代码拼写检查 Code Spell Checker"></a>2.1 代码拼写检查 Code Spell Checker</h3><p>当你代码中有单词拼写错误时，插件可以给出错误拼写单词的建议。对于没有的单词，也可以添加到词典中。</p>
-<h3 id="2-2-CSS-类名智能提示"><a href="#2-2-CSS-类名智能提示" class="headerlink" title="2.2 CSS 类名智能提示"></a>2.2 CSS 类名智能提示</h3><p>在 <code>HTML</code> 中调用定义好的样式名时，有时需要经常在 <code>HTML</code> 与 <code>CSS</code> 文件之间切换，来回地查看你已定义好的 <code>CSS</code> 类名。</p>
-<p>而有了 IntelliSense for CSS class names in HTML 插件后，你可以在 <code>HTML</code> 中需要调用 <code>CSS</code> 类名的地方，此插件会智能地给你已定义 <code>CSS</code> 类名的提示。</p>
-<h3 id="2-3-必备调试工具-Debugger-for-Chrome"><a href="#2-3-必备调试工具-Debugger-for-Chrome" class="headerlink" title="2.3 必备调试工具 Debugger for Chrome"></a>2.3 必备调试工具 Debugger for Chrome</h3><p>使用了 Debugger for Chrome 后，当代码在 Chrome 中运行后，你可以直接在 VSCode 中加上断点，点击运行后，Chrome 中的页面继续运行，执行到你在 VSCode 中添加的断点后，你可以直接在 VSCode 中进行单步调试。</p>
-<h3 id="2-4-代码检查工具-ESLint"><a href="#2-4-代码检查工具-ESLint" class="headerlink" title="2.4 代码检查工具 ESLint"></a>2.4 代码检查工具 ESLint</h3><p>ESLint 是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码。</p>
-<h3 id="2-5-HTML-CSS-Support"><a href="#2-5-HTML-CSS-Support" class="headerlink" title="2.5 HTML CSS Support"></a>2.5 HTML CSS Support</h3><p>让HTML标签上写class， 智能提示当前项目所支持的样式。</p>
-<h3 id="2-6-VUE插件-vetur"><a href="#2-6-VUE插件-vetur" class="headerlink" title="2.6 VUE插件 vetur"></a>2.6 VUE插件 vetur</h3><p>开发vue时必备，语法高亮、智能感知、Emmet等。</p>
-<h3 id="2-7-文件图标-vscode-icons"><a href="#2-7-文件图标-vscode-icons" class="headerlink" title="2.7 文件图标 vscode-icons"></a>2.7 文件图标 vscode-icons</h3><p>vscode-icons 插件可以实现对各种文件类型的文件前的图标进行优化显示，这样我们在查看长长的文件列表的时候，可以直接通过文件的图标就可以快速知道文件的类型，而不用去看文件的后缀。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/01/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengchunsgit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="fengchunsgit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/30/hello-world/" itemprop="url">Hello World</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-30T21:00:00+08:00">
-                2017-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[LVAR. Width]] 表示变量LVAR的宽度。</span><br><span class="line"></span><br><span class="line">[[This. Width]] 当前元件的宽度</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-1-元件函数"><a href="#5-1-元件函数" class="headerlink" title="5.1 元件函数"></a>5.1 元件函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">This</td>
+<td style="text-align:left">获取当前元件对象。当前元件是指当前添加交互动作的元件。</td>
+</tr>
+<tr>
+<td style="text-align:center">Target</td>
+<td style="text-align:left">获取目标元件对象。目标元件是指当前交互动作控制的元件。</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:left">获取元件对象的X轴坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">y</td>
+<td style="text-align:left">获取元件对象的Y轴坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">width</td>
+<td style="text-align:left">获取元件对象的宽度值。</td>
+</tr>
+<tr>
+<td style="text-align:center">height</td>
+<td style="text-align:left">获取元件对象的高度值。</td>
+</tr>
+<tr>
+<td style="text-align:center">scrollX</td>
+<td style="text-align:left">获取元件对象的水平滚动距离（当前仅限动态面板）。</td>
+</tr>
+<tr>
+<td style="text-align:center">scrollY</td>
+<td style="text-align:left">获取元件对象的垂直滚动距离（当前仅限动态面板）。</td>
+</tr>
+<tr>
+<td style="text-align:center">text</td>
+<td style="text-align:left">获取元件对象的文本文字。</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:left">获取元件对象的自定义名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">top</td>
+<td style="text-align:left">获取元件对象的上边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">left</td>
+<td style="text-align:left">获取元件对象的左边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">right</td>
+<td style="text-align:left">获取元件对象的右边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">bottom</td>
+<td style="text-align:left">获取元件对象的下边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">opacity</td>
+<td style="text-align:left">获取元件对象的不透明比例。</td>
+</tr>
+<tr>
+<td style="text-align:center">rotation</td>
+<td style="text-align:left">获取元件对象的旋转角度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-2-鼠标指针函数"><a href="#5-2-鼠标指针函数" class="headerlink" title="5.2 鼠标指针函数"></a>5.2 鼠标指针函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Cursor.x</td>
+<td style="text-align:left">鼠标指针在页面中位置的X轴坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">Cursor.y</td>
+<td style="text-align:left">鼠标指针在页面中位置的Y轴坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragX</td>
+<td style="text-align:left">鼠标指针沿X轴拖动元件时的瞬间(0.01秒)拖动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragY</td>
+<td style="text-align:left">鼠标指针沿Y轴拖动元件时的瞬间(0.01秒)拖动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">TotalDragX</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的X轴移动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">TotalDragY</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的Y轴移动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragTime</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的总时长。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-3-Axure-RP窗口函数"><a href="#5-3-Axure-RP窗口函数" class="headerlink" title="5.3 Axure RP窗口函数"></a>5.3 Axure RP窗口函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Window.width</td>
+<td style="text-align:left">打开原型页面的浏览器当前宽度。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.height</td>
+<td style="text-align:left">打开原型页面的浏览器当前高度。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.scrollX</td>
+<td style="text-align:left">浏览器中页面水平滚动的距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.scrollY</td>
+<td style="text-align:left">浏览器中页面垂直滚动的距离。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-4-页面函数"><a href="#5-4-页面函数" class="headerlink" title="5.4 页面函数"></a>5.4 页面函数</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">PageName</td>
+<td style="text-align:left">获取当前页面的名称。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-5-数字函数"><a href="#5-5-数字函数" class="headerlink" title="5.5 数字函数"></a>5.5 数字函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">toExponential(decimalPoints)</td>
+<td style="text-align:left">把数值转换为指数计数法。参数：decimalPoints为保留小数的位数。</td>
+</tr>
+<tr>
+<td style="text-align:center">toFixed(decimalPoints)</td>
+<td style="text-align:left">将一个数字转为保留指定位数的小数，小数位数超出指定位数时进行四舍五入。参数：decimalPoints为保留小数的位数。</td>
+</tr>
+<tr>
+<td style="text-align:center">toPrecision(length)</td>
+<td style="text-align:left">把数字格式化为指定的长度。参数：length为格式化后的数字长度，小数点不计入长度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-6-数学函数"><a href="#5-6-数学函数" class="headerlink" title="5.6 数学函数"></a>5.6 数学函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Math.abs(x)</td>
+<td style="text-align:left">计算参数数值的绝对值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.acos(x)</td>
+<td style="text-align:left">获取一个数值的反余弦弧度值，其范围是 0~ pi 。 参数：x为数值，范围在 -1~1 之间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.asin(x)</td>
+<td style="text-align:left">获取一个数值的反正弦值。 参数：x为数值，范围在 -1~1 之间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.atan(x)</td>
+<td style="text-align:left">获取一个数值的反正切值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.atan2(y,x)</td>
+<td style="text-align:left">获取某一点(x,y)的角度值。 参数：“x,y”为点的坐标数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.ceil(x)</td>
+<td style="text-align:left">向上取整函数，获取大于或者等于指定数值的最小整数。 参数：x为数值</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.cos(x)</td>
+<td style="text-align:left">余弦函数。 参数：x为弧度数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.exp(x)</td>
+<td style="text-align:left">指数函数，计算以e为底的指数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.floor(x)</td>
+<td style="text-align:left">向下取整函数，获取小于或者等于指定数值的最大整数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.log(x)</td>
+<td style="text-align:left">对数函数，计算以e为底的对数值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.max(x,y)</td>
+<td style="text-align:left">获取参数中的最大值。 参数：“x,y”表示多个数值，而非2个数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.min(x,y)</td>
+<td style="text-align:left">获取参数中的最小值。 参数：“x,y”表示多个数值，而非2个数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.pow(x,y)</td>
+<td style="text-align:left">幂函数，计算x的y次幂。 参数：x不能为负数且y为小数，或者x为0且y小于等于0。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.random()</td>
+<td style="text-align:left">随机数函数，返回一个0~1之间的随机数。 示例：获取10-15之间的随机小数，计算公式为Math.random()*5+10。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.sin(x)</td>
+<td style="text-align:left">正弦函数。 参数：x为弧度数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.sqrt(x)</td>
+<td style="text-align:left">平方根函数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.tan(x)</td>
+<td style="text-align:left">正切函数。 参数：x为弧度数值。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-7-时间函数"><a href="#5-7-时间函数" class="headerlink" title="5.7 时间函数"></a>5.7 时间函数</h3><style>
+table th:first-of-type {
+    width: 50%;
+}
+table th:nth-of-type(2) {
+    width: 50%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Now</td>
+<td style="text-align:left">获取当前计算机系统日期对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">GenDate</td>
+<td style="text-align:left">获取原型生成日期对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDate()</td>
+<td style="text-align:left">获取日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDay()</td>
+<td style="text-align:left">获取日期对象“星期”部分的数值(0 ~ 6)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDayOfWeek()</td>
+<td style="text-align:left">获取日期对象“星期”部分的英文名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">getFullYear()</td>
+<td style="text-align:left">获取日期对象“年份”部分四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getHours()</td>
+<td style="text-align:left">获取日期对象“小时”部分数值(0 ~ 23)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMilliseconds()</td>
+<td style="text-align:left">获取日期对象的毫秒数(0 ~ 999)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMinutes()</td>
+<td style="text-align:left">获取日期对象“分钟”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMonth()</td>
+<td style="text-align:left">获取日期对象“月份”部分的数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMonthName()</td>
+<td style="text-align:left">获取日期对象“月份”部分的英文名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">getSeconds()</td>
+<td style="text-align:left">获取日期对象“秒数”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getTime()</td>
+<td style="text-align:left">获取当前日期对象中的时间值。该时间值表示从1970年1月1日00:00:00开始，到当前日期对象时，所经过的毫秒数，以格林威治时间为准。</td>
+</tr>
+<tr>
+<td style="text-align:center">getTimezoneOffset()</td>
+<td style="text-align:left">获取世界标准时间(UTC)与当前主机时间之间的分钟差值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCDate()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCDay()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“星期”部分的数值(0 ~ 6)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCFullYear()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“年份”部分四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCHours()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“小时”部分数值(0 ~ 23)</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMilliseconds()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象的毫秒数(0 ~ 999)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMinutes()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“分钟”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMonth()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“月份”部分的数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCSeconds()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“秒数”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Date.parse(datestring)</td>
+<td style="text-align:left">用于分析一个包含日期的字符串，并返回该日期与1970年1月1日00:00:00之间相差的毫秒数 参数：datestring为日期格式的字符串，格式为：yyyy/mm/dd hh:mm:ss。</td>
+</tr>
+<tr>
+<td style="text-align:center">toDateString()</td>
+<td style="text-align:left">以字符串的形式获取一个日期。</td>
+</tr>
+<tr>
+<td style="text-align:center">toISOString()</td>
+<td style="text-align:left">获取当前日期对象的IOS格式的日期字串，格式：YYYY-MM-DDTHH:mm:ss.sssZ。</td>
+</tr>
+<tr>
+<td style="text-align:center">toJSON()</td>
+<td style="text-align:left">获取当前日期对象的JSON格式的日期字串，格式： YYYY-MM-DDTHH:mm:ss.sssZ。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLocaleDateString()</td>
+<td style="text-align:left">以字符串的形式获取本地化当前日期对象。并且只包含“年月日”部分的短日期信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLocaleTimeString()</td>
+<td style="text-align:left">以字符串的形式获取本地化当前日期对象。并且只包含“时分秒”部分的短日期信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">toUTCString()</td>
+<td style="text-align:left">以字符串的形式获取相对于当前日期对象的世界标准时间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Date.UTC<br>(year,month,day,hour,min,sec,millisec)</td>
+<td style="text-align:left">获取相对于1970 年 1 月 1 日 00:00:00的世界标准时间，与指定日期对象之间相差的毫秒数。 参数：组成指定日期对象的年、月、日、时、分、秒以及毫秒的数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">valueOf()</td>
+<td style="text-align:left">获取当前日期对象的原始值。</td>
+</tr>
+<tr>
+<td style="text-align:center">addYears(years)</td>
+<td style="text-align:left">将指定的年份数加到当前日期对象上，获取一个新的日期对象。 参数：years为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMonths(months)</td>
+<td style="text-align:left">将指定的月份数加到当前日期对象上，获取一个新的日期对象。 参数：months为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addDays(days)</td>
+<td style="text-align:left">将指定的天数加到当前日期对象上，获取一个新的日期对象。 参数：days为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addHours(hours)</td>
+<td style="text-align:left">将指定的小时数加到当前日期对象上，获取一个新的日期对象。 参数：hours为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMinutes(minutes)</td>
+<td style="text-align:left">将指定的分钟数加到当前日期对象上，获取一个新的日期对象。 参数：minutes为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addSeconds(seconds)</td>
+<td style="text-align:left">将指定的秒数加到当前日期对象上，获取一个新的日期对象。 参数：seconds为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMilliseconds(ms)</td>
+<td style="text-align:left">将指定的毫秒数加到当前日期对象上，获取一个新的日期对象。 参数：ms为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">Year</td>
+<td style="text-align:left">获取系统日期对象“年份”部分的四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Month</td>
+<td style="text-align:left">获取系统日期对象“月份”部分数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Day</td>
+<td style="text-align:left">获取系统日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Hours</td>
+<td style="text-align:left">获取系统日期对象“小时”部分数值(0 ~ 23)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Minutes</td>
+<td style="text-align:left">获取系统日期对象“分钟”部分数值(0 ~ 59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Seconds</td>
+<td style="text-align:left">获取系统日期对象“秒数”部分数值(0 ~ 59)。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-8-字符串函数"><a href="#5-8-字符串函数" class="headerlink" title="5.8 字符串函数"></a>5.8 字符串函数</h3><style>
+table th:first-of-type {
+    width: 40%;
+}
+table th:nth-of-type(2) {
+    width: 60%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">length</td>
+<td style="text-align:left">获取当前文本对象的长度，即字符个数；1个汉字的长度按1计算。</td>
+</tr>
+<tr>
+<td style="text-align:center">charAt(index)</td>
+<td style="text-align:left">获取当前文本对象中指定位置的字符； 参数：index为大于等于0的整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">charCodeAt(index)</td>
+<td style="text-align:left">获取当前文本对象中指定位置字符的Unicode编码（中文编码段19968 ~ 40622）；字符起始位置从0开始。 参数：index为大于等于0的整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">concat(‘string’)</td>
+<td style="text-align:left">将当前文本对象与另一个字符串组合。 参数：string为组合在后方的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">indexOf(‘searchValue’,start)</td>
+<td style="text-align:left">从左至右获取查询字符串在当前文本对象中首次出现的位置。未查询到时返回值为-1。 参数：searchValue为查询的字符串；start为查询的起始位置。该参数可省略，官方未给出此参数，经测试可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">lastIndexOf(‘searchvalue’,start)</td>
+<td style="text-align:left">从右至左获取查询字符串在当前文本对象中首次出现的位置。未查询到时返回值为-1。 参数：searchValue为查询的字符串；start为查询的起始位置。该参数可省略，官方未给出此参数，经测试可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">replace(‘searchvalue’,’newvalue’)</td>
+<td style="text-align:left">用新的字符串替换当前文本对象中指定的字符串。 参数：searchvalue为被替换的字符串；newvalue为新文本对象或字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">slice(start,end)</td>
+<td style="text-align:left">从当前文本对象中截取从指定起始位置开始到终止位置之前的字符串。 参数：start为被截取部分的起始位置，该数值可为负数；end为被截取部分的终止位置，该数值可为负数。该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">split(‘separator’,limit)</td>
+<td style="text-align:left">将当前文本对象中与分隔字符相同的字符转为“,”，形成多组字符串，并返回从左开始的指定组数。 参数：separator为分隔字符，分隔字符可以为空，为空时将分隔每个字符为一组；limit为返回组数的数值，该参数可以省略，省略该参数则返回所有字符串组。</td>
+</tr>
+<tr>
+<td style="text-align:center">substr(start,length)</td>
+<td style="text-align:left">从当前文本对象中指定起始位置开始截取一定长度的字符串。 参数：start为被截取部分的起始位置；length为被截取部分的长度，该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">substring(from,to)</td>
+<td style="text-align:left">从当前文本对象中截取从指定位置到另一指定位置区间的字符串。右侧位置不截取。 参数：from为指定区间的起始位置；to为指定区间的终止位置，该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLowerCase()</td>
+<td style="text-align:left">将文本对象中所有的大写字母转换为小写字母。</td>
+</tr>
+<tr>
+<td style="text-align:center">toUpperCase()</td>
+<td style="text-align:left">将当前文本对象中所有的小写字母转换为大写字母。</td>
+</tr>
+<tr>
+<td style="text-align:center">trim()</td>
+<td style="text-align:left">去除当前文本对象两端的空格。</td>
+</tr>
+<tr>
+<td style="text-align:center">toString()</td>
+<td style="text-align:left">将一个逻辑值转换为字符串。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-9-中继器函数"><a href="#5-9-中继器函数" class="headerlink" title="5.9 中继器函数"></a>5.9 中继器函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Repeater</td>
+<td style="text-align:left">中继器的对象。Item.Repeater即为Item所在的中继器对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">visibleItemCount</td>
+<td style="text-align:left">中继器项目列表中可见项的数量。比如：项目列表共有15项，分页显示为每页6项。当项目列表在第1、2页时，可见项数量为6；当项目列表在第3页时，可见项数量为3。</td>
+</tr>
+<tr>
+<td style="text-align:center">itemCount</td>
+<td style="text-align:left">获取中继器项目列表的总数量，或者叫加载项数量。默认情况下项目列表的总数量会与中继器数据集中的数据行数量一致，但是，如果进行了筛选，项目列表的总数量则是筛选后的数量，这个数量不受分页影响。</td>
+</tr>
+<tr>
+<td style="text-align:center">dataCount</td>
+<td style="text-align:left">获取中继器数据集中数据行的总数量。</td>
+</tr>
+<tr>
+<td style="text-align:center">pageCount</td>
+<td style="text-align:left">获取中继器分页的总数量，即能够获取分页后共有多少页。</td>
+</tr>
+<tr>
+<td style="text-align:center">pageIndex</td>
+<td style="text-align:left">获取中继器项目列表当前显示内容的页码。</td>
+</tr>
+<tr>
+<td style="text-align:center">Item</td>
+<td style="text-align:left">获取数据集一行数据的集合，即数据行的对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">TargetItem</td>
+<td style="text-align:left">目标数据行的对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">Item.列名</td>
+<td style="text-align:left">获取数据行中指定列的值。</td>
+</tr>
+<tr>
+<td style="text-align:center">index</td>
+<td style="text-align:left">获取数据行的索引编号，编号起始为1，由上至下每行递增1。</td>
+</tr>
+<tr>
+<td style="text-align:center">isFirst</td>
+<td style="text-align:left">判断数据行是否为第1行；如果是第1行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isLast</td>
+<td style="text-align:left">判断数据行是否为最末行；如果是最末行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isEven</td>
+<td style="text-align:left">判断数据行是否为偶数行；如果是偶数行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isOdd</td>
+<td style="text-align:left">判断数据行是否为奇数行；如果是奇数行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isMarked</td>
+<td style="text-align:left">判断数据行是否为被标记；如果被标记，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isVisible</td>
+<td style="text-align:left">判断数据行是否为可见行；如果是可见行，返回值为“True”，否则为“False”。</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -2020,7 +1263,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2066,7 +1309,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2330,323 +1573,6 @@
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 
