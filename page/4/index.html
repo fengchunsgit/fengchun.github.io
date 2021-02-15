@@ -291,6 +291,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/27/text/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fengchunsgit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fengchunsgit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/27/text/" itemprop="url">text&font 文字与字体</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T16:39:59+08:00">
+                2017-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="4-1-CSS3文字与字体-text-overflow-与-word-wrap"><a href="#4-1-CSS3文字与字体-text-overflow-与-word-wrap" class="headerlink" title="4.1 CSS3文字与字体 text-overflow 与 word-wrap"></a>4.1 CSS3文字与字体 text-overflow 与 word-wrap</h1><p><code>text-overflow</code>用来设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
+<p>语法：</p>
+<p><img src="images/text-overflow.jpg" alt="text-overflow"></p>
+<p>但是<code>text-overflow</code>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（<code>white-space:nowrap</code>）及溢出内容为隐藏（<code>overflow:hidden</code>），只有这样才能实现溢出文本显示省略号的效果，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>;</span><br></pre></td></tr></table></figure>
+<p>同时，<code>word-wrap</code>也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。</p>
+<p>语法：</p>
+<p><img src="images/word-wrap.jpg" alt="word-warp"></p>
+<p><code>normal</code>为浏览器默认值，<code>break-word</code>设置在长单词或 <code>URL</code>地址内部进行换行，此属性不常用，用浏览器默认值即可。</p>
+<h1 id="4-2-CSS3文字与字体-嵌入字体-font-face"><a href="#4-2-CSS3文字与字体-嵌入字体-font-face" class="headerlink" title="4.2 CSS3文字与字体 嵌入字体@font-face"></a>4.2 CSS3文字与字体 嵌入字体@font-face</h1><p><code>@font-face</code>能够加载服务器端的字体文件，让浏览器端可以显示用户电脑里没有安装的字体。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family </span>: 字体名称;</span><br><span class="line">    <span class="attribute">src </span>: 字体文件在服务器上的相对或绝对路径;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样设置之后，就可以像使用普通字体一样在（font-*）中设置字体样式。</p>
+<p>比如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size </span>:<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">font-family </span>: <span class="string">"My Font"</span>;</span><br><span class="line">    <span class="comment">/*必须项，设置@font-face中font-family同样的值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-3-CSS3文字与字体-文本阴影text-shadow"><a href="#4-3-CSS3文字与字体-文本阴影text-shadow" class="headerlink" title="4.3 CSS3文字与字体 文本阴影text-shadow"></a>4.3 CSS3文字与字体 文本阴影text-shadow</h1><p><code>text-shadow</code>可以用来设置文本的阴影效果。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: <span class="selector-tag">X-Offset</span> <span class="selector-tag">Y-Offset</span> <span class="selector-tag">blur</span> <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure></p>
+<p><code>X-Offset</code>：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      </p>
+<p><code>Y-Offset</code>：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
+<p><code>Blur</code>：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
+<p><code>Color</code>：是指阴影的颜色，其可以使用<code>rgba</code>色。</p>
+<p>比如，我们可以用下面代码实现设置阴影效果。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/24/CSS3颜色/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1905,7 +2066,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
