@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/27/text/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -278,7 +278,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/28/CSS3与背景相关的样式/" itemprop="url">CSS3与背景相关的样式</a></h2>
+                <a class="post-title-link" href="/2017/03/27/text/" itemprop="url">text&font 文字与字体</a></h2>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T09:46:53+08:00">
-                2017-03-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T16:39:59+08:00">
+                2017-03-27
               </time>
             
 
@@ -352,78 +352,26 @@
       
         
           
-            <h1 id="5-1-CSS3背景-background-origin"><a href="#5-1-CSS3背景-background-origin" class="headerlink" title="5.1 CSS3背景 background-origin"></a>5.1 CSS3背景 background-origin</h1><p>设置元素背景图片的<strong>原始起始位置</strong>。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-origin ： border-box | padding-box | content-box;</span><br></pre></td></tr></table></figure></p>
-<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
-<p>效果如下：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/background-origin.jpg" alt="background-origin"></p>
-<p>需要注意的是，如果背景不是<code>no-repeat</code>，这个属性无效，它会从边框开始显示。</p>
-<h1 id="5-2-CSS3背景-background-clip"><a href="#5-2-CSS3背景-background-clip" class="headerlink" title="5.2 CSS3背景 background-clip"></a>5.2 CSS3背景 background-clip</h1><p>用来将背景图片做适当的裁剪以适应实际需要。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-clip ： border-box | padding-box | content-box | no-clip</span><br></pre></td></tr></table></figure></p>
-<p>参数分别表示从<code>边框</code>、或<code>内填充</code>，或者<code>内容区域</code>向外裁剪背景。<code>no-clip</code>表示不裁切，和参数<code>border-box</code>显示同样的效果。<code>backgroud-clip</code>默认值为<code>border-box</code>。</p>
-<p>效果如下图所示：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/border-clip.jpg" alt="border-clip"></p>
-<h1 id="5-3-CSS3背景-background-size"><a href="#5-3-CSS3背景-background-size" class="headerlink" title="5.3 CSS3背景 background-size"></a>5.3 CSS3背景 background-size</h1><p>设置背景图片的大小，以长度值或百分比显示，还可以通过 <code>cover</code> 和 <code>contain</code> 来对图片进行伸缩。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</span><br></pre></td></tr></table></figure></p>
-<p>取值说明：</p>
-<ul>
-<li><p>1、<code>auto</code> ：默认值，不改变背景图片的原始高度和宽度；</p>
-</li>
-<li><p>2、&lt;长度值&gt;：成对出现如 <code>200px 50px</code>，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；</p>
-</li>
-<li><p>3、&lt;百分比&gt;：<code>0％~100％</code> 之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上；</p>
-</li>
-<li><p>4、<code>cover</code> ：顾名思义为覆盖，即将背景图片等比缩放以<code>填满整个容器</code>；</p>
-</li>
-<li><p>5、<code>contain</code> ：容纳，即将背景图片等比缩放至<code>某一边紧贴容器边缘为止</code>。</p>
-</li>
-</ul>
-<h1 id="5-4-CSS3背景-multiple-backgrounds"><a href="#5-4-CSS3背景-multiple-backgrounds" class="headerlink" title="5.4 CSS3背景 multiple backgrounds"></a>5.4 CSS3背景 multiple backgrounds</h1><p>多重背景，也就是<code>CSS2</code>里<code>background</code>的属性外加<code>origin</code>、<code>clip</code>和<code>size</code>组成的新<code>background</code>的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如<code>background-repeat</code>只有一个），表明所有背景图片应用该属性值。</p>
-<p>语法缩写如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...</span><br></pre></td></tr></table></figure></p>
-<p>可以把上面的缩写拆解成以下形式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:url1</span>,<span class="selector-tag">url2</span>,...,<span class="selector-tag">urlN</span>;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-repeat</span> : <span class="selector-tag">repeat1</span>,<span class="selector-tag">repeat2</span>,...,<span class="selector-tag">repeatN</span>;</span><br><span class="line"><span class="selector-tag">backround-position</span> : <span class="selector-tag">position1</span>,<span class="selector-tag">position2</span>,...,<span class="selector-tag">positionN</span>;</span><br><span class="line"><span class="selector-tag">background-size</span> : <span class="selector-tag">size1</span>,<span class="selector-tag">size2</span>,...,<span class="selector-tag">sizeN</span>;</span><br><span class="line"><span class="selector-tag">background-attachment</span> : <span class="selector-tag">attachment1</span>,<span class="selector-tag">attachment2</span>,...,<span class="selector-tag">attachmentN</span>;</span><br><span class="line"><span class="selector-tag">background-clip</span> : <span class="selector-tag">clip1</span>,<span class="selector-tag">clip2</span>,...,<span class="selector-tag">clipN</span>;</span><br><span class="line"><span class="selector-tag">background-origin</span> : <span class="selector-tag">origin1</span>,<span class="selector-tag">origin2</span>,...,<span class="selector-tag">originN</span>;</span><br><span class="line"><span class="selector-tag">background-color</span> : <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<ul>
-<li>1、用逗号隔开每组 <code>background</code> 的缩写值；</li>
-<li>2、如果有 <code>size</code> 值，需要紧跟 <code>position</code> 并且用 <code>&quot;/&quot;</code> 隔开，<code>background</code>值可以为；</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-position:left top,right bottom //左上角，右下角等</span><br></pre></td></tr></table></figure>
-<ul>
-<li>3、如果有多个背景图片，而其他属性只有一个（例如 <code>background-repeat</code> 只有一个），表明所有背景图片应用该属性值。</li>
-<li>4、<code>background-color</code> 只能设置一个。<br>举例：</li>
-</ul>
-<p>有三张单独的图片：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/poker7.jpg" alt="poker7"></p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/poker8.jpg" alt="poker8"></p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/poker9.jpg" alt="poker9"></p>
-<p>使用多背景技术实现：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/poker.jpg" alt="poker"></p>
-<h1 id="练习制作如下一个导航条"><a href="#练习制作如下一个导航条" class="headerlink" title="练习制作如下一个导航条"></a>练习制作如下一个导航条</h1><p><img src="//fengchunsgit.github.io/2017/03/28/CSS3与背景相关的样式/nav.jpg" alt="nav"></p>
-<p><a href="nav.html">源码</a></p>
-<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
-<li>1、制作导航圆角</li>
-</ul>
-<blockquote>
-<p>提示：使用border-radius实现圆角</p>
-</blockquote>
-<ul>
-<li>2、制作导航立体风格</li>
-</ul>
-<blockquote>
-<p>提示：使用box-shadow实现立体风格</p>
-</blockquote>
-<ul>
-<li>3、制作导航分隔线</li>
-</ul>
-<blockquote>
-<p>提示：使用渐变与伪元素制作</p>
-</blockquote>
-<ul>
-<li>4、删除第一个和最后一个导航分隔线</li>
-</ul>
-<blockquote>
-<p>提示：使用伪元素删除第一个和最后一个分隔线</p>
-</blockquote>
+            <h1 id="4-1-CSS3文字与字体-text-overflow-与-word-wrap"><a href="#4-1-CSS3文字与字体-text-overflow-与-word-wrap" class="headerlink" title="4.1 CSS3文字与字体 text-overflow 与 word-wrap"></a>4.1 CSS3文字与字体 text-overflow 与 word-wrap</h1><p><code>text-overflow</code>用来设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
+<p>语法：</p>
+<p><img src="//fengchunsgit.github.io/2017/03/27/text/text-overflow.jpg" alt="text-overflow"></p>
+<p>但是<code>text-overflow</code>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（<code>white-space:nowrap</code>）及溢出内容为隐藏（<code>overflow:hidden</code>），只有这样才能实现溢出文本显示省略号的效果，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>;</span><br></pre></td></tr></table></figure>
+<p>同时，<code>word-wrap</code>也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。</p>
+<p>语法：</p>
+<p><img src="//fengchunsgit.github.io/2017/03/27/text/word-wrap.jpg" alt="word-warp"></p>
+<p><code>normal</code>为浏览器默认值，<code>break-word</code>设置在长单词或 <code>URL</code>地址内部进行换行，此属性不常用，用浏览器默认值即可。</p>
+<h1 id="4-2-CSS3文字与字体-嵌入字体-font-face"><a href="#4-2-CSS3文字与字体-嵌入字体-font-face" class="headerlink" title="4.2 CSS3文字与字体 嵌入字体@font-face"></a>4.2 CSS3文字与字体 嵌入字体@font-face</h1><p><code>@font-face</code>能够加载服务器端的字体文件，让浏览器端可以显示用户电脑里没有安装的字体。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family </span>: 字体名称;</span><br><span class="line">    <span class="attribute">src </span>: 字体文件在服务器上的相对或绝对路径;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样设置之后，就可以像使用普通字体一样在（font-*）中设置字体样式。</p>
+<p>比如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size </span>:<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">font-family </span>: <span class="string">"My Font"</span>;</span><br><span class="line">    <span class="comment">/*必须项，设置@font-face中font-family同样的值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-3-CSS3文字与字体-文本阴影text-shadow"><a href="#4-3-CSS3文字与字体-文本阴影text-shadow" class="headerlink" title="4.3 CSS3文字与字体 文本阴影text-shadow"></a>4.3 CSS3文字与字体 文本阴影text-shadow</h1><p><code>text-shadow</code>可以用来设置文本的阴影效果。</p>
+<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: <span class="selector-tag">X-Offset</span> <span class="selector-tag">Y-Offset</span> <span class="selector-tag">blur</span> <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure></p>
+<p><code>X-Offset</code>：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      </p>
+<p><code>Y-Offset</code>：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
+<p><code>Blur</code>：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
+<p><code>Color</code>：是指阴影的颜色，其可以使用<code>rgba</code>色。</p>
+<p>比如，我们可以用下面代码实现设置阴影效果。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span></span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -463,7 +411,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/33/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/33/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -509,7 +457,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

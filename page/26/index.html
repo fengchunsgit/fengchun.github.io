@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/06/16/Golang开发环境搭建/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/08/CSS3用户界面与其他重要属性/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -278,7 +278,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/Golang开发环境搭建/" itemprop="url">Golang开发环境搭建</a></h2>
+                <a class="post-title-link" href="/2017/04/08/CSS3用户界面与其他重要属性/" itemprop="url">CSS3用户界面与其他重要属性</a></h2>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-16T11:58:40+08:00">
-                2017-06-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T19:41:40+08:00">
+                2017-04-08
               </time>
             
 
@@ -313,8 +313,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Golang/" itemprop="url" rel="index">
-                    <span itemprop="name">Golang</span>
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
                   </a>
                 </span>
 
@@ -352,27 +352,109 @@
       
         
           
-            <h1 id="go安装"><a href="#go安装" class="headerlink" title="go安装"></a>go安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li>官网下载</li>
-<li><a href="https://studygolang.com/dl" target="_blank" rel="noopener">studyGolang下载</a></li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>windos 默认安装在<code>C:/Go/</code>目录下，要将<code>path</code>添加上</li>
-<li>配置<code>$GOROOT</code></li>
-</ul>
-<p><code>GOROOT</code>指向Go开发包的安装目录。从Go 1.0开始，不必显示地设置<code>GOROOT</code>环境变量。Windows安装包将会自动设置<code>GOROOT</code>，默认装在<code>C:\Go</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOROOT=C:\Go\</span><br></pre></td></tr></table></figure></p>
-<p>而在<code>*nix</code>环境下，下载Go安装包并解压在<code>/usr/local/</code>目录下，然后把<code>/usr/local/go/bin</code>加入<code>PATH</code>环境变量即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/go/bin</span><br></pre></td></tr></table></figure></p>
-<p>如果Go安装包没有安装在默认的目录下<code>（Windows为C:\Go，*nix为/usr/local/go）</code>，则需要手动设置<code>GOROOT</code>，举个例子<code>（*nix）</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GOROOT=<span class="variable">$HOME</span>/go</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>配置<code>$GOPATH</code></li>
-</ul>
-<p><code>GOPATH</code>指定了Go工程目录，包含 <code>src</code> ，<code>pkg</code> 和 <code>bin</code> 三个子目录。这是开发 Go 程序时，唯一需要显示设置的环境变量。当使用go get目录下载Go第三方程序包时，也会安装在这个目录下。此外，为了方便，要记得把<code>$GOPATH/bin</code>也加到<code>PATH</code>环境变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:$GOPATH/bin</span><br></pre></td></tr></table></figure></p>
-<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello,world"></a>hello,world</h2><p>建立hello.go<br><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fmt.Println(<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">go run hello.go</span><br><span class="line"></span><br><span class="line">hello //输出</span><br></pre></td></tr></table></figure>
-<h1 id="go开发利器vscode"><a href="#go开发利器vscode" class="headerlink" title="go开发利器vscode"></a>go开发利器vscode</h1><h2 id="安装vscode插件go"><a href="#安装vscode插件go" class="headerlink" title="安装vscode插件go"></a>安装vscode插件go</h2><blockquote>
-<p>alt+左键点击，进行跳转</p>
-</blockquote>
-<h2 id="Go开发相关配置"><a href="#Go开发相关配置" class="headerlink" title="Go开发相关配置"></a>Go开发相关配置</h2><p>setting.json中进行相关设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    &quot;files.autoSave&quot;: &quot;onFocusChange&quot;,</span><br><span class="line">    &quot;go.buildOnSave&quot;: true,</span><br><span class="line">    &quot;go.lintOnSave&quot;: true,</span><br><span class="line">    &quot;go.vetOnSave&quot;: true,</span><br><span class="line">    &quot;go.buildFlags&quot;: [],</span><br><span class="line">    &quot;go.lintFlags&quot;: [],</span><br><span class="line">    &quot;go.vetFlags&quot;: [],</span><br><span class="line">    &quot;go.useCodeSnippetsOnFunctionSuggest&quot;: false,</span><br><span class="line">    &quot;go.formatOnSave&quot;: true,</span><br><span class="line">    &quot;go.formatTool&quot;: &quot;goreturns&quot;,</span><br><span class="line">    &quot;go.goroot&quot;: &quot;C:\\go&quot;,</span><br><span class="line">    &quot;go.gopath&quot;: &quot;D:\\go&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <h1 id="自由缩放属性resize"><a href="#自由缩放属性resize" class="headerlink" title="自由缩放属性resize"></a>自由缩放属性resize</h1><p>为了增强用户体验，CSS3增加了很多新的属性，其中<code>resize</code>就是一个重要的属性，它允许用户通过拖动的方式来修改元素的尺寸来改变元素的大小。任何拥有<code>overflow</code>属性的任何容器元素都可以使用。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize: none | both | horizontal | vertical | inherit</span><br></pre></td></tr></table></figure>
+<h2 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h2><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>属性值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>用户不能拖动元素修改尺寸大小。</td>
+</tr>
+<tr>
+<td><code>both</code></td>
+<td>用户可以拖动元素，同时修改元素的宽度和高度</td>
+</tr>
+<tr>
+<td><code>horizontal</code></td>
+<td>用户可以拖动元素，仅可以修改元素的宽度，但不能修改元素的高度。</td>
+</tr>
+<tr>
+<td><code>vertical</code></td>
+<td>用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。</td>
+</tr>
+<tr>
+<td><code>inherit</code></td>
+<td>继承父元素的resize属性值。</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<p>通过<code>resize</code>属性，让文本域可以沿水平方向拖大。代码为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-moz-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-o-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-ms-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">resize</span>: horizontal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3外轮廓属性"><a href="#CSS3外轮廓属性" class="headerlink" title="CSS3外轮廓属性"></a>CSS3外轮廓属性</h1><p>外轮廓<code>outline</code>在页面中呈现的效果和边框<code>border</code>呈现的效果极其相似，但和元素边框<code>border</code>完全不同，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，<code>只有元素获取到焦点或者被激活时呈现</code>。</p>
+<p><code>outline</code>属性早在CSS2中就出现了，主要是用来在元素周围绘制一条轮廓线，可以起到突出元素的作用。但是并未得到各主流浏览器的广泛支持，在CSS3中对<code>outline</code>作了一定的扩展，在以前的基础上增加新特性。</p>
+<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit</span><br></pre></td></tr></table></figure>
+<p>从语法中可以看出<code>outline</code>和<code>border</code>边框属性的使用方法极其类似。<code>outline-color</code>相当于<code>border-color、outline-style</code>相当于<code>border-style</code>，而<code>outline-width</code>相当于<code>border-width</code>，只不过CSS3给outline属性增加了一个<code>outline-offset</code>属性。</p>
+<h2 id="属性值-1"><a href="#属性值-1" class="headerlink" title="属性值"></a>属性值</h2><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>属性值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>outline-color</td>
+<td>定义轮廓线的颜色，属性值为CSS中定义的颜色值。在实际应用中，可以将此参数省略，省略时此参数的默认值为黑色。</td>
+</tr>
+<tr>
+<td>outline-style</td>
+<td>定义轮廓线的样式，属性为CSS中定义线的样式。在实际应用中，可以将此参数省略，省略时此参数的默认值为none，省略后不对该轮廓线进行任何绘制。</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>定义轮廓线的宽度，属性值可以为一个宽度值。在实际应用中，可以将此参数省略，省略时此参数的默认值为medium，表示绘制中等宽度的轮廓线。</td>
+</tr>
+<tr>
+<td>outline-offset</td>
+<td>定义轮廓边框的偏移位置的数值，此值可以取负数值。当此参数的值为正数值，表示轮廓边框向外偏离多少个像素；当此参数的值为负数值，表示轮廓边框向内偏移多少个像素。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>元素继承父元素的outline效果。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS生成内容content"><a href="#CSS生成内容content" class="headerlink" title="CSS生成内容content"></a>CSS生成内容content</h1><p>在Web中插入内容，在CSS2.1时代依靠的是JavaScript来实现。但进入CSS3进代之后我们可以通过CSS3的伪类<code>:before</code>，<code>:after</code>和CSS3的伪元素<code>::before</code>、<code>::after</code>来实现，其关键是依靠CSS3中的<code>content</code>属性来实现。不过这个属性对于<code>img</code>和<code>input</code>元素不起作用。</p>
+<p><code>conten</code>t配合CSS的伪类或者伪元素，一般可以做以下四件事情：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>不生成任何内容</td>
+</tr>
+<tr>
+<td>attr</td>
+<td>插入标签属性值</td>
+</tr>
+<tr>
+<td>url</td>
+<td>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</td>
+</tr>
+<tr>
+<td>string</td>
+<td>插入字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实例展示"><a href="#实例展示" class="headerlink" title="实例展示"></a>实例展示</h2><p>在CSS中有一种清除浮动的方法叫<code>clearfix</code>。而这个<code>clearfix</code>方法就中就使用了<code>content</code>，只不过只是在这里插入了一个空格。如下所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:””;</span><br><span class="line">  <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>:both;</span><br><span class="line">  <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这个示例是最常见的，也是最简单的，我们再来看一个插入元素属性值的方法。</p>
+<p>假设我们有一个元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"##"</span> <span class="attr">title</span>=<span class="string">"我是一个title属性值，我插在你的后面"</span>&gt;</span>我是元素<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以通过<code>:after</code>和<code>content:attr(title)</code>将元素的<code>title</code>值插入到元素内容<code>我是元素</code>之后：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">attr</span>(title);</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#f00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -412,7 +494,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -458,7 +540,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

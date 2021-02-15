@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/02/CSS3变形与动画/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -278,7 +278,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/04/04/CSS3布局样式相关/" itemprop="url">CSS3布局样式相关</a></h2>
+                <a class="post-title-link" href="/2017/04/02/CSS3变形与动画/" itemprop="url">CSS3变形与动画</a></h2>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-04T19:15:25+08:00">
-                2017-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T22:01:54+08:00">
+                2017-04-02
               </time>
             
 
@@ -352,250 +352,231 @@
       
         
           
-            <h1 id="CSS3-多列布局——Columns"><a href="#CSS3-多列布局——Columns" class="headerlink" title="CSS3 多列布局——Columns"></a>CSS3 多列布局——Columns</h1><p>为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个<code>多列布局模块</code>（CSS Multi Column Layout Module）。它主要应用在文本的<code>多列布局</code>方面，这种布局在报纸和杂志上都使用了几十年了，但要在Web页面上实现这样的效果还是有相当大的难度，庆幸的是，CSS3的多列布局可以轻松实现。接下来咱们一起学习多列布局相关的知识。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">columns：&lt;column-width&gt; || &lt;column-count&gt;</span><br></pre></td></tr></table></figure>
-<p>多列布局columns属性参数主要就两个属性参数：<code>列宽</code>和<code>列数</code>。</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">参数说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>&lt;column-width&gt;</code></td>
-<td style="text-align:center">主要用来定义多列中每列的宽度</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;column-count&gt;</code></td>
-<td style="text-align:center">主要用来定义多列中的列数</td>
-</tr>
-</tbody>
-</table>
-<p>举例：<br>要显示2栏显示，每栏宽度为200px，代码为：.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">columns</span>: 200<span class="selector-tag">px</span> 2;</span><br></pre></td></tr></table></figure>
-<p>到目前为止大部分主流浏览器都对其支持：</p>
-<h1 id="CSS3-多列布局——column-width"><a href="#CSS3-多列布局——column-width" class="headerlink" title="CSS3 多列布局——column-width"></a>CSS3 多列布局——column-width</h1><p><code>column-width</code>的使用和CSS中的width属性一样，不过不同的是，<code>column-width</code>属性在定义元素列宽的时候，既可以单独使用，也可以和多列属性中其他属性配合使用。</p>
-<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">column-width: auto | &lt;length&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">auto</td>
-<td style="text-align:left">如果column-width设置值为auto或者没有显式的设置值时，元素多列的列宽将由其他属性来决定，比如前面的示例就是由列数column-count来决定。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>&lt;length&gt;</code></td>
-<td style="text-align:left">使用固定值来设置元素列的宽度，其主要是由数值和长度单位组成，不过其值只能是正值，不能为负值。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="CSS3-多列布局——column-count"><a href="#CSS3-多列布局——column-count" class="headerlink" title="CSS3 多列布局——column-count"></a>CSS3 多列布局——column-count</h1><p><code>column-count</code>属性主要用来给元素指定想要的列数和允许的最大列数。</p>
-<h2 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">column-count：auto | &lt;integer&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>auto</td>
-<td>此值为column-count的默认值，表示元素只有一列，其主要依靠浏览器计算自动设置。</td>
-</tr>
-<tr>
-<td><code>&lt;integer&gt;</code></td>
-<td>此值为正整数值，主要用来定义元素的列数，取值为大于0的整数，负值无效。</td>
-</tr>
-</tbody>
-</table>
-<p> 例如：将列分成四列显示，代码如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">column-count</span><span class="selector-pseudo">:4</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="CSS3-列间距column-gap"><a href="#CSS3-列间距column-gap" class="headerlink" title="CSS3 列间距column-gap"></a>CSS3 列间距column-gap</h1><p><code>column-gap</code>主要用来设置列与列之间的间距，</p>
-<h2 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">column-gap: normal || &lt;length&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>normal</td>
-<td>默认值，默值为1em（如果你的字号是px，其默认值为你的font-size值）。</td>
-</tr>
-<tr>
-<td><code>&lt;length&gt;</code></td>
-<td>此值用来设置列与列之间的距离，其可以使用<code>px,em</code>单位的任何整数值，但不能是负值。</td>
-</tr>
-</tbody>
-</table>
-<p>例如：将内容分三列显列，列与列之间的间距为<code>2em</code>，</p>
-<p>实现代码为：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">column-count</span>: 3;</span><br><span class="line"><span class="selector-tag">column-gap</span>: 2<span class="selector-tag">em</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="CSS3-列表边框column-rule"><a href="#CSS3-列表边框column-rule" class="headerlink" title="CSS3 列表边框column-rule"></a>CSS3 列表边框column-rule</h1><p><code>column-rule</code>主要是用来定义列与列之间的边框宽度、边框样式和边框颜色。简单点说，就有点类似于常用的border属性。但<code>column-rule</code>是不占用任何空间位置的，在列与列之间改变其宽度不会改变任何列的位置。</p>
-<h2 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">column-rule:&lt;column-rule-width&gt;|&lt;column-rule-style&gt;|&lt;column-rule-color&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="属性-4"><a href="#属性-4" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>column-rule-width</td>
-<td>类似于<code>border-width</code>属性，主要用来定义列边框的宽度，其默认值为<code>medium</code>，<code>column-rule-width</code>属性接受任意浮点数，但不接收负值。但也像border-width属性一样，可以使用关键词：<code>medium、thick和thin</code>。</td>
-</tr>
-<tr>
-<td>column-rule-style</td>
-<td>类似于<code>border-style</code>属性，主要用来定义列边框样式，其默认值为<code>none</code>。<code>column-rule-style</code>属性值与<code>border-style</code>属值相同，包括<code>none、hidden、dotted、dashed、solid、double、groove、ridge、inset、outset。</code></td>
-</tr>
-<tr>
-<td>column-rule-color</td>
-<td>类似于<code>border-color</code>属性，主要用来定义列边框颜色，其默认值为前景色<code>color</code>的值，使用时相当于<code>border-color</code>。<code>column-rule-color</code>接受所有的颜色。如果不希望显示颜色，也可以将其设置为<code>transparent(透明色)</code></td>
-</tr>
-</tbody>
-</table>
-<p>例如：为了能有效区分栏目列之间的关系，可以为其设置一个列边框，代码为：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">column-rule</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">dotted</span> <span class="selector-tag">green</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="CSS3-跨列设置column-span"><a href="#CSS3-跨列设置column-span" class="headerlink" title="CSS3 跨列设置column-span"></a>CSS3 跨列设置column-span</h1><p><code>column-span</code>主要用来定义一个分列元素中的子元素能跨列多少。<code>column-width</code>、<code>column-count</code>等属性能让一元素分成多列，不管里面元素如何排放顺序，他们都是<code>从左向右</code>的放置内容，但有时我们需要基中一段内容或一个标题不进行分列，也就是横跨所有列，此时<code>column-span</code>就可以轻松实现，</p>
-<h2 id="语法-5"><a href="#语法-5" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">column-span: none | all</span><br></pre></td></tr></table></figure>
-<h2 id="属性-5"><a href="#属性-5" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>none</td>
-<td>此值为column-span的默认值，表示不跨越任何列。</td>
-</tr>
-<tr>
-<td>all</td>
-<td>这个值跟none值刚好相反，表示的是元素跨越所有列，并定位在列的Ｚ轴之上。</td>
-</tr>
-</tbody>
-</table>
-<p>例如：将第一个标题跨越所有列，代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">column-span</span><span class="selector-pseudo">:all</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="CSS3-盒子模型"><a href="#CSS3-盒子模型" class="headerlink" title="CSS3 盒子模型"></a>CSS3 盒子模型</h1><p>CSS中有一种基础设计模式叫盒模型，盒模型定义了Web页面中的元素中如何来解析。CSS中每一个元素都是一个盒模型，包括html和body标签元素。在盒模型中主要包括width、height、border、background、padding和margin这些属性，而且他们之间的层次关系可以相互影响，来看一张盒模型的3D展示图：</p>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/cssbox3d.gif" alt="cssbox3d.gif"></p>
-<p>从图中可以看出padding属性和content属性层叠background-image属性，层叠background-color属性，这个是存在的，它们四者之间构成了Ｚ轴（垂直屏幕的坐标）多重层叠关系。但是border属性与margin属性、padding属性三者之间应该是平面上的并级关系，并不能构成Ｚ轴的层叠关系。</p>
-<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p>在CSS中盒模型被分为两种，<br>第一种是w3c的标准模型，另一种是IE的传统模型，它们相同之处都是对元素计算尺寸的模型，具体说不是对元素的width、height、padding和border以及元素实际尺寸的计算关系，它们不同之处是两者的计算方法不一致，原则上来说盒模型是分得很细的，这里所看到的主要是外盒模型和内盒模型，如下面计算公式所示：</p>
+            <h1 id="CSS3变形–旋转-rotate"><a href="#CSS3变形–旋转-rotate" class="headerlink" title="CSS3变形–旋转 rotate()"></a>CSS3变形–旋转 rotate()</h1><p>旋转<code>rotate()</code>函数通过指定的角度参数使元素相对原点进行旋转。它主要在二维空间内进行操作，设置一个角度值，用来指定旋转的幅度。如果这个值为<code>正值</code>，元素相对原点中心<code>顺时针</code>旋转；如果这个值为<code>负值</code>，元素相对原点中心<code>逆时针</code>旋转。如下图所示：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/rotate.jpg" alt="rotate"></p>
+<p>HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> dotted red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3中的变形–扭曲-skew"><a href="#CSS3中的变形–扭曲-skew" class="headerlink" title="CSS3中的变形–扭曲 skew()"></a>CSS3中的变形–扭曲 skew()</h1><p>扭曲<code>skew()</code>函数能够让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。这与<code>rotate()</code>函数的旋转不同，<code>rotate()</code>函数只是旋转，而不会改变元素的形状。<code>skew()</code>函数不会旋转，而只会改变元素的形状。</p>
+<p><code>Skew()</code>具有三种情况：</p>
 <ul>
-<li>W3C标准盒模型</li>
+<li>1、<code>skew(x,y)</code>使元素在水平和垂直方向同时扭曲（X轴和Y轴同时按一定的角度值进行扭曲变形）；</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">外盒尺寸计算（元素空间尺寸）</span><br><span class="line"></span><br><span class="line">element空间高度＝内容高度＋内距＋边框＋外距</span><br><span class="line"></span><br><span class="line">element空间宽度＝内容宽度＋内距＋边框＋外距</span><br><span class="line"></span><br><span class="line">内盒尺寸计算（元素大小）</span><br><span class="line"></span><br><span class="line">element高度＝内容高度＋内距＋边框（height为内容高度）</span><br><span class="line"></span><br><span class="line">element宽度＝内容宽度＋内距＋边框（width为内容宽度）</span><br></pre></td></tr></table></figure>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/skew1.jpg" alt="skew1"></p>
+<p>第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则值为0，也就是Y轴方向上无斜切。</p>
 <ul>
-<li>2.IE传统下盒模型（IE6以下，不包含IE6版本或”QuirksMode下IE5.5+”）</li>
+<li>2、<code>skewX(x)</code>仅使元素在水平方向扭曲变形（X轴扭曲变形）；</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">外盒尺寸计算（元素空间尺寸）</span><br><span class="line"></span><br><span class="line">element空间高度＝内容高度＋外距（height包含了元素内容宽度、边框、内距）</span><br><span class="line"></span><br><span class="line">element宽间宽度＝内容宽度＋外距（width包含了元素内容宽度、边框、内距）</span><br><span class="line"></span><br><span class="line">内盒尺寸计算（元素大小）</span><br><span class="line"></span><br><span class="line">element高度＝内容高度（height包含了元素内容宽度、边框、内距）</span><br><span class="line"></span><br><span class="line">element宽度＝内容宽度（width包含了元素内容宽度、边框、内距）</span><br></pre></td></tr></table></figure>
-<p>在CSS3中新增加了<code>box-sizing</code>属性，能够事先定义盒模型的尺寸解析方式，</p>
-<h2 id="语法-6"><a href="#语法-6" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-sizing: content-box | border-box | inherit</span><br></pre></td></tr></table></figure>
-<h2 id="属性-6"><a href="#属性-6" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>属性值说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>content-box</code></td>
-<td>默认值，其让元素维持W3C的标准盒模型，也就是说元素的宽度和高度（<code>width/height</code>）等于元素边框宽度（<code>border</code>）加上元素内距（<code>padding</code>）加上元素内容宽度或高度（<code>content width/ height</code>），也就是<code>element width/height = border + padding + content width / height</code></td>
-</tr>
-<tr>
-<td><code>border-box</code></td>
-<td>重新定义CSS2.1中盒模型组成的模式，让元素维持IE传统的盒模型（IE6以下版本和IE6-7怪异模式），也就是说元素的宽度或高度等于元素内容的宽度或高度。从上面盒模型介绍可知，这里的内容宽度或高度包含了元素的<code>border、padding</code>、内容的宽度或高度（此处的内容宽度或高度＝盒子的宽度或高度—边框—内距）。</td>
-</tr>
-<tr>
-<td><code>inherit</code></td>
-<td>使元素继承父元素的盒模型模式</td>
-</tr>
-</tbody>
-</table>
-<p>其中最为关键的是<code>box-sizing</code>中<code>content-box</code>和<code>border-box</code>两者的区别，他们之间的区别可以通过下图来展示，其对盒模型的不同解析：</p>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/box-sizing.jpg" alt="box-sizing.jpg"></p>
-<h1 id="CSS3-伸缩布局"><a href="#CSS3-伸缩布局" class="headerlink" title="CSS3 伸缩布局"></a>CSS3 伸缩布局</h1><p>CSS3引入了一种新的布局模式——<code>Flexbox</code>布局，即<strong>伸缩布局盒模型</strong>（<code>Flexible Box</code>），用来提供一个更加有效的方式制定、调整和分布一个容器里项目布局，即使它们的大小是未知或者动态的，这里简称为<code>Flex</code>。</p>
-<p><code>Flexbox</code>布局常用于设计比较复杂的页面，可以轻松的实现屏幕和浏览器窗口大小发生变化时保持元素的相对位置和大小不变，同时减少了依赖于浮动布局实现元素位置的定义以及重置元素的大小。</p>
-<p><code>Flexbox</code>布局在定义伸缩项目大小时伸缩容器会预留一些可用空间，让你可以调节伸缩项目的相对大小和位置。例如，你可以确保伸缩容器中的多余空间平均分配多个伸缩项目，当然，如果你的伸缩容器没有足够大的空间放置伸缩项目时，浏览器会根据一定的比例减少伸缩项目的大小，使其不溢出伸缩容器。</p>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexbox.png" alt="flexbox.png"></p>
-<p>综合而言，<code>Flexbox</code>布局功能主要具有以下几点：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/skew2.jpg" alt="skew2"></p>
 <ul>
-<li><p>第一，屏幕和浏览器窗口大小发生改变也可以灵活调整布局；</p>
-</li>
-<li><p>第二，可以指定伸缩项目沿着主轴或侧轴按比例分配额外空间（伸缩容器额外空间），从而调整伸缩项目的大小；</p>
-</li>
-<li><p>第三，可以指定伸缩项目沿着主轴或侧轴将伸缩容器额外空间，分配到伸缩项目之前、之后或之间；</p>
-</li>
-<li><p>第四，可以指定如何将垂直于元素布局轴的额外空间分布到该元素的周围；</p>
-</li>
-<li><p>第五，可以控制元素在页面上的布局方向；</p>
-</li>
-<li><p>第六，可以按照不同于文档对象模型（DOM）所指定排序方式对屏幕上的元素重新排序。也就是说可以在浏览器渲染中不按照文档流先后顺序重排伸缩项目顺序。</p>
-</li>
+<li>3、<code>skewY(y)</code>仅使元素在垂直方向扭曲变形（Y轴扭曲变形）</li>
 </ul>
-<p><code>Flexbox</code>规范版本众多，浏览器对此语法支持度也各有不同，接下来的内容以最新语法版本为例向大家展示：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/skew3.jpg" alt="skew3"></p>
+<p>示例演示：</p>
+<p>通过<code>skew()</code>函数将长方形变成平行四边形。</p>
+<p>HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我变成平形四边形<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> dotted red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">30px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">skew</span>(45deg);</span><br><span class="line">  <span class="attribute">-moz-transform</span>:<span class="built_in">skew</span>(45deg) </span><br><span class="line">  transform:<span class="built_in">skew</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3中的变形–缩放-scale"><a href="#CSS3中的变形–缩放-scale" class="headerlink" title="CSS3中的变形–缩放 scale()"></a>CSS3中的变形–缩放 scale()</h1><p>缩放 <code>scale()</code>函数 让元素根据中心原点对对象进行缩放。</p>
+<p>缩放 <code>scale</code> 具有三种情况：</p>
 <ul>
-<li>1.创建一个flex容器</li>
+<li>1、 <code>scale(X,Y)</code>使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）<br>例如：</li>
 </ul>
-<p>任何一个<code>flexbox</code>布局的第一步是需要创建一个<code>flex</code>容器。为此给元素设置<code>display</code>属性的值为<code>flex</code>。在Safari浏览器中，你依然需要添加前缀<code>-webkit</code>，</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex;</span><br><span class="line">  <span class="attribute">display</span>: flex; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/scale1.jpg" alt="scale1"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1.5,0.5);</span><br><span class="line">  <span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.5,0.5)</span><br><span class="line">  transform: <span class="built_in">scale</span>(1.5,0.5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：Y是一个可选参数，如果没有设置Y值，则表示X，Y两个方向的缩放倍数是一样的。</p>
 <ul>
-<li>2.Flex项目显示</li>
+<li>2、<code>scaleX(x)</code>元素仅水平方向缩放（X轴缩放）</li>
 </ul>
-<p>Flex项目是Flex容器的子元素。他们沿着主要轴和横轴定位。</p>
-<p>默认的是沿着水平轴排列一行。<br>你可以通过<code>flex-direction</code>来改变主轴方向修改为<code>column</code>，</p>
-<p>其默认值是<code>row</code>。</p>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexrow.jpg" alt="flexrow"></p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/scale2.jpg" alt="scale2"></p>
 <ul>
-<li>3.Flex项目列显示</li>
+<li>3、<code>scaleY(y)</code>元素仅垂直方向缩放（Y轴缩放）</li>
 </ul>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flexcolumn.jpg" alt="flexcolumn"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>4.Flex项目移动到顶部</li>
-</ul>
-<p>如何将flex项目移动到顶部，取决于主轴的方向。<br>如果它是垂直的方向通过<code>align-items</code>设置；<br>如果它是水平的方向通过<code>justify-content</code>设置。</p>
-<p><img src="//fengchunsgit.github.io/2017/04/04/CSS3布局样式相关/flex.jpg" alt="flex"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: flex-start; </span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start; </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: flex-start; </span><br><span class="line">  <span class="attribute">align-items</span>: flex-start; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>5.Flex项目移到左边</li>
-</ul>
-<p>flex项目移动到左边或右边也取决于主轴的方向。</p>
-<p>如果<code>flex-direction</code></p>
-<p>设置为<code>row</code>，设置<code>justify-content</code>控制方向；</p>
-<p>设置为<code>column</code>，设置<code>align-items</code>控制方向。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: flex-start; </span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start; </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: flex-start; </span><br><span class="line">  <span class="attribute">align-items</span>: flex-start; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>6.Flex项目移动右边</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: flex-end; </span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: flex-end; </span><br><span class="line">  <span class="attribute">align-items</span>: flex-end; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>7.水平垂直居中</li>
-</ul>
-<p>设置<code>justify-content</code>或者<code>align-items</code>为<code>center</code>。<br>另外根据主轴的方向设置<code>flex-direction</code>为<code>row</code>或<code>column</code>。</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/scale3.jpg" alt="scale3"></p>
+<p>HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我将放大1.5倍<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">2px</span> dashed red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: .<span class="number">5</span>;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1.5);</span><br><span class="line">  <span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(1.5)</span><br><span class="line">  transform: <span class="built_in">scale</span>(1.5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>演示结果</p>
 <blockquote>
-<p>无论是row还是column，<code>justify-content</code>和<code>align-items</code>为<code>center</code></p>
+<p>注意： <code>scale()</code>的取值默认的值为1，当值设置为0.01到0.99之间的任何值，作用使一个元素缩小；而任何大于或等于1.01的值，作用是让元素放大。</p>
 </blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">flex-direction</span>: row; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: center; </span><br><span class="line">  <span class="attribute">align-items</span>: center; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: center; </span><br><span class="line">  <span class="attribute">justify-content</span>: center; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flexcontainer</span>&#123; </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; </span><br><span class="line">  <span class="attribute">display</span>: flex; </span><br><span class="line">  <span class="attribute">-webkit-flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">flex-direction</span>: column; </span><br><span class="line">  <span class="attribute">-webkit-align-items</span>: center; </span><br><span class="line">  <span class="attribute">align-items</span>: center; </span><br><span class="line">  <span class="attribute">-webkit-justify-content</span>: center; </span><br><span class="line">  <span class="attribute">justify-content</span>: center; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中的变形–位移-translate"><a href="#CSS3中的变形–位移-translate" class="headerlink" title="CSS3中的变形–位移 translate()"></a>CSS3中的变形–位移 translate()</h1><p><code>translate()</code>函数可以将元素向指定的方向移动，类似于<code>position</code>中的<code>relative</code>。或以简单的理解为，使用<code>translate()</code>函数，可以把元素从原来的位置移动，而不影响在X、Y轴上的任何Web组件。</p>
+<p><code>translate</code>我们分为三种情况：</p>
 <ul>
-<li>8.Flex项目实现自动伸缩</li>
+<li>1、<code>translate(x,y)</code>水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）</li>
 </ul>
-<p>如果想让一个flex项目，相对于flex容器实现自动的伸缩。</p>
-<p>需要给每个flex项目设置flex属性设置需要伸缩的值。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bigitem</span>&#123;</span><br><span class="line">  <span class="attribute">-webkit-flex</span>:<span class="number">200</span>; </span><br><span class="line">  <span class="attribute">flex</span>:<span class="number">200</span>; </span><br><span class="line">  &#125; </span><br><span class="line"><span class="selector-class">.smallitem</span>&#123;</span><br><span class="line">  <span class="attribute">-webkit-flex</span>:<span class="number">100</span>;</span><br><span class="line">  <span class="attribute">flex</span>:<span class="number">100</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2、<code>translateX(x)</code>仅水平方向移动（X轴移动）</li>
+</ul>
+<ul>
+<li>3、<code>translateY(Y)</code>仅垂直方向移动（Y轴移动）</li>
+</ul>
+<p>实例演示：通过translate()函数将元素向Y轴下方移动50px,X轴右方移动100px。</p>
+<p>HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我向右向下移动<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> dotted red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(50px,100px);</span><br><span class="line">  <span class="attribute">-moz-transform</span>:<span class="built_in">translate</span>(50px,100px);</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(50px,100px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中的变形–矩阵-matrix"><a href="#CSS3中的变形–矩阵-matrix" class="headerlink" title="CSS3中的变形–矩阵 matrix()"></a>CSS3中的变形–矩阵 matrix()</h1><p>CSS 函数 <code>matrix()</code> 用六个指定的值来指定一个均匀的二维（2D）变换矩阵。这个矩形中的常量值是不作为参数进行传递的，其他的参数则在主要列的顺序中描述。</p>
+<p><code>matrix(a, b, c, d, tx, ty)</code> 是 <code>matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 的简写</p>
+<p>语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">matrix</span>(<span class="selector-tag">a</span>, <span class="selector-tag">b</span>, <span class="selector-tag">c</span>, <span class="selector-tag">d</span>, <span class="selector-tag">tx</span>, <span class="selector-tag">ty</span>)</span><br></pre></td></tr></table></figure>
+<p>属性值</p>
+<p><strong>a b c d</strong></p>
+<p>以 <code>&lt;number&gt;</code> 的格式来描述线性变换<br><strong>tx ty</strong></p>
+<p>以 <code>&lt;number&gt;</code> 的格式来描述变换的量</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/matrix2.png" alt="matrix2.png"></p>
+<p>示例演示：<br>通过<code>matrix()</code>函数来模拟<code>transform</code>中<code>translate()</code>位移的效果。<br>HTML代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> dotted red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">matrix</span>(1,0,0,1,50,50);</span><br><span class="line">  <span class="attribute">-moz-transform</span>:<span class="built_in">matrix</span>(1,0,0,1,50,50);</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">matrix</span>(1,0,0,1,50,50);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/" target="_blank" rel="noopener">张鑫旭参考资料</a></p>
+</blockquote>
+<h1 id="CSS3中的变形–原点-transform-origin"><a href="#CSS3中的变形–原点-transform-origin" class="headerlink" title="CSS3中的变形–原点 transform-origin"></a>CSS3中的变形–原点 transform-origin</h1><p>任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处。</p>
+<p>在没有重置<code>transform-origin</code>改变元素原点位置的情况下，CSS变形进行的旋转、位移、缩放，扭曲等操作都是以元素自己中心位置进行变形。但很多时候，我们可以通过<code>transform-origin</code>来对元素进行原点位置改变，使元素原点不在元素的中心位置，以达到需要的原点位置。</p>
+<p><code>transform-origin</code>取值和元素设置背景中的<code>background-position</code>取值类似，如下表所示：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/transformorigin.jpg" alt="transformorigin"></p>
+<p>示例展示：</p>
+<p>通过<code>transform-origin</code>改变元素原点到左上角，然后进行顺时旋转45度。</p>
+<p>HTML代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>原点在默认位置处<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper transform-origin"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>原点重置到左上角<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> dotted red;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transform-origin</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-transform-origin</span>: left top;</span><br><span class="line">  <span class="attribute">transform-origin</span>: left top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中的动画–过渡属性-transition-property"><a href="#CSS3中的动画–过渡属性-transition-property" class="headerlink" title="CSS3中的动画–过渡属性 transition-property"></a>CSS3中的动画–过渡属性 transition-property</h1><p>早期在Web中要实现动画效果，都是依赖于JavaScript或Flash来完成。但在CSS3中新增加了一个新的模块<code>transition</code>，它可以通过一些简单的CSS事件来触发元素的外观变化，让效果显得更加细腻。简单点说，就是通过鼠标的单击、获得焦点，被点击或对元素任何改变中触发，并平滑地以动画效果改变CSS的属性值。</p>
+<p>在CSS中创建简单的过渡效果可以从以下几个步骤来实现：</p>
+<ul>
+<li>第一，在默认样式中声明元素的初始状态样式；</li>
+<li>第二，声明过渡元素最终状态样式，比如悬浮状态；</li>
+<li>第三，在默认样式中通过添加过渡函数，添加一些不同的样式。</li>
+</ul>
+<p>CSS3的过度<code>transition</code>属性是一个复合属性，主要包括以下几个子属性：</p>
+<ul>
+<li><code>transition-property</code>:指定过渡或动态模拟的CSS属性</li>
+<li><code>transition-duration</code>:指定完成过渡所需的时间</li>
+<li><code>transition-timing-function</code>:指定过渡函数</li>
+<li><code>transition-delay</code>:指定开始出现的延迟时间<br>先来看<code>transition-property</code>属性</li>
+</ul>
+<p><code>transition-property</code>用来指定过渡动画的CSS属性名称，而这个过渡属性只有具备一个中点值的属性（需要产生动画的属性）才能具备过渡效果，其对应具有过渡的CSS属性主要有：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/transition.jpg" alt="transition"></p>
+<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>:red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">-webkit-transition</span>: background-color .<span class="number">5s</span> ease .<span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">transition</span>: background-color .<span class="number">5s</span> ease .<span class="number">1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3中的动画–过渡所需时间-transition-duration"><a href="#CSS3中的动画–过渡所需时间-transition-duration" class="headerlink" title="CSS3中的动画–过渡所需时间 transition-duration"></a>CSS3中的动画–过渡所需时间 transition-duration</h1><p><code>transition-duration</code>属性主要用来设置一个属性过渡到另一个属性所需的时间，也就是从旧属性过渡到新属性花费的时间长度，俗称持续时间。</p>
+<p>案例演示：</p>
+<p>在鼠标悬停（<code>hover</code>）状态下，让容器从直角慢慢过渡到圆角，并让整个动画持续0.5s。</p>
+<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: orange;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">-webkit-transition-property</span>: -webkit-border-radius;</span><br><span class="line">  <span class="attribute">transition-property</span>: border-radius;</span><br><span class="line">  <span class="attribute">-webkit-transition-duration</span>: .<span class="number">5s</span>;</span><br><span class="line">  <span class="attribute">transition-duration</span>: .<span class="number">5s</span>;</span><br><span class="line">  <span class="attribute">-webkit-transition-timing-function</span>: ease-out;</span><br><span class="line">  <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">  <span class="attribute">-webkit-transition-delay</span>: .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">transition-delay</span>: .<span class="number">2s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3中的动画–过渡函数-transition-timing-function"><a href="#CSS3中的动画–过渡函数-transition-timing-function" class="headerlink" title="CSS3中的动画–过渡函数 transition-timing-function"></a>CSS3中的动画–过渡函数 transition-timing-function</h1><p><code>transition-timing-function</code>属性指的是过渡的<code>缓动函数</code>。主要用来指定浏览器的过渡速度，以及过渡期间的操作进展情况，其中要包括以下几种函数：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/transition-timing-function.jpg" alt="transition-timing-function"></p>
+<h1 id="CSS3中的动画–过渡延迟时间-transition-delay"><a href="#CSS3中的动画–过渡延迟时间-transition-delay" class="headerlink" title="CSS3中的动画–过渡延迟时间 transition-delay"></a>CSS3中的动画–过渡延迟时间 transition-delay</h1><p><code>transition-delay</code>属性和<code>transition-duration</code>属性极其类似，不同的是<code>transition-duration</code>是用来设置过渡动画的持续时间，而<code>transition-delay</code>主要用来指定一个动画开始执行的时间，也就是说当改变元素属性值后多长时间开始执行。</p>
+<p>有时我们想改变两个或者多个css属性的<code>transition</code>效果时，只要把几个<code>transition</code>的声明串在一起，用逗号（<code>，</code>）隔开，然后各自可以有各自不同的延续时间和其时间的速率变换方式。但需要值得注意的一点：第一个时间的值为 <code>transition-duration</code>，第二个为<code>transition-delay</code>。</p>
+<p>例如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123; <span class="attribute">transition</span>: background <span class="number">0.8s</span> ease-in <span class="number">0.3</span>,color <span class="number">0.6s</span> ease-out <span class="number">0.3</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例演示：</p>
+<p>通过<code>transition</code>属性将一个<code>200px *200px</code>的橙色容器，在鼠标悬浮状态时，过渡到一个<code>300px * 300px</code>的红色容器。而且整个过渡<code>0.1s</code>后触发，并且整个过渡持续<code>0.28s</code>。</p>
+<p>HTML代码:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>鼠标放到我的身上来<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS代码:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> dotted red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: orange;</span><br><span class="line">  <span class="attribute">-webkit-transition</span>: all .<span class="number">28s</span> ease-in .<span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">transition</span>: all .<span class="number">28s</span> ease-in .<span class="number">1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3-Keyframes介绍"><a href="#CSS3-Keyframes介绍" class="headerlink" title="CSS3 Keyframes介绍"></a>CSS3 Keyframes介绍</h1><p><code>Keyframes</code>被称为关键帧，其类似于Flash中的关键帧。在CSS3中其主要以<code>@keyframes</code>开头，后面紧跟着是动画名称加上一对花括号<code>{…}</code>，括号中就是一些不同时间段样式规则。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> changecolor&#123;</span><br><span class="line">  0%&#123;</span><br><span class="line">   <span class="attribute">background</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line">  100%&#123;</span><br><span class="line">    <span class="attribute">background</span>: green;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在一个<code>@keyframes</code>中的样式规则可以由多个百分比构成的，如在<code>0%</code>到<code>100%</code>之间创建更多个百分比，分别给每个百分比中给需要有动画效果的元素加上不同的样式，从而达到一种在不断变化的效果。</p>
+<p>经验与技巧：</p>
+<p>在<code>@keyframes</code>中定义动画名称时，其中0%和100%还可以使用关键词from和to来代表，其中0%对应的是from，100%对应的是to。</p>
+<p>浏览器的支持情况：</p>
+<p>Chrome 和 Safari 需要前缀 <code>-webkit-</code>；Foxfire 需要前缀 <code>-moz-</code>。</p>
+<p>案例演示</p>
+<p>通过<code>@keyframes</code>声明一个名叫<code>wobble</code>的动画，从<code>0%</code>开始到<code>100%</code>结束，同时还经历了一个<code>40%</code>和<code>60%</code>两个过程。<code>wobble</code>动画在<code>0%</code>时元素定位到left为100px，背景色为green，然后在<code>40%</code>时元素过渡到left为150px,背景色为orange,接着在<code>60%</code>时元素过渡到left为75px，背景色为blue，最后<code>100%</code>时结束动画，元素又回到起点left为100px处，背景色变为red。</p>
+<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>鼠标放到我身上<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> wobble &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>:green;</span><br><span class="line">  &#125;</span><br><span class="line">  40% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background</span>:orange;</span><br><span class="line">  &#125;</span><br><span class="line">  60% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">background</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>:red;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">  <span class="attribute">animation</span>: wobble <span class="number">5s</span> ease .<span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中调用动画"><a href="#CSS3中调用动画" class="headerlink" title="CSS3中调用动画"></a>CSS3中调用动画</h1><p><code>animation-name</code>属性主要是用来调用 <code>@keyframes</code> 定义好的动画。需要特别注意<code>: animation-name</code>调用的动画名需要和<code>@keyframes</code>定义的动画名称完全一致（区分大小写），如果不一致将不具有任何动画效果。</p>
+<p>语法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-name: none | IDENT[,none|DENT]*;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>1、IDENT是由 @keyframes 创建的动画名，上面已经讲过了（animation-name 调用的动画名需要和“@keyframes”定义的动画名称完全一致）；</p>
+</li>
+<li><p>2、none为默认值，当值为 none 时，将没有任何动画效果,这可以用于覆盖任何动画。</p>
+</li>
+</ul>
+<p>注意：需要在 Chrome 和 Safari 上面的基础上加上-webkit-前缀，Firefox加上-moz-。</p>
+<h1 id="CSS3中设置动画播放时间"><a href="#CSS3中设置动画播放时间" class="headerlink" title="CSS3中设置动画播放时间"></a>CSS3中设置动画播放时间</h1><p><code>animation-duration</code>主要用来设置CSS3动画播放时间，其使用方法和<code>transition-duration</code>类似，是用来指定元素播放动画所持续的时间长，也就是完成从0%到100%一次动画所需时间。单位：S秒</p>
+<p>语法规则</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-duration</span>: &lt;<span class="selector-tag">time</span>&gt;<span class="selector-attr">[,&lt;time&gt;]</span>*</span><br></pre></td></tr></table></figure>
+<p>取值<time>为数值，单位为秒，其默认值为“0”，这意味着动画周期为“0”，也就是没有动画效果（如果值为负值会被视为“0”）。</time></p>
+<p>案例演示：</p>
+<p>制作一个矩形变成圆形的动画，整个动画播放时间持续了10s钟。</p>
+<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hover Me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> toradius&#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">animation-name</span>: toradius;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">10s</span>;</span><br><span class="line">  <span class="attribute">animation-timing-function</span>: ease-in-out;</span><br><span class="line">  <span class="attribute">animation-delay</span>: .<span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="CSS3中设置动画播放方式"><a href="#CSS3中设置动画播放方式" class="headerlink" title="CSS3中设置动画播放方式"></a>CSS3中设置动画播放方式</h1><p><code>animation-timing-function</code>属性主要用来设置动画播放方式。主要让元素根据时间的推进来改变属性值的变换速率，简单点说就是动画的播放方式。</p>
+<p>语法规则：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-timing-function:ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) [, ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)]*</span><br></pre></td></tr></table></figure>
+<p>它和<code>transition</code>中的<code>transition-timing-function</code>一样，具有以下几种变换方式：<code>ease,ease-in,ease-in-out,ease-out,linear和cubic-bezier</code>。对应功如下：</p>
+<p><img src="//fengchunsgit.github.io/2017/04/02/CSS3变形与动画/animation-time-function.jpg" alt="animation-time-function"></p>
+<p>在调用move动画播放中，让元素样式从初始状态到终止状态时，先加速再减速，也就是渐显渐隐效果。</p>
+<h1 id="CSS3中设置动画开始播放的时间"><a href="#CSS3中设置动画开始播放的时间" class="headerlink" title="CSS3中设置动画开始播放的时间"></a>CSS3中设置动画开始播放的时间</h1><p><code>animation-delay</code>属性用来定义动画开始播放的时间，用来触发动画播放的时间点。和<code>transition-delay</code>属性一样，用于定义在浏览器开始执行动画之前等待的时间。</p>
+<p>语法规则：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-delay</span>:&lt;<span class="selector-tag">time</span>&gt;<span class="selector-attr">[,&lt;time&gt;]</span>*</span><br></pre></td></tr></table></figure>
+<p>案例演示：    </p>
+<p>浏览器渲染样式之后2S之后触发move动画。</p>
+<p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> move &#123;</span><br><span class="line">  0%&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(0);</span><br><span class="line">  &#125;</span><br><span class="line">  15%&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(100px,180px);</span><br><span class="line">  &#125;</span><br><span class="line">  30%&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(150px,0);</span><br><span class="line">  &#125;</span><br><span class="line">  45%&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(250px,180px);</span><br><span class="line">  &#125;</span><br><span class="line">  60%&#123;</span><br><span class="line">    <span class="attribute">transform</span>:<span class="built_in">translate</span>(300px,0);</span><br><span class="line">  &#125;</span><br><span class="line">  75%&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(450px,180px);</span><br><span class="line">  &#125;</span><br><span class="line">  100%&#123;</span><br><span class="line">    <span class="attribute">transfrom</span>: <span class="built_in">translate</span>(480px,0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">animation-name</span>:move;</span><br><span class="line">  <span class="attribute">animation-duration</span>: <span class="number">10s</span>;</span><br><span class="line">  <span class="attribute">animation-timing-function</span>:ease;</span><br><span class="line">  <span class="attribute">animation-delay</span>:<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">animation-iteration-count</span>:infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中设置动画播放次数"><a href="#CSS3中设置动画播放次数" class="headerlink" title="CSS3中设置动画播放次数"></a>CSS3中设置动画播放次数</h1><p><code>animation-iteration-count</code>属性主要用来定义动画的播放次数。</p>
+<p>语法规则：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-iteration-count: infinite | &lt;number&gt; [, infinite | &lt;number&gt;]*</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>1、其值通常为整数，但也可以使用带有小数的数字，其默认值为1，这意味着动画将从开始到结束只播放一次。</p>
+</li>
+<li><p>2、如果取值为<code>infinite</code>，动画将会无限次的播放。</p>
+</li>
+</ul>
+<p>举例：</p>
+<p>通过<code>animation-iteration-count</code>属性让动画move只播放5次，代码设置为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-iteration-count</span><span class="selector-pseudo">:5</span>;</span><br></pre></td></tr></table></figure>
+<p>注意：Chrome或Safari浏览器，需要加入-webkit-前缀！</p>
+<h1 id="CSS3中设置动画播放方向"><a href="#CSS3中设置动画播放方向" class="headerlink" title="CSS3中设置动画播放方向"></a>CSS3中设置动画播放方向</h1><p><code>animation-direction</code>属性主要用来设置动画播放方向，</p>
+<p>其语法规则如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-direction:normal | alternate [, normal | alternate]*</span><br></pre></td></tr></table></figure>
+<p>其主要有两个值：<code>normal、alternate</code></p>
+<ul>
+<li><p>1、normal是默认值，如果设置为normal时，动画的每次循环都是向前播放；</p>
+</li>
+<li><p>2、另一个值是alternate，他的作用是，动画播放在第偶数次向前播放，第奇数次向反方向播放。</p>
+</li>
+</ul>
+<p>例如：通过<code>animation-direction</code>属性，将move动画播放动画方向设置为<code>alternate</code>，代码为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-direction</span><span class="selector-pseudo">:alternate</span>;</span><br></pre></td></tr></table></figure>
+<p>注意：Chrome或Safari浏览器，需要加入-webkit-前缀！</p>
+<h1 id="CSS3中设置动画的播放状态"><a href="#CSS3中设置动画的播放状态" class="headerlink" title="CSS3中设置动画的播放状态"></a>CSS3中设置动画的播放状态</h1><p><code>animation-play-state</code>属性主要用来控制元素动画的播放状态。</p>
+<p>参数：</p>
+<p>其主要有两个值：<code>running</code>和<code>paused</code>。</p>
+<p>其中running是其默认值，主要作用就是类似于音乐播放器一样，可以通过paused将正在播放的动画停下来，也可以通过running将暂停的动画重新播放，这里的重新播放不一定是从元素动画的开始播放，而是从暂停的那个位置开始播放。另外如果暂停了动画的播放，元素的样式将回到最原始设置状态。</p>
+<p>例如，页面加载时，动画不播放。代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-play-state</span><span class="selector-pseudo">:paused</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3中设置动画时间外属性"><a href="#CSS3中设置动画时间外属性" class="headerlink" title="CSS3中设置动画时间外属性"></a>CSS3中设置动画时间外属性</h1><p><code>animation-fill-mode</code>属性定义在动画开始之前和结束之后发生的操作。主要具有四个属性值：<code>none、forwards、backwords和both</code>。其四个属性值对应效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>默认值，表示动画将按预期进行和结束，在动画完成其最后一帧时，动画会反转到初始帧处</td>
+</tr>
+<tr>
+<td><code>forwards</code></td>
+<td>表示动画在结束后继续应用最后的关键帧的位置</td>
+</tr>
+<tr>
+<td><code>backwards</code></td>
+<td>会在向元素应用动画样式时迅速应用动画的初始帧</td>
+</tr>
+<tr>
+<td><code>both</code></td>
+<td>元素动画同时具有<code>forwards</code>和<code>backwards</code>效果</td>
+</tr>
+</tbody>
+</table>
+<p>在默认情况之下，动画不会影响它的关键帧之外的属性，使用animation-fill-mode属性可以修改动画的默认行为。简单的说就是告诉动画在第一关键帧上等待动画开始，或者在动画结束时停在最后一个关键帧上而不回到动画的第一帧上。或者同时具有这两个效果。</p>
+<p>例如：让动画停在最一帧处。代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-fill-mode</span><span class="selector-pseudo">:forwards</span>;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -635,7 +616,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -681,7 +662,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

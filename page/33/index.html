@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/27/text/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/03/24/CSS3颜色/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -278,7 +278,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/27/text/" itemprop="url">text&font 文字与字体</a></h2>
+                <a class="post-title-link" href="/2017/03/24/CSS3颜色/" itemprop="url">CSS3颜色</a></h2>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T16:39:59+08:00">
-                2017-03-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-24T20:19:00+08:00">
+                2017-03-24
               </time>
             
 
@@ -352,26 +352,19 @@
       
         
           
-            <h1 id="4-1-CSS3文字与字体-text-overflow-与-word-wrap"><a href="#4-1-CSS3文字与字体-text-overflow-与-word-wrap" class="headerlink" title="4.1 CSS3文字与字体 text-overflow 与 word-wrap"></a>4.1 CSS3文字与字体 text-overflow 与 word-wrap</h1><p><code>text-overflow</code>用来设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
-<p>语法：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/27/text/text-overflow.jpg" alt="text-overflow"></p>
-<p>但是<code>text-overflow</code>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（<code>white-space:nowrap</code>）及溢出内容为隐藏（<code>overflow:hidden</code>），只有这样才能实现溢出文本显示省略号的效果，代码如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>;</span><br></pre></td></tr></table></figure>
-<p>同时，<code>word-wrap</code>也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。</p>
-<p>语法：</p>
-<p><img src="//fengchunsgit.github.io/2017/03/27/text/word-wrap.jpg" alt="word-warp"></p>
-<p><code>normal</code>为浏览器默认值，<code>break-word</code>设置在长单词或 <code>URL</code>地址内部进行换行，此属性不常用，用浏览器默认值即可。</p>
-<h1 id="4-2-CSS3文字与字体-嵌入字体-font-face"><a href="#4-2-CSS3文字与字体-嵌入字体-font-face" class="headerlink" title="4.2 CSS3文字与字体 嵌入字体@font-face"></a>4.2 CSS3文字与字体 嵌入字体@font-face</h1><p><code>@font-face</code>能够加载服务器端的字体文件，让浏览器端可以显示用户电脑里没有安装的字体。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family </span>: 字体名称;</span><br><span class="line">    <span class="attribute">src </span>: 字体文件在服务器上的相对或绝对路径;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样设置之后，就可以像使用普通字体一样在（font-*）中设置字体样式。</p>
-<p>比如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size </span>:<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">font-family </span>: <span class="string">"My Font"</span>;</span><br><span class="line">    <span class="comment">/*必须项，设置@font-face中font-family同样的值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="4-3-CSS3文字与字体-文本阴影text-shadow"><a href="#4-3-CSS3文字与字体-文本阴影text-shadow" class="headerlink" title="4.3 CSS3文字与字体 文本阴影text-shadow"></a>4.3 CSS3文字与字体 文本阴影text-shadow</h1><p><code>text-shadow</code>可以用来设置文本的阴影效果。</p>
-<p>语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: <span class="selector-tag">X-Offset</span> <span class="selector-tag">Y-Offset</span> <span class="selector-tag">blur</span> <span class="selector-tag">color</span>;</span><br></pre></td></tr></table></figure></p>
-<p><code>X-Offset</code>：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      </p>
-<p><code>Y-Offset</code>：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
-<p><code>Blur</code>：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
-<p><code>Color</code>：是指阴影的颜色，其可以使用<code>rgba</code>色。</p>
-<p>比如，我们可以用下面代码实现设置阴影效果。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-shadow</span>: 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-id">#fff</span></span><br></pre></td></tr></table></figure></p>
+            <h1 id="3-1-CSS3颜色-颜色之RGBA"><a href="#3-1-CSS3颜色-颜色之RGBA" class="headerlink" title="3.1 CSS3颜色 颜色之RGBA"></a>3.1 CSS3颜色 颜色之RGBA</h1><p>RGB是一种色彩标准，是由红(R)、绿(G)、蓝(B)的变化以及相互叠加来得到各式各样的颜色。RGBA是在RGB的基础上增加了控制alpha透明度的参数。</p>
+<p>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color：rgba(R,G,B,A)</span><br></pre></td></tr></table></figure></p>
+<p>以上R、G、B三个参数，正整数值的取值范围为：0 - 255。百分数值的取值范围为：0.0% - 100.0%。超出范围的数值将被截至其最接近的取值极限。并非所有浏览器都支持使用百分数值。A为透明度参数，取值在0~1之间，不可为负值。</p>
+<p>代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color:rgba(100,120,60,0.5);</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-2-CSS3颜色-渐变色彩"><a href="#3-2-CSS3颜色-渐变色彩" class="headerlink" title="3.2 CSS3颜色 渐变色彩"></a>3.2 CSS3颜色 渐变色彩</h1><p>CSS3 Gradient 分为线性渐变(linear)和径向渐变(radial)。由于不同的渲染引擎实现渐变的语法不同，这里我们只针对线性渐变的 W3C 标准语法来分析其用法，其余大家可以查阅相关资料。W3C 语法已经得到了 IE10+、Firefox19.0+、Chrome26.0+ 和 Opera12.1+等浏览器的支持。</p>
+<p>这一小节我们来说一下线性渐变：</p>
+<p><img src="//fengchunsgit.github.io/2017/03/24/CSS3颜色/linear-gradient.jpg" alt="linear-gradient"></p>
+<p>参数：</p>
+<p>第一个参数:指定渐变方向，可以用“角度”的关键词或“英文”来表示：</p>
+<p><img src="//fengchunsgit.github.io/2017/03/24/CSS3颜色/color-english.jpg" alt="color-english"></p>
+<p>第一个参数省略时，默认为“180deg”，等同于“to bottom”。</p>
+<p>第二个和第三个参数，表示颜色的起始点和结束点，可以有多个颜色值。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(to</span> <span class="selector-tag">left</span>, <span class="selector-tag">red</span>, <span class="selector-tag">orange</span>,<span class="selector-tag">yellow</span>,<span class="selector-tag">green</span>,<span class="selector-tag">blue</span>,<span class="selector-tag">indigo</span>,<span class="selector-tag">violet</span>);</span><br></pre></td></tr></table></figure></p>
+<p><img src="//fengchunsgit.github.io/2017/03/24/CSS3颜色/color-demo.jpg" alt="color-demo"></p>
 
           
         
@@ -411,7 +404,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/32/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/34/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -457,7 +450,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
