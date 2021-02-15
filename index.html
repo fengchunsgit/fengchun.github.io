@@ -724,61 +724,864 @@
       
         
           
-            <h1 id="原型设计-Axure-RP-交互设计"><a href="#原型设计-Axure-RP-交互设计" class="headerlink" title="原型设计-Axure RP 交互设计"></a>原型设计-Axure RP 交互设计</h1><h2 id="1-页面事件"><a href="#1-页面事件" class="headerlink" title="1 页面事件"></a>1 页面事件</h2><table>
+            <h2 id="1-页面事件"><a href="#1-页面事件" class="headerlink" title="1 页面事件"></a>1 页面事件</h2><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
 <thead>
 <tr>
-<th>事件名称</th>
-<th style="text-align:left">时间说明</th>
+<th style="text-align:center">事件名称</th>
+<th style="text-align:left">事件说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>页面加载时事件</td>
+<td style="text-align:center">页面加载时事件</td>
 <td style="text-align:left">页面加载时事件</td>
 </tr>
 <tr>
-<td>窗口尺寸改变时事件</td>
+<td style="text-align:center">窗口尺寸改变时事件</td>
 <td style="text-align:left">浏览器窗口改变大小时，在调整浏览器窗口时发生，可多次发生</td>
 </tr>
 <tr>
-<td>窗口滚动时事件</td>
+<td style="text-align:center">窗口滚动时事件</td>
 <td style="text-align:left">浏览器窗口滚动时事件</td>
 </tr>
 <tr>
-<td>窗口向上滚动时事件</td>
+<td style="text-align:center">窗口向上滚动时事件</td>
 <td style="text-align:left">浏览器窗口向上滚动时发生</td>
 </tr>
 <tr>
-<td>窗口向下滚动时事件</td>
+<td style="text-align:center">窗口向下滚动时事件</td>
 <td style="text-align:left">浏览器窗口向下滚动时发生</td>
 </tr>
 <tr>
-<td>页面鼠标单击时事件</td>
-<td style="text-align:left">页面单击时事件，在空白区域，或者在没有添加“鼠标单击时事件”的元件上进行单击操作时，将会发生该事件</td>
+<td style="text-align:center">页面鼠标单击时事件</td>
+<td style="text-align:left">页面单击时事件，在空白区域，或者在没有添加“鼠标单击时”事件的元件上进行单击操作时，将会发生该事件</td>
 </tr>
 <tr>
-<td>页面鼠标双击时事件</td>
-<td style="text-align:left">页面双击时事件，在空白区域，或者在没有添加“鼠标双击时事件”的元件上进行双击操作时，将会发生该事件</td>
+<td style="text-align:center">页面鼠标双击时事件</td>
+<td style="text-align:left">页面双击时事件，在空白区域，或者在没有添加“鼠标双击时”事件的元件上进行双击操作时，将会发生该事件</td>
 </tr>
 <tr>
-<td>页面鼠标右击时事件</td>
-<td style="text-align:left">页面右击时事件，在空白区域，或者在没有添加“鼠标右击时事件”的元件上进行右击操作时，将会发生该事件</td>
+<td style="text-align:center">页面鼠标右击时事件</td>
+<td style="text-align:left">页面右击时事件，在空白区域，或者在没有添加“鼠标右击时”事件的元件上进行右击操作时，将会发生该事件</td>
 </tr>
 <tr>
-<td>页面鼠标移动时事件</td>
-<td style="text-align:left">鼠标移动时事件，在空白区域，或者在没有添加“鼠标移动时事件”的元件上进行移动操作时，将会发生该事件</td>
+<td style="text-align:center">页面鼠标移动时事件</td>
+<td style="text-align:left">鼠标移动时事件，在空白区域，或者在没有添加“鼠标移动时”事件的元件上进行移动操作时，将会发生该事件</td>
 </tr>
 <tr>
-<td>页面按键按下时事件</td>
+<td style="text-align:center">页面按键按下时事件</td>
 <td style="text-align:left">键盘按键按下时事件。在空白区域，或者在没有添加“键盘按下时”事件的元件上进行键盘按下操作，将会发生该事件</td>
 </tr>
 <tr>
-<td>页面按键松开时事件</td>
+<td style="text-align:center">页面按键松开时事件</td>
 <td style="text-align:left">键盘按键松开时事件。在空白区域，或者在没有添加“键盘松开时”事件的元件上进行键盘松开操作，将会发生该事件</td>
 </tr>
 <tr>
-<td>自适应视图改变时事件</td>
-<td style="text-align:left">自适应视图更改时事件，当切换到另一视图时，发生一次该事件可发生多次</td>
+<td style="text-align:center">自适应视图改变时事件</td>
+<td style="text-align:left">自适应视图更改时事件，当切换到另一视图时，发生一次，该事件可发生多次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-元件事件"><a href="#2-元件事件" class="headerlink" title="2 元件事件"></a>2 元件事件</h2><blockquote>
+<p>为元件添加事件的方法与页面添加事件的步骤一样，但针对不同的元件，事件类型有所不同。</p>
+</blockquote>
+<style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件名称</th>
+<th style="text-align:left">事件说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">鼠标单击时事件</td>
+<td style="text-align:left">内联框架元件、中继器元件不包含该事件</td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标移入时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标移出时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标双击时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">鼠标右击时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">按键按下时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">按键松开时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">移动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">显示时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">隐藏时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">获取焦点时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">失去焦点时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">文本改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">选项改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">选中改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">状态改变时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动开始时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">拖动结束时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向左拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向右拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向上拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">向下拖动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">载入时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">滚动时事件</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">尺寸改变时事件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h2><p>Axure函数的基本语法</p>
+<blockquote>
+<p>在axure交互设计时，函数可以用在条件公式和需要赋值的地方，其基本语法是用双方括号包含，变量值和函数用英文句号连接。</p>
+</blockquote>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[LVAR. Width]] 表示变量LVAR的宽度。</span><br><span class="line"></span><br><span class="line">[[This. Width]] 当前元件的宽度</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-1-元件函数"><a href="#5-1-元件函数" class="headerlink" title="5.1 元件函数"></a>5.1 元件函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">This</td>
+<td style="text-align:left">获取当前元件对象。当前元件是指当前添加交互动作的元件。</td>
+</tr>
+<tr>
+<td style="text-align:center">Target</td>
+<td style="text-align:left">获取目标元件对象。目标元件是指当前交互动作控制的元件。</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:left">获取元件对象的X轴坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">y</td>
+<td style="text-align:left">获取元件对象的Y轴坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">width</td>
+<td style="text-align:left">获取元件对象的宽度值。</td>
+</tr>
+<tr>
+<td style="text-align:center">height</td>
+<td style="text-align:left">获取元件对象的高度值。</td>
+</tr>
+<tr>
+<td style="text-align:center">scrollX</td>
+<td style="text-align:left">获取元件对象的水平滚动距离（当前仅限动态面板）。</td>
+</tr>
+<tr>
+<td style="text-align:center">scrollY</td>
+<td style="text-align:left">获取元件对象的垂直滚动距离（当前仅限动态面板）。</td>
+</tr>
+<tr>
+<td style="text-align:center">text</td>
+<td style="text-align:left">获取元件对象的文本文字。</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:left">获取元件对象的自定义名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">top</td>
+<td style="text-align:left">获取元件对象的上边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">left</td>
+<td style="text-align:left">获取元件对象的左边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">right</td>
+<td style="text-align:left">获取元件对象的右边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">bottom</td>
+<td style="text-align:left">获取元件对象的下边界坐标值。</td>
+</tr>
+<tr>
+<td style="text-align:center">opacity</td>
+<td style="text-align:left">获取元件对象的不透明比例。</td>
+</tr>
+<tr>
+<td style="text-align:center">rotation</td>
+<td style="text-align:left">获取元件对象的旋转角度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-2-鼠标指针函数"><a href="#5-2-鼠标指针函数" class="headerlink" title="5.2 鼠标指针函数"></a>5.2 鼠标指针函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Cursor.x</td>
+<td style="text-align:left">鼠标指针在页面中位置的X轴坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">Cursor.y</td>
+<td style="text-align:left">鼠标指针在页面中位置的Y轴坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragX</td>
+<td style="text-align:left">鼠标指针沿X轴拖动元件时的瞬间(0.01秒)拖动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragY</td>
+<td style="text-align:left">鼠标指针沿Y轴拖动元件时的瞬间(0.01秒)拖动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">TotalDragX</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的X轴移动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">TotalDragY</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的Y轴移动距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">DragTime</td>
+<td style="text-align:left">鼠标指针拖动元件从开始到结束的总时长。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-3-Axure-RP窗口函数"><a href="#5-3-Axure-RP窗口函数" class="headerlink" title="5.3 Axure RP窗口函数"></a>5.3 Axure RP窗口函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Window.width</td>
+<td style="text-align:left">打开原型页面的浏览器当前宽度。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.height</td>
+<td style="text-align:left">打开原型页面的浏览器当前高度。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.scrollX</td>
+<td style="text-align:left">浏览器中页面水平滚动的距离。</td>
+</tr>
+<tr>
+<td style="text-align:center">Window.scrollY</td>
+<td style="text-align:left">浏览器中页面垂直滚动的距离。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-4-页面函数"><a href="#5-4-页面函数" class="headerlink" title="5.4 页面函数"></a>5.4 页面函数</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">PageName</td>
+<td style="text-align:left">获取当前页面的名称。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-5-数字函数"><a href="#5-5-数字函数" class="headerlink" title="5.5 数字函数"></a>5.5 数字函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">toExponential(decimalPoints)</td>
+<td style="text-align:left">把数值转换为指数计数法。参数：decimalPoints为保留小数的位数。</td>
+</tr>
+<tr>
+<td style="text-align:center">toFixed(decimalPoints)</td>
+<td style="text-align:left">将一个数字转为保留指定位数的小数，小数位数超出指定位数时进行四舍五入。参数：decimalPoints为保留小数的位数。</td>
+</tr>
+<tr>
+<td style="text-align:center">toPrecision(length)</td>
+<td style="text-align:left">把数字格式化为指定的长度。参数：length为格式化后的数字长度，小数点不计入长度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-6-数学函数"><a href="#5-6-数学函数" class="headerlink" title="5.6 数学函数"></a>5.6 数学函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Math.abs(x)</td>
+<td style="text-align:left">计算参数数值的绝对值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.acos(x)</td>
+<td style="text-align:left">获取一个数值的反余弦弧度值，其范围是 0~ pi 。 参数：x为数值，范围在 -1~1 之间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.asin(x)</td>
+<td style="text-align:left">获取一个数值的反正弦值。 参数：x为数值，范围在 -1~1 之间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.atan(x)</td>
+<td style="text-align:left">获取一个数值的反正切值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.atan2(y,x)</td>
+<td style="text-align:left">获取某一点(x,y)的角度值。 参数：“x,y”为点的坐标数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.ceil(x)</td>
+<td style="text-align:left">向上取整函数，获取大于或者等于指定数值的最小整数。 参数：x为数值</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.cos(x)</td>
+<td style="text-align:left">余弦函数。 参数：x为弧度数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.exp(x)</td>
+<td style="text-align:left">指数函数，计算以e为底的指数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.floor(x)</td>
+<td style="text-align:left">向下取整函数，获取小于或者等于指定数值的最大整数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.log(x)</td>
+<td style="text-align:left">对数函数，计算以e为底的对数值。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.max(x,y)</td>
+<td style="text-align:left">获取参数中的最大值。 参数：“x,y”表示多个数值，而非2个数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.min(x,y)</td>
+<td style="text-align:left">获取参数中的最小值。 参数：“x,y”表示多个数值，而非2个数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.pow(x,y)</td>
+<td style="text-align:left">幂函数，计算x的y次幂。 参数：x不能为负数且y为小数，或者x为0且y小于等于0。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.random()</td>
+<td style="text-align:left">随机数函数，返回一个0~1之间的随机数。 示例：获取10-15之间的随机小数，计算公式为Math.random()*5+10。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.sin(x)</td>
+<td style="text-align:left">正弦函数。 参数：x为弧度数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.sqrt(x)</td>
+<td style="text-align:left">平方根函数。 参数：x为数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Math.tan(x)</td>
+<td style="text-align:left">正切函数。 参数：x为弧度数值。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-7-时间函数"><a href="#5-7-时间函数" class="headerlink" title="5.7 时间函数"></a>5.7 时间函数</h3><style>
+table th:first-of-type {
+    width: 50%;
+}
+table th:nth-of-type(2) {
+    width: 50%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Now</td>
+<td style="text-align:left">获取当前计算机系统日期对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">GenDate</td>
+<td style="text-align:left">获取原型生成日期对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDate()</td>
+<td style="text-align:left">获取日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDay()</td>
+<td style="text-align:left">获取日期对象“星期”部分的数值(0 ~ 6)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getDayOfWeek()</td>
+<td style="text-align:left">获取日期对象“星期”部分的英文名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">getFullYear()</td>
+<td style="text-align:left">获取日期对象“年份”部分四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getHours()</td>
+<td style="text-align:left">获取日期对象“小时”部分数值(0 ~ 23)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMilliseconds()</td>
+<td style="text-align:left">获取日期对象的毫秒数(0 ~ 999)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMinutes()</td>
+<td style="text-align:left">获取日期对象“分钟”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMonth()</td>
+<td style="text-align:left">获取日期对象“月份”部分的数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getMonthName()</td>
+<td style="text-align:left">获取日期对象“月份”部分的英文名称。</td>
+</tr>
+<tr>
+<td style="text-align:center">getSeconds()</td>
+<td style="text-align:left">获取日期对象“秒数”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getTime()</td>
+<td style="text-align:left">获取当前日期对象中的时间值。该时间值表示从1970年1月1日00:00:00开始，到当前日期对象时，所经过的毫秒数，以格林威治时间为准。</td>
+</tr>
+<tr>
+<td style="text-align:center">getTimezoneOffset()</td>
+<td style="text-align:left">获取世界标准时间(UTC)与当前主机时间之间的分钟差值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCDate()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCDay()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“星期”部分的数值(0 ~ 6)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCFullYear()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“年份”部分四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCHours()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“小时”部分数值(0 ~ 23)</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMilliseconds()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象的毫秒数(0 ~ 999)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMinutes()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“分钟”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCMonth()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“月份”部分的数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">getUTCSeconds()</td>
+<td style="text-align:left">使用世界标准时间获取当前日期对象“秒数”部分数值(0 ~59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Date.parse(datestring)</td>
+<td style="text-align:left">用于分析一个包含日期的字符串，并返回该日期与1970年1月1日00:00:00之间相差的毫秒数 参数：datestring为日期格式的字符串，格式为：yyyy/mm/dd hh:mm:ss。</td>
+</tr>
+<tr>
+<td style="text-align:center">toDateString()</td>
+<td style="text-align:left">以字符串的形式获取一个日期。</td>
+</tr>
+<tr>
+<td style="text-align:center">toISOString()</td>
+<td style="text-align:left">获取当前日期对象的IOS格式的日期字串，格式：YYYY-MM-DDTHH:mm:ss.sssZ。</td>
+</tr>
+<tr>
+<td style="text-align:center">toJSON()</td>
+<td style="text-align:left">获取当前日期对象的JSON格式的日期字串，格式： YYYY-MM-DDTHH:mm:ss.sssZ。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLocaleDateString()</td>
+<td style="text-align:left">以字符串的形式获取本地化当前日期对象。并且只包含“年月日”部分的短日期信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLocaleTimeString()</td>
+<td style="text-align:left">以字符串的形式获取本地化当前日期对象。并且只包含“时分秒”部分的短日期信息。</td>
+</tr>
+<tr>
+<td style="text-align:center">toUTCString()</td>
+<td style="text-align:left">以字符串的形式获取相对于当前日期对象的世界标准时间。</td>
+</tr>
+<tr>
+<td style="text-align:center">Date.UTC<br>(year,month,day,hour,min,sec,millisec)</td>
+<td style="text-align:left">获取相对于1970 年 1 月 1 日 00:00:00的世界标准时间，与指定日期对象之间相差的毫秒数。 参数：组成指定日期对象的年、月、日、时、分、秒以及毫秒的数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">valueOf()</td>
+<td style="text-align:left">获取当前日期对象的原始值。</td>
+</tr>
+<tr>
+<td style="text-align:center">addYears(years)</td>
+<td style="text-align:left">将指定的年份数加到当前日期对象上，获取一个新的日期对象。 参数：years为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMonths(months)</td>
+<td style="text-align:left">将指定的月份数加到当前日期对象上，获取一个新的日期对象。 参数：months为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addDays(days)</td>
+<td style="text-align:left">将指定的天数加到当前日期对象上，获取一个新的日期对象。 参数：days为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addHours(hours)</td>
+<td style="text-align:left">将指定的小时数加到当前日期对象上，获取一个新的日期对象。 参数：hours为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMinutes(minutes)</td>
+<td style="text-align:left">将指定的分钟数加到当前日期对象上，获取一个新的日期对象。 参数：minutes为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addSeconds(seconds)</td>
+<td style="text-align:left">将指定的秒数加到当前日期对象上，获取一个新的日期对象。 参数：seconds为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">addMilliseconds(ms)</td>
+<td style="text-align:left">将指定的毫秒数加到当前日期对象上，获取一个新的日期对象。 参数：ms为整数数值，正负均可。</td>
+</tr>
+<tr>
+<td style="text-align:center">Year</td>
+<td style="text-align:left">获取系统日期对象“年份”部分的四位数值。</td>
+</tr>
+<tr>
+<td style="text-align:center">Month</td>
+<td style="text-align:left">获取系统日期对象“月份”部分数值(1 ~ 12)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Day</td>
+<td style="text-align:left">获取系统日期对象“日期”部分数值(1 ~ 31)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Hours</td>
+<td style="text-align:left">获取系统日期对象“小时”部分数值(0 ~ 23)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Minutes</td>
+<td style="text-align:left">获取系统日期对象“分钟”部分数值(0 ~ 59)。</td>
+</tr>
+<tr>
+<td style="text-align:center">Seconds</td>
+<td style="text-align:left">获取系统日期对象“秒数”部分数值(0 ~ 59)。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-8-字符串函数"><a href="#5-8-字符串函数" class="headerlink" title="5.8 字符串函数"></a>5.8 字符串函数</h3><style>
+table th:first-of-type {
+    width: 40%;
+}
+table th:nth-of-type(2) {
+    width: 60%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">length</td>
+<td style="text-align:left">获取当前文本对象的长度，即字符个数；1个汉字的长度按1计算。</td>
+</tr>
+<tr>
+<td style="text-align:center">charAt(index)</td>
+<td style="text-align:left">获取当前文本对象中指定位置的字符； 参数：index为大于等于0的整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">charCodeAt(index)</td>
+<td style="text-align:left">获取当前文本对象中指定位置字符的Unicode编码（中文编码段19968 ~ 40622）；字符起始位置从0开始。 参数：index为大于等于0的整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">concat(‘string’)</td>
+<td style="text-align:left">将当前文本对象与另一个字符串组合。 参数：string为组合在后方的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">indexOf(‘searchValue’,start)</td>
+<td style="text-align:left">从左至右获取查询字符串在当前文本对象中首次出现的位置。未查询到时返回值为-1。 参数：searchValue为查询的字符串；start为查询的起始位置。该参数可省略，官方未给出此参数，经测试可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">lastIndexOf(‘searchvalue’,start)</td>
+<td style="text-align:left">从右至左获取查询字符串在当前文本对象中首次出现的位置。未查询到时返回值为-1。 参数：searchValue为查询的字符串；start为查询的起始位置。该参数可省略，官方未给出此参数，经测试可用。</td>
+</tr>
+<tr>
+<td style="text-align:center">replace(‘searchvalue’,’newvalue’)</td>
+<td style="text-align:left">用新的字符串替换当前文本对象中指定的字符串。 参数：searchvalue为被替换的字符串；newvalue为新文本对象或字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">slice(start,end)</td>
+<td style="text-align:left">从当前文本对象中截取从指定起始位置开始到终止位置之前的字符串。 参数：start为被截取部分的起始位置，该数值可为负数；end为被截取部分的终止位置，该数值可为负数。该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">split(‘separator’,limit)</td>
+<td style="text-align:left">将当前文本对象中与分隔字符相同的字符转为“,”，形成多组字符串，并返回从左开始的指定组数。 参数：separator为分隔字符，分隔字符可以为空，为空时将分隔每个字符为一组；limit为返回组数的数值，该参数可以省略，省略该参数则返回所有字符串组。</td>
+</tr>
+<tr>
+<td style="text-align:center">substr(start,length)</td>
+<td style="text-align:left">从当前文本对象中指定起始位置开始截取一定长度的字符串。 参数：start为被截取部分的起始位置；length为被截取部分的长度，该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">substring(from,to)</td>
+<td style="text-align:left">从当前文本对象中截取从指定位置到另一指定位置区间的字符串。右侧位置不截取。 参数：from为指定区间的起始位置；to为指定区间的终止位置，该参数可省略，省略该参数则由起始位置截取至文本对象结尾。</td>
+</tr>
+<tr>
+<td style="text-align:center">toLowerCase()</td>
+<td style="text-align:left">将文本对象中所有的大写字母转换为小写字母。</td>
+</tr>
+<tr>
+<td style="text-align:center">toUpperCase()</td>
+<td style="text-align:left">将当前文本对象中所有的小写字母转换为大写字母。</td>
+</tr>
+<tr>
+<td style="text-align:center">trim()</td>
+<td style="text-align:left">去除当前文本对象两端的空格。</td>
+</tr>
+<tr>
+<td style="text-align:center">toString()</td>
+<td style="text-align:left">将一个逻辑值转换为字符串。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-9-中继器函数"><a href="#5-9-中继器函数" class="headerlink" title="5.9 中继器函数"></a>5.9 中继器函数</h3><style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名称</th>
+<th style="text-align:left">函数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Repeater</td>
+<td style="text-align:left">中继器的对象。Item.Repeater即为Item所在的中继器对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">visibleItemCount</td>
+<td style="text-align:left">中继器项目列表中可见项的数量。比如：项目列表共有15项，分页显示为每页6项。当项目列表在第1、2页时，可见项数量为6；当项目列表在第3页时，可见项数量为3。</td>
+</tr>
+<tr>
+<td style="text-align:center">itemCount</td>
+<td style="text-align:left">获取中继器项目列表的总数量，或者叫加载项数量。默认情况下项目列表的总数量会与中继器数据集中的数据行数量一致，但是，如果进行了筛选，项目列表的总数量则是筛选后的数量，这个数量不受分页影响。</td>
+</tr>
+<tr>
+<td style="text-align:center">dataCount</td>
+<td style="text-align:left">获取中继器数据集中数据行的总数量。</td>
+</tr>
+<tr>
+<td style="text-align:center">pageCount</td>
+<td style="text-align:left">获取中继器分页的总数量，即能够获取分页后共有多少页。</td>
+</tr>
+<tr>
+<td style="text-align:center">pageIndex</td>
+<td style="text-align:left">获取中继器项目列表当前显示内容的页码。</td>
+</tr>
+<tr>
+<td style="text-align:center">Item</td>
+<td style="text-align:left">获取数据集一行数据的集合，即数据行的对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">TargetItem</td>
+<td style="text-align:left">目标数据行的对象。</td>
+</tr>
+<tr>
+<td style="text-align:center">Item.列名</td>
+<td style="text-align:left">获取数据行中指定列的值。</td>
+</tr>
+<tr>
+<td style="text-align:center">index</td>
+<td style="text-align:left">获取数据行的索引编号，编号起始为1，由上至下每行递增1。</td>
+</tr>
+<tr>
+<td style="text-align:center">isFirst</td>
+<td style="text-align:left">判断数据行是否为第1行；如果是第1行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isLast</td>
+<td style="text-align:left">判断数据行是否为最末行；如果是最末行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isEven</td>
+<td style="text-align:left">判断数据行是否为偶数行；如果是偶数行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isOdd</td>
+<td style="text-align:left">判断数据行是否为奇数行；如果是奇数行，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isMarked</td>
+<td style="text-align:left">判断数据行是否为被标记；如果被标记，返回值为“True”，否则为“False”。</td>
+</tr>
+<tr>
+<td style="text-align:center">isVisible</td>
+<td style="text-align:left">判断数据行是否为可见行；如果是可见行，返回值为“True”，否则为“False”。</td>
 </tr>
 </tbody>
 </table>
@@ -934,7 +1737,7 @@
       
         
           
-            <h1 id="原型设计-Axure-RP高级元件"><a href="#原型设计-Axure-RP高级元件" class="headerlink" title="原型设计-Axure RP高级元件"></a>原型设计-Axure RP高级元件</h1><p>| 高级元件包含动态面板(Dynamic Panel)、内联框架(Inline Frame)、中继器(Repeater)等</p>
+            <p>| 高级元件包含动态面板(Dynamic Panel)、内联框架(Inline Frame)、中继器(Repeater)等</p>
 <h2 id="1-动态面板"><a href="#1-动态面板" class="headerlink" title="1 动态面板"></a>1 动态面板</h2><p>动态面板元件它可以定义诸多状态，并可设置默认状态，还可以通过交互事件动态切换状态和调整大小，所以很多的动态交互效果都可以通过动态面板元件实现。动态面板元件的不同状态都可以定义不同内容，默认显示的是是动态面板元件的第一个状态的内容，也可在“概要”面板将某个动态面板元件置为不可见。</p>
 <h2 id="2-内联框架"><a href="#2-内联框架" class="headerlink" title="2 内联框架"></a>2 内联框架</h2><p>与 HTML 页面中的 iFrame 元素对应，内联框架元件用于在一个页面中嵌入另一个页面。在 Axure RP 8 中，可以使用内联框架元件引入任何一个 http：//开头的地址，如网站地址、图片地址和Flash地址等，也可引用本工程或本地计算机中的某个页面。</p>
 <h2 id="3-中继器"><a href="#3-中继器" class="headerlink" title="3 中继器"></a>3 中继器</h2><p>中继器元件是自Axure RP 7起推出的新元件，与动态面板元件一样经常被用于实现复杂的交互功能。中继器操作相对复杂，创建后需要编辑内部每一组数据项的内部布局，可设置包括多少数据列（一般与内部布局的可设置的动态元素个数数对应），也可设置中继器包括的数据行的内容；并可通过每项载入时事件，将数据行的内容赋值给每一组数据项内部的元件，还可设置每行显示多少组数据项。<br>当然，中继器的强大之处还在于，在各事件中，可设置中继器的动作（添加排序、移除排序、添加筛选、移除筛选、设置当前显示数量、设置每页项目数量、设置数据集，例如添加行、标记行、取消标记、更新行和删除行）对中继器进行内部操作，因为这些功能，中继器元件比表格元件强大很多，完全可以替代表格元件完成更复杂的功能。</p>
@@ -1090,7 +1893,7 @@
       
         
           
-            <h1 id="原型设计"><a href="#原型设计" class="headerlink" title="原型设计"></a>原型设计</h1><h2 id="什么是原型设计"><a href="#什么是原型设计" class="headerlink" title="什么是原型设计"></a>什么是原型设计</h2><p>原型设计是指产品或者创意的最初模型，可以通过产品原型让用户提前体验产品、交流设计构想、展示复杂交互的方式。也是团队各角色，以及与团队外相关角色交流的利器。因为与实际开发产品相比，所耗费时间少，而且成本低廉。因此，产品原型设计被广泛应用在产品开发过程中。</p>
+            <h2 id="什么是原型设计"><a href="#什么是原型设计" class="headerlink" title="什么是原型设计"></a>什么是原型设计</h2><p>原型设计是指产品或者创意的最初模型，可以通过产品原型让用户提前体验产品、交流设计构想、展示复杂交互的方式。也是团队各角色，以及与团队外相关角色交流的利器。因为与实际开发产品相比，所耗费时间少，而且成本低廉。因此，产品原型设计被广泛应用在产品开发过程中。</p>
 <h2 id="原型设计工具"><a href="#原型设计工具" class="headerlink" title="原型设计工具"></a>原型设计工具</h2><p>|常用的原型设计工具有以下几种：Axure RP、墨刀、Mockplus、Justinmind、Balsamiq Mockups</p>
 <h3 id="1-Axure-RP"><a href="#1-Axure-RP" class="headerlink" title="1 Axure RP"></a>1 Axure RP</h3><p>Axure RP是美国Axure Software Solution公司旗舰产品，是一款专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的产品设计人员能够快速地创建应用软件或Web 网站的线框图、流程图、原型和需求规格说明文档。作为专业的原型设计工具，它能快速、高效地创建原型，同时支持多人协作设计和版本控制管理。Axure（发音：Ack-sure），代表美国Axure公司，RP则是Rapid Prototyping（快速原型）的缩写。Prototyping（快速原型）的缩写。其官方网站为：<a href="https://www.axure.com" target="_blank" rel="noopener">https://www.axure.com</a></p>
 <h3 id="2-墨刀"><a href="#2-墨刀" class="headerlink" title="2 墨刀"></a>2 墨刀</h3><p>墨刀是一款在线原型设计工具。借助于墨刀，创业者、产品经理及 UI/UX设计师能够快速构建移动应用产品原型，并向他人演示。<br>作为一款专注移动应用的原型工具，墨刀把全部功能都进行了模块化，用户也能选择页面切换特效及主题，操作方式也相对简便，大部分操作都可通过鼠标拖动来完成。现在，墨刀已实现了云端保存、手机实时预览和在线评论等功能。<br>墨刀的官方网站为：<a href="https://modao.cc" target="_blank" rel="noopener">https://modao.cc</a></p>
