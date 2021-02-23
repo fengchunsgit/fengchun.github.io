@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="fengchunsgit">
 <meta property="og:description" content="1 页面事件 table th:first-of-type {     width: 30%; } table th:nth-of-type(2) {     width: 70%; }       事件名称 事件说明     页面加载时事件 页面加载时事件   窗口尺寸改变时事件 浏览器窗口改变大小时，在调整浏览器窗口时发生，可多次发生   窗口滚动时事件 浏览器窗口滚动时事件   窗口向上滚动">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-15T04:02:06.789Z">
+<meta property="og:updated_time" content="2021-02-23T14:37:29.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型设计-Axure RP 交互设计">
 <meta name="twitter:description" content="1 页面事件 table th:first-of-type {     width: 30%; } table th:nth-of-type(2) {     width: 70%; }       事件名称 事件说明     页面加载时事件 页面加载时事件   窗口尺寸改变时事件 浏览器窗口改变大小时，在调整浏览器窗口时发生，可多次发生   窗口滚动时事件 浏览器窗口滚动时事件   窗口向上滚动">
@@ -563,7 +563,10 @@ table th:nth-of-type(2) {
 </tr>
 </tbody>
 </table>
-<h2 id="3-用例和动作"><a href="#3-用例和动作" class="headerlink" title="3 用例和动作"></a>3 用例和动作</h2><h2 id="4-变量"><a href="#4-变量" class="headerlink" title="4 变量"></a>4 变量</h2><blockquote>
+<h2 id="3-用例和动作"><a href="#3-用例和动作" class="headerlink" title="3 用例和动作"></a>3 用例和动作</h2><blockquote>
+<p>事件是通过不同的用例和动作对外界输入做出的一种反映。事件包含一个或多个用例。通过判断各自的条件来执行具体的动作，不同的用例不会同时发生。</p>
+</blockquote>
+<h2 id="4-变量"><a href="#4-变量" class="headerlink" title="4 变量"></a>4 变量</h2><blockquote>
 <p>在 Axure RP 8 中变量被用于实现多种交互效果。从 Axure RP 6 版本开始，就增加了全局变量的功能，因此，Axure RP 8有两种变量：全局变量和局部变量。</p>
 </blockquote>
 <h3 id="4-3-变量应用场合"><a href="#4-3-变量应用场合" class="headerlink" title="4.3 变量应用场合"></a>4.3 变量应用场合</h3><p>变量的应用场合丰富多样，关键还是看设计人员如何使用，用得好就是神来之笔，用得不好反而会使原型设计复杂化。以下两种应用场景最为常见。</p>
@@ -1238,6 +1241,12 @@ table th:nth-of-type(2) {
 </tr>
 </tbody>
 </table>
+<h3 id="实例-实现数字时钟逻辑"><a href="#实例-实现数字时钟逻辑" class="headerlink" title="实例-实现数字时钟逻辑"></a>实例-实现数字时钟逻辑</h3><ul>
+<li>case 1 seconds 不等于59时，seconds+1</li>
+<li>case 2 else if seconds=59，minutes=59，hours=23 时，seconds，minutes，hours置零</li>
+<li>case 3 else if seconds=59，minutes=59，hours+1</li>
+<li>case 4 else if seconds=59，minutes+1</li>
+</ul>
 
       
     </div>
@@ -1428,7 +1437,7 @@ table th:nth-of-type(2) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-页面事件"><span class="nav-number">1.</span> <span class="nav-text">1 页面事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-元件事件"><span class="nav-number">2.</span> <span class="nav-text">2 元件事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-用例和动作"><span class="nav-number">3.</span> <span class="nav-text">3 用例和动作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-变量"><span class="nav-number">4.</span> <span class="nav-text">4 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-变量应用场合"><span class="nav-number">4.1.</span> <span class="nav-text">4.3 变量应用场合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-函数"><span class="nav-number">5.</span> <span class="nav-text">5 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-元件函数"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 元件函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-鼠标指针函数"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 鼠标指针函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Axure-RP窗口函数"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 Axure RP窗口函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-页面函数"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 页面函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-数字函数"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 数字函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-数学函数"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 数学函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-时间函数"><span class="nav-number">5.7.</span> <span class="nav-text">5.7 时间函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-8-字符串函数"><span class="nav-number">5.8.</span> <span class="nav-text">5.8 字符串函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-9-中继器函数"><span class="nav-number">5.9.</span> <span class="nav-text">5.9 中继器函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-页面事件"><span class="nav-number">1.</span> <span class="nav-text">1 页面事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-元件事件"><span class="nav-number">2.</span> <span class="nav-text">2 元件事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-用例和动作"><span class="nav-number">3.</span> <span class="nav-text">3 用例和动作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-变量"><span class="nav-number">4.</span> <span class="nav-text">4 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-变量应用场合"><span class="nav-number">4.1.</span> <span class="nav-text">4.3 变量应用场合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-函数"><span class="nav-number">5.</span> <span class="nav-text">5 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-元件函数"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 元件函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-鼠标指针函数"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 鼠标指针函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-Axure-RP窗口函数"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 Axure RP窗口函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-页面函数"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 页面函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-数字函数"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 数字函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-数学函数"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 数学函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-时间函数"><span class="nav-number">5.7.</span> <span class="nav-text">5.7 时间函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-8-字符串函数"><span class="nav-number">5.8.</span> <span class="nav-text">5.8 字符串函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-9-中继器函数"><span class="nav-number">5.9.</span> <span class="nav-text">5.9 中继器函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-实现数字时钟逻辑"><span class="nav-number">5.10.</span> <span class="nav-text">实例-实现数字时钟逻辑</span></a></li></ol></li></ol></div>
             
 
           </div>
