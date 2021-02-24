@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/06/CSS3响应式设计/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/04/08/CSS3用户界面与其他重要属性/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -281,7 +281,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/04/06/CSS3响应式设计/" itemprop="url">CSS3响应式设计</a></h2>
+                <a class="post-title-link" href="/2017/04/08/CSS3用户界面与其他重要属性/" itemprop="url">CSS3用户界面与其他重要属性</a></h2>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-06T18:06:08+08:00">
-                2017-04-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T19:41:40+08:00">
+                2017-04-08
               </time>
             
 
@@ -355,214 +355,109 @@
       
         
           
-            <h1 id="Media-Queries——媒体查询"><a href="#Media-Queries——媒体查询" class="headerlink" title="Media Queries——媒体查询"></a>Media Queries——媒体查询</h1><p>随着科学技术不断的向前发展，网页的浏览终端越来越多样化，用户可以通过：<code>宽屏电视、台式电脑、笔记本电脑、平板电脑和智能手机</code>来访问你的网站。尽管你无法保证一个网站在不同屏幕尺寸和不同设备上看起来完全一模一样，但至少要让你的Web页面能适配用户的终端，让他更好的呈现在你的用户面前。在本节中，将会学到如何使用CSS3中的Media Queries模块来让一个页面适应不同的终端（或屏幕尺寸），从而让你的页面让用户有一个更好的体验。</p>
-<h2 id="Media-Queries"><a href="#Media-Queries" class="headerlink" title="Media Queries"></a>Media Queries</h2><p>Media Queries是CSS3新增加的一个模块功能，其最大的特色就是通过CSS3来查询媒体，然后调用对应的样式。其实这个功能在CSS2.1中就有出现过，只不过那个时候此功能并不强大，我们最常见的就是给打印设备添加打印样式。随着时代的变化，这个模块功能越来越强大。</p>
-<p>在彻底的了解Media Queries我们需要了解其中的两个重要部分，第一个是媒体类型，第二个是媒体特性。下面的内容我们简单的来了解这两个部分：</p>
-<h3 id="媒体类型-Media-Type"><a href="#媒体类型-Media-Type" class="headerlink" title="媒体类型(Media Type)"></a>媒体类型(Media Type)</h3><p>媒体类型（Media Type）在CSS2中是一个常见的属性，也是一个非常有用的属性，可以通过媒体类型对不同的设备指定不同的样式。</p>
-<p>在CSS2中常碰到的就是all(全部)、screen(屏幕)、print(页面打印或打印预览模式)，其实媒体类型远不止这三种，W3C总共列出了10种媒体类型。如下表所示：</p>
-<table>
+            <h1 id="自由缩放属性resize"><a href="#自由缩放属性resize" class="headerlink" title="自由缩放属性resize"></a>自由缩放属性resize</h1><p>为了增强用户体验，CSS3增加了很多新的属性，其中<code>resize</code>就是一个重要的属性，它允许用户通过拖动的方式来修改元素的尺寸来改变元素的大小。任何拥有<code>overflow</code>属性的任何容器元素都可以使用。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize: none | both | horizontal | vertical | inherit</span><br></pre></td></tr></table></figure>
+<h2 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h2><table>
 <thead>
 <tr>
-<th>值</th>
-<th>设备类型</th>
+<th>属性值</th>
+<th>属性值说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>All</code></td>
-<td>所有设备</td>
+<td><code>none</code></td>
+<td>用户不能拖动元素修改尺寸大小。</td>
 </tr>
 <tr>
-<td><code>Braille</code></td>
-<td>盲人用点字法触觉回馈设备</td>
+<td><code>both</code></td>
+<td>用户可以拖动元素，同时修改元素的宽度和高度</td>
 </tr>
 <tr>
-<td><code>Embossed</code></td>
-<td>盲文打印机</td>
+<td><code>horizontal</code></td>
+<td>用户可以拖动元素，仅可以修改元素的宽度，但不能修改元素的高度。</td>
 </tr>
 <tr>
-<td><code>Handheld</code></td>
-<td>便携设备</td>
+<td><code>vertical</code></td>
+<td>用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。</td>
 </tr>
 <tr>
-<td><code>Print</code></td>
-<td>打印用纸或打印预览视图</td>
-</tr>
-<tr>
-<td><code>Projection</code></td>
-<td>各种投影设备</td>
-</tr>
-<tr>
-<td><code>Screen</code></td>
-<td>电脑显示器</td>
-</tr>
-<tr>
-<td><code>Speech</code></td>
-<td>语音或音频合成器</td>
-</tr>
-<tr>
-<td><code>Tv</code></td>
-<td>电视机类型设备</td>
-</tr>
-<tr>
-<td><code>Tty</code></td>
-<td>使用固定密度字母栅格的媒介，比如电传打字机和终端</td>
+<td><code>inherit</code></td>
+<td>继承父元素的resize属性值。</td>
 </tr>
 </tbody>
 </table>
-<p>其中<code>Screen</code>、<code>All</code>和<code>Print</code>为最常见的三种媒体类型。</p>
-<h3 id="媒体类型引用方法"><a href="#媒体类型引用方法" class="headerlink" title="媒体类型引用方法"></a>媒体类型引用方法</h3><p>媒体类型的引用方法也有多种，常见的有：<code>link</code>标签、<code>@import</code>和CSS3新增的<code>@media</code>几种：</p>
-<ul>
-<li><p><code>link</code>方法</p>
-<p><code>link</code>方法引入媒体类型其实就是在<code>&lt;link&gt;</code>标签引用样式的时候，通过<code>&lt;link&gt;</code>标签中的media属性来指定不同的媒体类型。如下所示。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel="stylesheet" type="text/css" href="style.css" media="screen" /&gt;</span><br><span class="line">&lt;link rel="stylesheet" type="text/css" href="print.css" media="print" /&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>@import</code>方法</p>
-<p><code>@import</code>可以引用样式文件，同样也可以用来引用媒体类型。<code>@import</code>引入媒体类型主要有两种方式，一种是在样式中通过@import调用另一个样式文件；另一种方法是在<code>&lt;head&gt;&lt;/head&gt;</code>标签中的<code>&lt;style&gt;&lt;/style&gt;</code>中引入，但这种使用方法在IE6~7都不被支持，如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">importurl</span>(<span class="keyword">reset</span>.<span class="keyword">css</span>) screen;   </span><br><span class="line">@<span class="keyword">importurl</span>(<span class="keyword">print</span>.<span class="keyword">css</span>) print;</span><br></pre></td></tr></table></figure>
-<p>在<code>&lt;head&gt;</code>中的<code>&lt;style&gt;</code>标签中引入媒体类型方法。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    @<span class="keyword">importurl</span>(<span class="keyword">style</span>.<span class="keyword">css</span>) all;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>@media</code>方法</p>
-<p><code>@media</code>是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。<code>@media</code>引入媒体类型和<code>@import</code>有点类似也具有两方式。</p>
-<p>（1）在样式文件中引用媒体类型：</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media screen &#123;</span><br><span class="line">  选择器&#123;/*你的样式代码写在这里…*/&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  （2）使用@media引入媒体类型的方式是在<code>&lt;head&gt;</code>标签中的<code>&lt;style&gt;</code>中引用。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">      @<span class="keyword">media</span> screen&#123;</span></span><br><span class="line"><span class="css">      选择器&#123;<span class="comment">/*你的样式代码写在这里…*/</span>&#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Media-Queries使用方法"><a href="#Media-Queries使用方法" class="headerlink" title="Media Queries使用方法"></a>Media Queries使用方法</h1><p>了解完这些概念性的东西，同学们最想知道的是Media Queries要如何使用？下面我们一起来探讨其使用方法：</p>
-<p>Media Queries能在不同的条件下使用不同的样式，使页面在不同在终端设备下达到不同的渲染效果。前面简单的介绍了Media Queries如何引用到项目中，但Media Queries有其自己的使用规则。具体来说,Media Queries的使用方法如下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@media 媒体类型and （媒体特性）&#123;你的样式&#125;</span><br></pre></td></tr></table></figure>
-<p>注意：使用Media Queries必须要使用<code>@media</code>开头，然后指定媒体类型（也可以称为设备类型），随后是指定媒体特性（也可以称之为设备特性）。媒体特性的书写方式和样式的书写方式非常相似，主要分为两个部分，第一个部分指的是媒体特性，第二部分为媒体特性所指定的值，而且这两个部分之间使用冒号分隔。例如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">max-width</span>: 480<span class="selector-tag">px</span></span><br></pre></td></tr></table></figure></p>
-<p>从前面表中可以得知，主要有十种媒体类型和13种媒体特性，将其组合就类似于不同的CSS集合。但与CSS属性不同的是，媒体特性是通过<code>min/max</code>来表示大于等于或小于做为逻辑判断，而不是使用小于（<code>&lt;</code>）和大于（<code>&gt;</code>）这样的符号来判断。接下来一起来看看Media Queries在实际项目中常用的方式。</p>
-<h2 id="最大宽度max-width"><a href="#最大宽度max-width" class="headerlink" title="最大宽度max-width"></a>最大宽度max-width</h2><p><code>max-width</code> 是媒体特性中最常用的一个特性，其意思是指媒体类型小于或等于指定的宽度时，样式生效。如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width:<span class="number">480px</span>)&#123;</span><br><span class="line"> <span class="selector-class">.ads</span> &#123;</span><br><span class="line">   <span class="attribute">display</span>:none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面表示的是：当屏幕小于或等于<code>480px</code>时,页面中的广告区块（<code>.ads</code>）都将被隐藏。</p>
-<h2 id="最小宽度min-width"><a href="#最小宽度min-width" class="headerlink" title="最小宽度min-width"></a>最小宽度min-width</h2><p><code>min-width</code>与<code>max-width</code>相反，指的是媒体类型大于或等于指定宽度时，样式生效。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">900px</span>)&#123;</span><br><span class="line"><span class="selector-class">.wrapper</span>&#123;<span class="attribute">width</span>: <span class="number">980px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面表示的是：当屏幕大于或等于<code>900px</code>时，容器<code>.wrapper</code>的宽度为<code>980px</code>。</p>
-<h2 id="多个媒体特性使用"><a href="#多个媒体特性使用" class="headerlink" title="多个媒体特性使用"></a>多个媒体特性使用</h2><p>Media Queries可以使用关键词<code>and</code>将多个媒体特性结合在一起。也就是说，一个Media Query中可以包含0到多个表达式，表达式又可以包含0到多个关键字，以及一种媒体类型。</p>
-<p>当屏幕在<code>600px~900px</code>之间时，<code>body</code>的背景色渲染为<code>#f5f5f5</code>，如下所示。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">600px</span>) and (max-width:<span class="number">900px</span>)&#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>:<span class="number">#f5f5f5</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备屏幕的输出宽度Device-Width"><a href="#设备屏幕的输出宽度Device-Width" class="headerlink" title="设备屏幕的输出宽度Device Width"></a>设备屏幕的输出宽度Device Width</h2><p>在智能设备上，例如iPhone、iPad等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用 <code>min/max</code> 对应参数，如 <code>min-device-width</code> 或者 <code>max-device-width</code> 。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">media</span>=<span class="string">"screen and (max-device-width:480px)"</span> <span class="attr">href</span>=<span class="string">"iphone.css"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面的代码指的是<code>iphone.css</code>样式适用于最大设备宽度为<code>480px</code>，比如说iPhone上的显示，这里的<code>max-device-width</code>所指的是设备的实际分辨率，也就是指可视面积分辨率。</p>
-<h2 id="not关键词"><a href="#not关键词" class="headerlink" title="not关键词"></a>not关键词</h2><p>使用关键词<code>not</code>是用来排除某种制定的媒体类型，也就是用来排除符合表达式的设备。换句话说，<code>not</code>关键词表示对后面的表达式执行取反操作，如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> not print and (max-width: <span class="number">1200px</span>)&#123;样式代码&#125;</span><br></pre></td></tr></table></figure>
-<p>上面代码表示的是：样式代码将被使用在除打印设备和设备宽度小于1200px下所有设备中。</p>
-<h2 id="only关键词"><a href="#only关键词" class="headerlink" title="only关键词"></a>only关键词</h2><p><code>only</code>用来指定某种特定的媒体类型，可以用来排除不支持媒体查询的浏览器。其实<code>only</code>很多时候是用来对那些不支持Media Query但却支持Media Type的设备隐藏样式表的。其主要有：支持媒体特性的设备，正常调用样式，此时就当only不存在；表示不支持媒体特性但又支持媒体类型的设备，这样就会不读样式，因为其先会读取only而不是screen；另外不支持Media Queries的浏览器，不论是否支持only，样式都不会被采用。如</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">linkrel="stylesheet"</span> <span class="attr">media</span>=<span class="string">"only screen and (max-device-width:240px)"</span> <span class="attr">href</span>=<span class="string">"android240.css"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在Media Query中如果没有明确指定Media Type，那么其默认为<code>all</code>，如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">linkrel="stylesheet"</span> <span class="attr">media</span>=<span class="string">"(min-width:701px) and (max-width:900px)"</span> <span class="attr">href</span>=<span class="string">"mediu.css"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>另外在样式中，还可以使用多条语句来将同一个样式应用于不同的媒体类型和媒体特性中，指定方式如下所示。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">linkrel="stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span> <span class="attr">media</span>=<span class="string">"handheld and (max-width:480px), screen and (min-width:960px)"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中<code>style.css</code>样式被用在宽度小于或等于<code>480px</code>的手持设备上，或者被用于屏幕宽度大于或等于<code>960px</code>的设备上。</p>
-<p>到目前为止，CSS3 Media Queries得到了众多浏览器支持，除了IE6-8浏览器不支持之外，在所有现代浏览器中都可以完美支持。还有一个与众不同的时，Media Queries在其他浏览器中<code>不需要像其他CSS3属性一样在不同的浏览器中添加前缀</code>。</p>
-<h1 id="Responsive设计"><a href="#Responsive设计" class="headerlink" title="Responsive设计"></a>Responsive设计</h1><p>什么是响应式设计呢？维基百科是这样对响应式作的描述：“Responsive设计简单的称为RWD，是精心提供各种设备都能浏览网页的一种设计方法，RWD能让你的网页在不同的设备中展现不同的设计风格。”从这一点描述来说，RWD不是流体布局，也不是网格布局，而是一种独特的网页设计方法。</p>
-<p>响应式设计要考虑元素布局的秩序，而且还需要做到“有求必应”，那就需要满足以下三个条件：网站必须建立灵活的网格基础；引用到网站的图片必须是可伸缩的；不同的显示风格，需要在Media Queries上写不同的样式。</p>
-<p>要想灵活的使用Responsive，仅满足这几个条件还是不够的，我们必须对Responsive有一个全面的了解，那么要了解Responsive，就得先了解他的一些术语：</p>
-<h2 id="流体网格"><a href="#流体网格" class="headerlink" title="流体网格"></a>流体网格</h2><p>流体网格是一个简单的网格系统，这种网格设计参考了流体设计中的网格系统，将每个网格格子使用百分比单位来控制网格大小。这种网格系统最大的好处是让你的网格大小随时根据屏幕尺寸大小做出相对应的比例缩放。</p>
-<h2 id="弹性图片"><a href="#弹性图片" class="headerlink" title="弹性图片"></a>弹性图片</h2><p>弹性图片指的是不给图片设置固定尺寸，而是根据流体网格进行缩放，用于适应各种网格的尺寸。而实现方法是比较简单，一句代码就能搞定的事情。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;<span class="attribute">max-width</span>:<span class="number">100%</span>;&#125;</span><br></pre></td></tr></table></figure>
-<p>不幸的是，这句代码在IE8浏览器存在一个严重的问题，让你的图片会失踪。当然弹性图片在响应式设计中如何更好的实现，到目前为止都还存在争议，也还在不断的改善之中。</p>
-<p>为每一个断点提供不同的图片，这是一个比较头痛的事情，因为Media Queries并不能改变图片“src”的属性值，那有没有办分法可以解决呢？可以参考一下下面的解决方法。使用background-image给元素使用背景图片，显示/隐藏父元素，给父元素使用不同的图片，然后通过Media Queries来控制这些图片显示或隐藏。</p>
-<p>来看一个断点解决图片自适应的例子。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image.jpg"</span></span></span><br><span class="line"><span class="tag"><span class="attr">data-src-600px</span>=<span class="string">"image-600px.jpg"</span></span></span><br><span class="line"><span class="tag"><span class="attr">data-src-800px</span>=<span class="string">"image-800px.jpg"</span></span></span><br><span class="line"><span class="tag"><span class="attr">alt</span>=<span class="string">""</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>对应的CSS代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (min-device-width:<span class="number">600px</span>)&#123;</span><br><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[data-src-600px]</span>&#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="built_in">attr</span>(data-src-600px,url);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> (min-device-width:<span class="number">800px</span>)&#123;</span><br><span class="line">  <span class="selector-tag">img</span><span class="selector-attr">[data-src-800px]</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">attr</span>(data-src-800px,url);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>请注意：这仅仅是解决响应式图片自适应的一种思路，但这种方案仅仅适配的断点较少。并不太实用，此处仅为扩展同学们的思路。</p>
-<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><p>媒体查询在CSS3中得到了强大的扩展。使用这个属性可以让你的设计根据用户终端设备适配对应的样式。这也是响应式设计中最为关键的。可以说<code>Responsive设计离开了Medial Queries</code>就失去了他生存的意义。简单的说媒体查询可以根据设备的尺寸，查询出适配的样式。Responsive设计最关注的就是：<code>根据用户的使用设备的当前宽度，你的Web页面将加载一个备用的样式，实现特定的页面风格</code>。</p>
-<h2 id="屏幕分辨率"><a href="#屏幕分辨率" class="headerlink" title="屏幕分辨率"></a>屏幕分辨率</h2><p>屏幕分辨简单点说就是用户显示器的分辨率，深一点说，屏幕分辨率指的是用户使用的设备浏览您的Web页面时的显示屏幕的分辨率，比如说智能手机浏览器、移动电脑浏览器、平板电脑浏览器和桌面浏览器的分辨率。Responsive设计利用Media Queries属性针对浏览器使用的分辨率来适配对应的CSS样式。因此屏幕分辨率在Responsive设计中是一个很重要的东西，因为只有知道Web页面要在哪种分辨率下显示何种效果，才能调用对应的样式。</p>
-<h2 id="主要断点"><a href="#主要断点" class="headerlink" title="主要断点"></a>主要断点</h2><p>主要断点，在Web开发中是一个新词，但对于Responsive设计中是一个很重要的一部分。简单的描述就是，设备<code>宽度的临界点</code>。在Media Queries中，其中媒体特性“min-width”和“max-width”对应的属性值就是响应式设计中的断点值。简单点说，就是使用主要断点和次要断点，创建媒体查询的条件。而每个断点会对应调用一个样式文件（或者样式代码），如下图所示：</p>
-<p>上图主要显示的是主要断点，主要断点加载的不同样式文件直接将影响Web的效果。除了主要断点之外，为了满足更多效果时，还可以在这个基础上添次要断点。不过主要断点和次要断点增加之后，需要维护的样式也相应的增加，成本也相对应的增加。因此在实际使用中，需要根据自身产品需求，决定断点。</p>
-<p>综合下来，设置断点应把握三个要点：满足主要的断点；有可能的话添加一些别的断点；设置高于1024的桌面断点</p>
-<h1 id="Responsive布局技巧"><a href="#Responsive布局技巧" class="headerlink" title="Responsive布局技巧"></a>Responsive布局技巧</h1><p>通过上面的介绍，大家对响应式设计有了一定的了解，但在实际制作中还是有一些布局技巧的：<br>在Responsive布局中，可以毫无保留的丢弃：</p>
-<h2 id="坏的习惯"><a href="#坏的习惯" class="headerlink" title="坏的习惯"></a>坏的习惯</h2><ul>
-<li><p>第一， 尽量少用无关紧要的div；</p>
-</li>
-<li><p>第二，不要使用内联元素（inline）；</p>
-</li>
-<li><p>第三，尽量少用JS或flash；</p>
-</li>
-<li><p>第四，丢弃没用的绝对定位和浮动样式；</p>
-</li>
-<li><p>第五，摒弃任何冗余结构和不使用100%设置。</p>
-</li>
-</ul>
-<p>有舍才有得，丢弃了一些对Responsive有影响的东东，那么有哪些东东能帮助Responsive确定更好的布局呢？</p>
-<h2 id="好的习惯"><a href="#好的习惯" class="headerlink" title="好的习惯"></a>好的习惯</h2><ul>
-<li><p>第一，使用HTML5 Doctype和相关指南；</p>
-</li>
-<li><p>第二，重置好你的样式（reset.css）；</p>
-</li>
-<li><p>第三，一个简单的有语义的核心布局；</p>
-</li>
-<li><p>第四，给重要的网页元素使用简单的技巧，比如导航菜单之类元素。</p>
-</li>
-</ul>
-<p>使用这些技巧，无非是为了保持你的HTML简单干净，而且在你的页面布局中的关键部分（元素）不要过分的依赖现代技巧来实现，比如说CSS3特效或者JS脚本。</p>
-<p>说了这么多，怎么样的布局或者说HTML结构才是简单干净的呢？这里教大家一个快速测试的方法。你首先禁掉你页面中所有的样式（以及与样式相关的信息），在浏览器中打开，如果你的内容排列有序，方便阅读，那么你的这个结构不会差到哪里去。</p>
-<h2 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h2><p>最后还有一个不可或缺的东东，那就是·标签，可以说，在响应式设计中如果没有这个meta标签，你就是蹩脚的，响应式设计就是空谈。</p>
-<p>meta标签，其使用方法如下。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">””</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在<code>content</code>属性中主要包括以下属性值，用来处理可视区域。</p>
-<table>
+<p>例如：</p>
+<p>通过<code>resize</code>属性，让文本域可以沿水平方向拖大。代码为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-moz-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-o-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">-ms-resize</span>: horizontal;</span><br><span class="line">  <span class="attribute">resize</span>: horizontal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS3外轮廓属性"><a href="#CSS3外轮廓属性" class="headerlink" title="CSS3外轮廓属性"></a>CSS3外轮廓属性</h1><p>外轮廓<code>outline</code>在页面中呈现的效果和边框<code>border</code>呈现的效果极其相似，但和元素边框<code>border</code>完全不同，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，<code>只有元素获取到焦点或者被激活时呈现</code>。</p>
+<p><code>outline</code>属性早在CSS2中就出现了，主要是用来在元素周围绘制一条轮廓线，可以起到突出元素的作用。但是并未得到各主流浏览器的广泛支持，在CSS3中对<code>outline</code>作了一定的扩展，在以前的基础上增加新特性。</p>
+<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit</span><br></pre></td></tr></table></figure>
+<p>从语法中可以看出<code>outline</code>和<code>border</code>边框属性的使用方法极其类似。<code>outline-color</code>相当于<code>border-color、outline-style</code>相当于<code>border-style</code>，而<code>outline-width</code>相当于<code>border-width</code>，只不过CSS3给outline属性增加了一个<code>outline-offset</code>属性。</p>
+<h2 id="属性值-1"><a href="#属性值-1" class="headerlink" title="属性值"></a>属性值</h2><table>
 <thead>
 <tr>
-<th>Value</th>
-<th>可能值</th>
-<th>描述</th>
+<th>属性值</th>
+<th>属性值说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>width</code></td>
-<td>一个正整数或者字符串<code>device-width</code></td>
-<td>以pixels（像素）为单位， 定义<code>viewport</code>（视口）的宽度</td>
+<td>outline-color</td>
+<td>定义轮廓线的颜色，属性值为CSS中定义的颜色值。在实际应用中，可以将此参数省略，省略时此参数的默认值为黑色。</td>
 </tr>
 <tr>
-<td><code>height</code></td>
-<td>一个正整数或者字符串 <code>device-height</code></td>
-<td>以pixels（像素）为单位， 定义<code>viewport</code>（视口）的高度</td>
+<td>outline-style</td>
+<td>定义轮廓线的样式，属性为CSS中定义线的样式。在实际应用中，可以将此参数省略，省略时此参数的默认值为none，省略后不对该轮廓线进行任何绘制。</td>
 </tr>
 <tr>
-<td><code>initial-scale</code></td>
-<td>一个<code>0.0</code> 到<code>10.0</code>之间的正数</td>
-<td>定义设备宽度（纵向模式下的设备宽度或横向模式下的设备高度）与视口大小之间的缩放比率</td>
+<td>outline-width</td>
+<td>定义轮廓线的宽度，属性值可以为一个宽度值。在实际应用中，可以将此参数省略，省略时此参数的默认值为medium，表示绘制中等宽度的轮廓线。</td>
 </tr>
 <tr>
-<td><code>maximum-scale</code></td>
-<td>一个<code>0.0</code> 到<code>10.0</code>之间的正数</td>
-<td>定义缩放的最大值；它必须大于或等于<code>minimum-scale</code>的值，不然会导致不确定的行为发生</td>
+<td>outline-offset</td>
+<td>定义轮廓边框的偏移位置的数值，此值可以取负数值。当此参数的值为正数值，表示轮廓边框向外偏离多少个像素；当此参数的值为负数值，表示轮廓边框向内偏移多少个像素。</td>
 </tr>
 <tr>
-<td><code>minimum-scale</code></td>
-<td>一个<code>0.0</code> 到<code>10.0</code>之间的正数</td>
-<td>定义缩放的最小值；它必须小于或等于<code>maximum-scale</code>的值，不然会导致不确定的行为发生</td>
-</tr>
-<tr>
-<td><code>user-scalable</code></td>
-<td>一个布尔值(<code>yes</code> 或者<code>no</code>)</td>
-<td>如果设置为 <code>no</code>，用户将不能放大或缩小网页。默认值为 <code>yes</code></td>
+<td>inherit</td>
+<td>元素继承父元素的outline效果。</td>
 </tr>
 </tbody>
 </table>
-<p>在实际项目中，为了让Responsive设计在智能设备中能显示正常，也就是浏览Web页面适应屏幕的大小，显示在屏幕上，可以通过这个可视区域的meta标签进行重置，告诉他使用设备的宽度为视图的宽度，也就是说禁止其默认的自适应页面的效果，具体设置如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,initial-scale</span>=<span class="string">1.0”</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>另外一点，由于Responsive设计是结合CSS3的Media Queries属性，才能尽显Responsive设计风格，但大家都清楚，在IE6-8中完全是不支持CSS3 Media。下面我们一起来看看CSS3 Meida Queries在标准设备上的运用，大家可以把这些样式加到你的样式文件中，或者单独创建一个名为<code>responsive.css</code>文件，并在相应的条件中写上你的样式，让他适合你的设计需求。</p>
-<p>脚本下载地址：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">media-queries.js(http://code.google.com/p/css3-mediaqueries-js/)      </span><br><span class="line"></span><br><span class="line">respond.js(https://github.com/scottjehl/Respond)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">!—[if</span> <span class="attr">lt</span> <span class="attr">IE9</span>]&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scriptsrc=http:</span>//<span class="attr">css3-mediaqueries-js.googlecode.com</span>/<span class="attr">svn</span>/<span class="attr">trunk</span>/<span class="attr">css3-mediaqueries.js</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">​<span class="tag">&lt;<span class="name">![endif]</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="Responsive设计——不同设备的分辨率设置"><a href="#Responsive设计——不同设备的分辨率设置" class="headerlink" title="Responsive设计——不同设备的分辨率设置"></a>Responsive设计——不同设备的分辨率设置</h1><p>下面我们一起来看看CSS3 Meida Queries在标准设备上的运用，大家可以把这些样式加到你的样式文件中，或者单独创建一个名为“responsive.css”文件，并在相应的条件中写上你的样式，让他适合你的设计需求：</p>
-<blockquote>
-<p><strong>备注，应该以分辨率作为断点条件，而不是针对各种设备</strong></p>
-</blockquote>
-<h2 id="1024px显屏"><a href="#1024px显屏" class="headerlink" title="1024px显屏"></a>1024px显屏</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width : <span class="number">1024px</span>) &#123;                    </span><br><span class="line"><span class="comment">/* 样式写在这里 */</span>          </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="800px显屏"><a href="#800px显屏" class="headerlink" title="800px显屏"></a>800px显屏</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width : <span class="number">800px</span>) &#123;              </span><br><span class="line"><span class="comment">/* 样式写在这里 */</span>          </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="640px显屏"><a href="#640px显屏" class="headerlink" title="640px显屏"></a>640px显屏</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width : <span class="number">640px</span>) &#123;              </span><br><span class="line"><span class="comment">/* 样式写在这*/</span>            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="iPad横板显屏"><a href="#iPad横板显屏" class="headerlink" title="iPad横板显屏"></a>iPad横板显屏</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-device-width: <span class="number">1024px</span>) and (orientation: landscape) &#123;              </span><br><span class="line"><span class="comment">/* 样式写在这 */</span>            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="iPad竖板显屏"><a href="#iPad竖板显屏" class="headerlink" title="iPad竖板显屏"></a>iPad竖板显屏</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-device-width: <span class="number">768px</span>) and (orientation: portrait) &#123;         </span><br><span class="line"><span class="comment">/* 样式写在这 */</span>            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="iPhone-和-Smartphones"><a href="#iPhone-和-Smartphones" class="headerlink" title="iPhone 和 Smartphones"></a>iPhone 和 Smartphones</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (min-device-width: <span class="number">320px</span>) and (min-device-width: <span class="number">480px</span>) &#123;              </span><br><span class="line"><span class="comment">/* 样式写在这 */</span>            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在有关于这方面的运用也是相当的成熟，twitter的Bootstrap第二版本中就加上了这方面的运用。大家可以对比一下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">480px</span>) &#123; ... &#125;              </span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">768px</span>) &#123; ... &#125;              </span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) and (max-width: <span class="number">980px</span>) &#123; ... &#125;      </span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">1200px</span>) &#123; .. &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="CSS生成内容content"><a href="#CSS生成内容content" class="headerlink" title="CSS生成内容content"></a>CSS生成内容content</h1><p>在Web中插入内容，在CSS2.1时代依靠的是JavaScript来实现。但进入CSS3进代之后我们可以通过CSS3的伪类<code>:before</code>，<code>:after</code>和CSS3的伪元素<code>::before</code>、<code>::after</code>来实现，其关键是依靠CSS3中的<code>content</code>属性来实现。不过这个属性对于<code>img</code>和<code>input</code>元素不起作用。</p>
+<p><code>conten</code>t配合CSS的伪类或者伪元素，一般可以做以下四件事情：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>不生成任何内容</td>
+</tr>
+<tr>
+<td>attr</td>
+<td>插入标签属性值</td>
+</tr>
+<tr>
+<td>url</td>
+<td>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</td>
+</tr>
+<tr>
+<td>string</td>
+<td>插入字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实例展示"><a href="#实例展示" class="headerlink" title="实例展示"></a>实例展示</h2><p>在CSS中有一种清除浮动的方法叫<code>clearfix</code>。而这个<code>clearfix</code>方法就中就使用了<code>content</code>，只不过只是在这里插入了一个空格。如下所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:””;</span><br><span class="line">  <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>:both;</span><br><span class="line">  <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这个示例是最常见的，也是最简单的，我们再来看一个插入元素属性值的方法。</p>
+<p>假设我们有一个元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"##"</span> <span class="attr">title</span>=<span class="string">"我是一个title属性值，我插在你的后面"</span>&gt;</span>我是元素<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以通过<code>:after</code>和<code>content:attr(title)</code>将元素的<code>title</code>值插入到元素内容<code>我是元素</code>之后：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">attr</span>(title);</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#f00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -602,7 +497,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -648,7 +543,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
