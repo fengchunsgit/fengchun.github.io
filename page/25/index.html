@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/06/16/Golang开发环境搭建/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2017/11/04/打包工具gulp/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -281,7 +281,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/16/Golang开发环境搭建/" itemprop="url">Golang开发环境搭建</a></h2>
+                <a class="post-title-link" href="/2017/11/04/打包工具gulp/" itemprop="url">打包工具gulp</a></h2>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-16T11:58:40+08:00">
-                2017-06-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T21:40:33+08:00">
+                2017-11-04
               </time>
             
 
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Golang/" itemprop="url" rel="index">
-                    <span itemprop="name">Golang</span>
+                  <a href="/categories/打包工具/" itemprop="url" rel="index">
+                    <span itemprop="name">打包工具</span>
                   </a>
                 </span>
 
@@ -355,27 +355,16 @@
       
         
           
-            <h1 id="go安装"><a href="#go安装" class="headerlink" title="go安装"></a>go安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li>官网下载</li>
-<li><a href="https://studygolang.com/dl" target="_blank" rel="noopener">studyGolang下载</a></li>
+            <h1 id="代码打包工具"><a href="#代码打包工具" class="headerlink" title="代码打包工具"></a>代码打包工具</h1><ul>
+<li>Grunt 自动化构建工具</li>
+<li><a href="gulpjs.com">glup</a> 自动化构建工具 <a href="www.gulpjs.com.cn">gulp中文网</a></li>
+<li>Webpack 静态资源打包</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>windos 默认安装在<code>C:/Go/</code>目录下，要将<code>path</code>添加上</li>
-<li>配置<code>$GOROOT</code></li>
-</ul>
-<p><code>GOROOT</code>指向Go开发包的安装目录。从Go 1.0开始，不必显示地设置<code>GOROOT</code>环境变量。Windows安装包将会自动设置<code>GOROOT</code>，默认装在<code>C:\Go</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOROOT=C:\Go\</span><br></pre></td></tr></table></figure></p>
-<p>而在<code>*nix</code>环境下，下载Go安装包并解压在<code>/usr/local/</code>目录下，然后把<code>/usr/local/go/bin</code>加入<code>PATH</code>环境变量即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/go/bin</span><br></pre></td></tr></table></figure></p>
-<p>如果Go安装包没有安装在默认的目录下<code>（Windows为C:\Go，*nix为/usr/local/go）</code>，则需要手动设置<code>GOROOT</code>，举个例子<code>（*nix）</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GOROOT=<span class="variable">$HOME</span>/go</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>配置<code>$GOPATH</code></li>
-</ul>
-<p><code>GOPATH</code>指定了Go工程目录，包含 <code>src</code> ，<code>pkg</code> 和 <code>bin</code> 三个子目录。这是开发 Go 程序时，唯一需要显示设置的环境变量。当使用go get目录下载Go第三方程序包时，也会安装在这个目录下。此外，为了方便，要记得把<code>$GOPATH/bin</code>也加到<code>PATH</code>环境变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:$GOPATH/bin</span><br></pre></td></tr></table></figure></p>
-<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello,world"></a>hello,world</h2><p>建立hello.go<br><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fmt.Println(<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">go run hello.go</span><br><span class="line"></span><br><span class="line">hello //输出</span><br></pre></td></tr></table></figure>
-<h1 id="go开发利器vscode"><a href="#go开发利器vscode" class="headerlink" title="go开发利器vscode"></a>go开发利器vscode</h1><h2 id="安装vscode插件go"><a href="#安装vscode插件go" class="headerlink" title="安装vscode插件go"></a>安装vscode插件go</h2><blockquote>
-<p>alt+左键点击，进行跳转</p>
+<h1 id="gulp使用"><a href="#gulp使用" class="headerlink" title="gulp使用"></a>gulp使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//初始化项目 npm init</span><br><span class="line"></span><br><span class="line">// 安装gulp </span><br><span class="line">npm i gulp --save-dev</span><br><span class="line"></span><br><span class="line">//查看gulp版本</span><br><span class="line">gulp -v</span><br><span class="line"></span><br><span class="line">//安装gulp插件</span><br><span class="line">npm i gulp-rev gulp-rev-replace gulp-useref gulp-filter gulp-uglify gulp-csso --save-dev</span><br></pre></td></tr></table></figure>
+<h1 id="gulp配置文件-gulpfile-js"><a href="#gulp配置文件-gulpfile-js" class="headerlink" title="gulp配置文件 gulpfile.js"></a>gulp配置文件 gulpfile.js</h1><blockquote>
+<p>项目根目录下创建任务文件gulpfile.js，并创建任务<br>修改gulpfile  default 可以直接运行，其他需要写任务名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;)</span><br><span class="line">var csso = require(&quot;gulp-csso&quot;)</span><br><span class="line">var filter = require(&quot;gulp-filter&quot;)</span><br><span class="line">var rev = require(&quot;gulp-rev&quot;) //计算文件hash码</span><br><span class="line">var revReplace= require(&quot;gulp-rev-replace&quot;) //index里面的引用改成新的</span><br><span class="line">var uglify = require(&quot;gulp-uglify&quot;)</span><br><span class="line">var useref = require(&quot;gulp-useref&quot;) //通过注释，写一些设置</span><br><span class="line">//gulp-watch 文件变化自动打包</span><br><span class="line">//gulp-postcss 自动给css添加浏览器前缀</span><br><span class="line">//gulp-concat 将多个文件合并成一个文件</span><br><span class="line">//gulp-responsive 自动生成相应式图片</span><br><span class="line">//gulp- 再npm中寻找其他的插件</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;default&apos;, function () &#123;</span><br><span class="line">    var jsFilter=filter(&apos;**/*.js&apos;,&#123;restore:true&#125;)</span><br><span class="line">    var cssFilter=filter(&apos;**/*.css&apos;,&#123;restore:true&#125;)</span><br><span class="line">    var indexHtmlFilter=filter([&apos;**/*&apos;,&apos;!**/index.html&apos;],&#123;restore:true&#125;)</span><br><span class="line"></span><br><span class="line">    return gulp.src(&apos;src/index.html&apos;)</span><br><span class="line">    .pipe(useref())</span><br><span class="line">    .pipe(jsFilter)</span><br><span class="line">    .pipe(uglify())</span><br><span class="line">    .pipe(jsFilter.restore)</span><br><span class="line">    .pipe(cssFilter)</span><br><span class="line">    .pipe(csso())</span><br><span class="line">    .pipe(cssFilter.restore)</span><br><span class="line">    .pipe(indexHtmlFilter)</span><br><span class="line">    .pipe(rev())</span><br><span class="line">    .pipe(indexHtmlFilter.restore)</span><br><span class="line">    .pipe(revReplace())</span><br><span class="line">    .pipe(gulp.dest(&apos;dist&apos;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="Go开发相关配置"><a href="#Go开发相关配置" class="headerlink" title="Go开发相关配置"></a>Go开发相关配置</h2><p>setting.json中进行相关设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    &quot;files.autoSave&quot;: &quot;onFocusChange&quot;,</span><br><span class="line">    &quot;go.buildOnSave&quot;: true,</span><br><span class="line">    &quot;go.lintOnSave&quot;: true,</span><br><span class="line">    &quot;go.vetOnSave&quot;: true,</span><br><span class="line">    &quot;go.buildFlags&quot;: [],</span><br><span class="line">    &quot;go.lintFlags&quot;: [],</span><br><span class="line">    &quot;go.vetFlags&quot;: [],</span><br><span class="line">    &quot;go.useCodeSnippetsOnFunctionSuggest&quot;: false,</span><br><span class="line">    &quot;go.formatOnSave&quot;: true,</span><br><span class="line">    &quot;go.formatTool&quot;: &quot;goreturns&quot;,</span><br><span class="line">    &quot;go.goroot&quot;: &quot;C:\\go&quot;,</span><br><span class="line">    &quot;go.gopath&quot;: &quot;D:\\go&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>gulp配置完成后一般不用再修改，而且可以提升工作效率，因此使用熟练gulp是非常值得的</p>
 
           
         
@@ -415,7 +404,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/24/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/26/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/24/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="extend next" rel="next" href="/page/26/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -461,7 +450,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
