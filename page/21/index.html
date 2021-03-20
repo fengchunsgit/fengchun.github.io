@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2018/01/29/使用-Go-语言完成-HTTP-文件上传与下载/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2018/04/20/统计学基础-2-用统计量描述数据/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -281,7 +281,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/29/使用-Go-语言完成-HTTP-文件上传与下载/" itemprop="url">使用 Go 语言完成 HTTP 文件上传与下载</a></h2>
+                <a class="post-title-link" href="/2018/04/20/统计学基础-2-用统计量描述数据/" itemprop="url">统计学基础- 2 用统计量描述数据</a></h2>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-29T10:12:52+08:00">
-                2018-01-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T17:16:07+08:00">
+                2018-04-20
               </time>
             
 
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">翻译</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -355,36 +355,18 @@
       
         
           
-            <p>最近我使用 Go 语言完成了一个正式的 web 应用，有一些方面的问题在使用 Go 开发 web 应用过程中比较重要。过去，我将 web 开发作为一项职业并且把使用不同的语言和范式开发 web 应用作为一项爱好，因此对于 web 开发领域有一些心得体会。 </p>
-<p>总的来说，我喜欢使用 Go 语言进行 web 开发，尽管开始一段时间需要去适应它。Go 语言有一些坑，但是正如本篇文章中所要讨论的文件上传与下载，Go 语言的标准库与内置函数，使得开发是种愉快的体验。</p>
-<p>在接下来的几篇文章中，我将重点讨论我在 Go 中编写生产级 Web 应用程序时遇到的一些问题，特别是关于身份验证/授权的问题。</p>
-<p>这篇文章将展示HTTP文件上传和下载的基本示例。我们将一个有 <code>type</code> 文本框和一个 <code>uploadFile</code>  上传框的 HTML 表单作为客户端。</p>
-<p>让我们来看下 Go 语言中是如何解决这种在 web 开发中随处可见的问题的。</p>
-<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p>首先，我们在服务器端设定两个路由，<code>/upload</code> 用于文件上传， <code>/files/*</code> 用于文件下载。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> maxUploadSize = <span class="number">2</span> * <span class="number">1024</span> * <span class="number">2014</span> <span class="comment">// 2 MB </span></span><br><span class="line"><span class="keyword">const</span> uploadPath = <span class="string">"./tmp"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    http.HandleFunc(<span class="string">"/upload"</span>, uploadFileHandler())</span><br><span class="line"></span><br><span class="line">    fs := http.FileServer(http.Dir(uploadPath))</span><br><span class="line">    http.Handle(<span class="string">"/files/"</span>, http.StripPrefix(<span class="string">"/files"</span>, fs))</span><br><span class="line"></span><br><span class="line">    log.Print(<span class="string">"Server started on localhost:8080, use /upload for uploading files and /files/&#123;fileName&#125; for downloading files."</span>)</span><br><span class="line">    log.Fatal(http.ListenAndServe(<span class="string">":8080"</span>, <span class="literal">nil</span>))</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">我们还将要上传的目标目录，以及我们接受的最大文件大小定义为常量。注意这里，整个文件服务的概念是如此的简单-我们仅使用标准库中的工具，使用 `</span>http.FileServe<span class="string">` 创建一个 HTTP 处理程序，它将使用 `</span>http.Dir(uploadPath)<span class="string">` 提供的目录来上传文件。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">现在我们只需要实现 `</span>uploadFileHandler<span class="string">`。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">这个处理程序将包含以下功能：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 验证文件最大值</span></span><br><span class="line"><span class="string">- 从请求验证文件和POST参数</span></span><br><span class="line"><span class="string">- 检查所提供的文件类型（我们只接受图像和PDF）</span></span><br><span class="line"><span class="string">- 创建一个随机文件名</span></span><br><span class="line"><span class="string">- 将文件写入硬盘</span></span><br><span class="line"><span class="string">- 处理所有错误，如果一切顺利返回成功消息</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">第一步，我们定义处理程序:</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span><span class="keyword">go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uploadFileHandler</span><span class="params">()</span> <span class="title">http</span>.<span class="title">HandlerFunc</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> http.HandlerFunc(<span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br></pre></td></tr></table></figure>
-<p>然后，我们使用 <code>http.MaxBytesReader</code> 验证文件大小，当文件大小大于设定值时它将返回一个错误。错误将被一个助手程序 <code>renderError</code> 进行处理，它返回错误信息及对应的 HTTP 状态码。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r.Body = http.MaxBytesReader(w, r.Body, maxUploadSize)</span><br><span class="line"><span class="keyword">if</span> err := r.ParseMultipartForm(maxUploadSize); err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"FILE_TOO_BIG"</span>, http.StatusBadRequest)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果文件大小验证通过，我们将检查并解析表单参数类型和上传的文件，并读取文件。在本例中，为了清晰起见，我们不使用花哨的 <code>io.Reader</code> 和 <code>io.Writer</code> 接口，我们只是简单的将文件读取到一个字节数组中，这点我们后面会写到。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fileType := r.PostFormValue(<span class="string">"type"</span>)</span><br><span class="line">file, _, err := r.FormFile(<span class="string">"uploadFile"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"INVALID_FILE"</span>, http.StatusBadRequest)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">defer</span> file.Close()</span><br><span class="line">fileBytes, err := ioutil.ReadAll(file)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"INVALID_FILE"</span>, http.StatusBadRequest)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在我们成功的验证了文件的大小，并且读取了文件，接下来我们该检验文件的类型了。一种廉价但是并不安全的方式，只检查文件扩展名，并相信用户没有改变它，但是对于一个正式的项目来讲不应该这么做。</p>
-<p>幸运的是，Go 标准库提供给我们一个 <code>http.DetectContentType</code> 函数，这个函数基于 <code>mimesniff</code> 算法，只需要读取文件的前 512 个字节就能够判定文件类型。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">filetype := http.DetectContentType(fileBytes)</span><br><span class="line"><span class="keyword">if</span> filetype != <span class="string">"image/jpeg"</span> &amp;&amp; filetype != <span class="string">"image/jpg"</span> &amp;&amp;</span><br><span class="line">    filetype != <span class="string">"image/gif"</span> &amp;&amp; filetype != <span class="string">"image/png"</span> &amp;&amp;</span><br><span class="line">    filetype != <span class="string">"application/pdf"</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"INVALID_FILE_TYPE"</span>, http.StatusBadRequest)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在实际应用程序中，我们可能会使用文件元数据做一些事情，例如将其保存到数据库或将其推送到外部服务——以任何方式，我们将解析和操作元数据。这里我们创建一个随机的新名字（这在实践中可能是一个UUID）并将新文件名记录下来。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fileName := randToken(<span class="number">12</span>)</span><br><span class="line">fileEndings, err := mime.ExtensionsByType(fileType)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"CANT_READ_FILE_TYPE"</span>, http.StatusInternalServerError)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">newPath := filepath.Join(uploadPath, fileName+fileEndings[<span class="number">0</span>])</span><br><span class="line">fmt.Printf(<span class="string">"FileType: %s, File: %s\n"</span>, fileType, newPath)</span><br></pre></td></tr></table></figure>
-<p>马上就大功告成了，只剩下一个关键步骤-写文件。如上文所提到的，我们只需要复制读取的二进制文件到一个新创建的名为 <code>newFile</code> 的文件处理程序里。</p>
-<p>如果所有部分都没问题，我们给用户返回一个 <code>SUCCESS</code> 信息。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">newFile, err := os.Create(newPath)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"CANT_WRITE_FILE"</span>, http.StatusInternalServerError)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">defer</span> newFile.Close()</span><br><span class="line"><span class="keyword">if</span> _, err := newFile.Write(fileBytes); err != <span class="literal">nil</span> &#123;</span><br><span class="line">    renderError(w, <span class="string">"CANT_WRITE_FILE"</span>, http.StatusInternalServerError)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">w.Write([]<span class="keyword">byte</span>(<span class="string">"SUCCESS"</span>))</span><br></pre></td></tr></table></figure></p>
-<p>这样可以了. 你可以对这个简单的例子进行测试，使用虚拟的文件上传 HTML 页面，cURL 或者工具例如 <a href="https://www.getpostman.com/" target="_blank" rel="noopener">postman</a>。</p>
-<p>这里是完整的代码示例 <a href="https://github.com/zupzup/golang-http-file-upload-download" target="_blank" rel="noopener">这里</a></p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这是另外一个演示，演示了 Go 如何允许用户为 web 编写简单而强大的软件，而不必处理其他语言和生态系统中固有的无数抽象层</p>
-<p>在接下来的篇幅中，我将展示一些在我第一次使用Go语言编写正式的 web应用中其他细节，敬请期待。；）</p>
-<p>//根据 reddit 用户 <code>lstokeworth</code> 的反馈对部分代码进行了修改。谢谢:)</p>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><p><a href="https://github.com/zupzup/golang-http-file-upload-download" target="_blank" rel="noopener">完整代码示例</a></p>
-<hr>
-<p>via: <a href="https://zupzup.org/go-http-file-upload-download/" target="_blank" rel="noopener">https://zupzup.org/go-http-file-upload-download/</a></p>
-<p>作者：<a href="https://zupzup.org/about/" target="_blank" rel="noopener">zupzup</a></p>
-<p>译者：<a href="https://github.com/fengchunsgit" target="_blank" rel="noopener">fengchunsgit</a></p>
-<p>校对：<a href="https://github.com/polaris1119" target="_blank" rel="noopener">polaris1119</a></p>
-<p>本文由 <a href="https://github.com/studygolang/GCTT" target="_blank" rel="noopener">GCTT</a> 原创编译，<a href="https://studygolang.com/" target="_blank" rel="noopener">Go 中文网</a> 荣誉推出</p>
+            <h1 id="用统计量描述数据"><a href="#用统计量描述数据" class="headerlink" title="用统计量描述数据"></a>用统计量描述数据</h1><blockquote>
+<p>在2008年第29界北京奥运会女子10米气手枪决赛中，进入决赛的8名运动员预赛成绩和最后10枪的决赛成绩如下表:</p>
+</blockquote>
+<table align="center"><br>    <tr><td>姓名</td><td>国家</td><td>预赛成绩</td><td clospan="10">决赛成绩10枪</td></tr><br>    <tr><br>        <td>娜塔莉娅.帕杰林娜</td><td>俄罗斯</td><td>391</td><td>10.0</td><td>8.5</td><td>10.0</td><td>10.2</td><td>10.8</td><td>10.5</td><td>9.8</td><td>9.7</td><td>9.5</td><td>9.3</td><br>    </tr><br>    <tr><br>        <td>郭文珺</td><td>中国</td><td>391</td><td>10.0</td><td>8.5</td><td>10.0</td><td>10.2</td><td>10.8</td><td>10.5</td><td>9.8</td><td>9.7</td><td>9.5</td><td>9.3</td><br>    </tr><br>    <tr><br>        <td>卓格巴德拉赫.蒙赫珠勒</td><td>蒙古</td><td>391</td><td>10.0</td><td>10.5</td><td>10.4</td><td>10.4</td><td>10.1</td><td>10.3</td><td>9.4</td><td>10.7</td><td>10.8</td><td>9.7</td><br>    </tr><br>    <tr><br>        <td>萨克卢瓦泽</td><td>格鲁吉亚</td><td>391</td><td>9.3</td><td>10</td><td>8.7</td><td>8.3</td><td>9.2</td><td>9.5</td><td>8.5</td><td>10.7</td><td>9.2</td><td>9.2</td><br>    </tr><br>    <tr><br>        <td>维多利亚.柴卡</td><td>白俄罗斯</td><td>391</td><td>9.8</td><td>10.3</td><td>10</td><td>9.5</td><td>10.2</td><td>10.7</td><td>10.4</td><td>10.6</td><td>9.1</td><td>10.8</td><br>    </tr><br>    <tr><br>        <td>来万朵思夫卡</td><td>波兰</td><td>391</td><td>9.3</td><td>9.4</td><td>10.4</td><td>10.1</td><td>10.2</td><td>10.5</td><td>9.2</td><td>10.5</td><td>9.8</td><td>8.6</td><br>    </tr><br>    <tr><br>        <td>舍卡里其</td><td>塞尔维亚</td><td>391</td><td>8.1</td><td>10.3</td><td>9.2</td><td>9.9</td><td>9.8</td><td>10.4</td><td>9.9</td><td>9.4</td><td>10.7</td><td>9.6</td><br>    </tr><br>    <tr><br>        <td>内万苏</td><td>芬兰</td><td>384</td><td>10.2</td><td>9.6</td><td>9.9</td><td>9.9</td><td>9.3</td><td>9.1</td><td>9.7</td><td>10</td><td>9.3</td><td>9.9</td><br>    </tr><br></table>
 
+<blockquote>
+<p>预赛排名第一的俄罗斯选手决赛获得第二名，预赛排名第二的郭文珺凭借稳定发挥获得冠军<br>而预赛排名第三的蒙古国选手，仅获得第8名。由此可见,在射击比赛中，能否发挥稳定对选手能够取得好成绩至关重要。那么如何评价一名运动员的发挥是否稳定呢？<br>详细的数据分析特征，需要相应的数据统计量进行描述，数据分布特征可以从3个方面进行描述：1是数据水平，反应数据的集中程度，2是数据的差异，反应数据的离散程度，3是分布的形状，反应数据分布的偏态和峰态。</p>
+</blockquote>
+<h2 id="1-水平的度量"><a href="#1-水平的度量" class="headerlink" title="1 水平的度量"></a>1 水平的度量</h2><h2 id="2-差异的度量"><a href="#2-差异的度量" class="headerlink" title="2 差异的度量"></a>2 差异的度量</h2><h2 id="3-分布形状的度量"><a href="#3-分布形状的度量" class="headerlink" title="3 分布形状的度量"></a>3 分布形状的度量</h2><p>通过直方图和茎叶图等可以知道数据的分布是否对称，对于不对称的分布，要知道不对称的程度需要计算相应的描述统计量。偏态系数和峰态系数就是对分布的对称程度和峰值高低的一种度量</p>
+<h3 id="偏态系数"><a href="#偏态系数" class="headerlink" title="偏态系数"></a>偏态系数</h3><pre><code>偏态系数(coeffieient of skewness)测定数据分布的不对称度，记作SK。
+</code></pre><h3 id="峰态系数"><a href="#峰态系数" class="headerlink" title="峰态系数"></a>峰态系数</h3><pre><code>峰态系数(coeffieient of kurtosis)是指分布峰值的高低，记做K。
+</code></pre>
           
         
       
@@ -423,7 +405,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/">46</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -469,7 +451,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -491,7 +473,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

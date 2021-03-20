@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2019/12/27/tableau笔记/">
+    <link itemprop="mainEntityOfPage" href="https://fengchunsgit.github.io/2020/03/03/visio-基础知识/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengchunsgit">
@@ -281,7 +281,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/27/tableau笔记/" itemprop="url">tableau笔记</a></h2>
+                <a class="post-title-link" href="/2020/03/03/visio-基础知识/" itemprop="url">visio-基础知识</a></h2>
         
 
         <div class="post-meta">
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-27T16:12:18+08:00">
-                2019-12-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-03T19:32:49+08:00">
+                2020-03-03
               </time>
             
 
@@ -318,17 +318,6 @@
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/笔记/" itemprop="url" rel="index">
                     <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/数据分析/" itemprop="url" rel="index">
-                    <span itemprop="name">数据分析</span>
                   </a>
                 </span>
 
@@ -366,183 +355,18 @@
       
         
           
-            <h1 id="tableau文件类型"><a href="#tableau文件类型" class="headerlink" title="tableau文件类型"></a>tableau文件类型</h1><p>Tableau中的数据分析结果可以以各种格式保存并保存和分发。这些各种格式被称为不同的文件类型，并且它们由不同的扩展标识。它们的格式取决于它们的生产方式和使用目的。它们都存储为XML文件，可以打开和编辑。<br>每种文件类型及其用法的描述如下:</p>
-<table>
-<thead>
-<tr>
-<th>文件类型</th>
-<th>文件扩展名</th>
-<th style="text-align:left">目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tableau工作簿</td>
-<td>.twb</td>
-<td style="text-align:left">它包含工作簿中每个工作表和仪表板的信息。它包含在每个视图中使用的字段的详细信息以及应用于度量的聚合的公式。它还应用了格式和样式。它还包含数据源连接信息和为该连接创建的任何元数据信息。</td>
-</tr>
-<tr>
-<td>Tableau打包工作簿</td>
-<td>.twbx</td>
-<td style="text-align:left">此文件格式包含工作簿的详细信息以及在分析中使用的本地数据。其目的是与其他Tableau桌面或Tableau读者用户共享，前提是它不需要来自服务器的数据。</td>
-</tr>
-<tr>
-<td>Tableau数据源</td>
-<td>.tds</td>
-<td style="text-align:left">用于创建tableau报表的连接的详细信息存储在此文件中。 在连接细节中，它存储源类型(excel / relational / sap等)以及列的数据类型。</td>
-</tr>
-<tr>
-<td>Tableau打包的数据源</td>
-<td>.tdsx</td>
-<td style="text-align:left">此文件与添加数据以及连接详细信息的.tds文件类似。</td>
-</tr>
-<tr>
-<td>Tableau数据提取</td>
-<td>.tde</td>
-<td style="text-align:left">此文件包含高度压缩的柱状数据格式的.twb文件中使用的数据。这有助于存储优化。它还保存在分析中应用的聚合计算。此文件应刷新以从源获取更新的数据。</td>
-</tr>
-<tr>
-<td>Tableau书签</td>
-<td>.tbm</td>
-<td style="text-align:left">这些文件包含一个易于共享以粘贴到其他工作簿中的工作表。</td>
-</tr>
-<tr>
-<td>Tableau偏好设置</td>
-<td>.tps</td>
-<td style="text-align:left">此文件存储所有工作簿中使用的颜色首选项。它主要用于在用户之间保持一致的外观和感觉。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="tableau-数据类型"><a href="#tableau-数据类型" class="headerlink" title="tableau 数据类型"></a>tableau 数据类型</h1><p>作为数据分析工具，Tableau将每个数据分为四个类别之一，即 - String，Number，Boolean和datetime。从源加载数据后，tableau会自动分配数据类型，但如果满足数据转换规则，也可以更改某些数据类型。此外，用户必须指定计算字段的数据类型。<br>Tableau支持的数据类型的描述如下:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数据类型</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">例子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">STRING</td>
-<td style="text-align:center">任何零个或多个字符的序列。 它们用单引号括起来。 引号本身可以通过写两次来包含在字符串中。</td>
-<td style="text-align:center">\’Hello\’ \’Quoted\’ \’quote\’</td>
-</tr>
-<tr>
-<td style="text-align:center">NUMBER</td>
-<td style="text-align:center">这些是整数或浮点数。 建议在计算中使用浮点数的四舍五入。</td>
-<td style="text-align:center">3 142.58</td>
-</tr>
-<tr>
-<td style="text-align:center">BOOLEAN</td>
-<td style="text-align:center">它们是逻辑值。</td>
-<td style="text-align:center">TRUE FALSE</td>
-</tr>
-<tr>
-<td style="text-align:center">DATE &amp; DATETIME</td>
-<td style="text-align:center">Tableau以几乎所有格式识别日期。 但是，如果我们需要强制tableau将字符串识别为日期，那么我们在数据之前放一个＃符号。</td>
-<td style="text-align:center">“02/01/2015” “＃3 March 1982”</td>
-</tr>
-</tbody>
-</table>
-<h1 id="tableau-术语"><a href="#tableau-术语" class="headerlink" title="tableau 术语"></a>tableau 术语</h1><p>作为强大的数据可视化工具，Tableau有许多独特的术语和定义。在开始使用Tableau中的功能之前，我们需要熟悉它们的含义。以下术语列表是全面的，并解释最常用的术语。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">术语</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">alias</td>
-<td style="text-align:center">可以分配给字段或维度成员的备用名称。</td>
-</tr>
-<tr>
-<td style="text-align:center">bin</td>
-<td style="text-align:center">用户定义的数据源中的度量分组。</td>
-</tr>
-<tr>
-<td style="text-align:center">bookmark</td>
-<td style="text-align:center">Tableau存储库中“书签”文件夹中包含单个工作表的.tbm文件。 很像Web浏览器书签，.tbm文件是快速显示不同分析的一种方便的方法。</td>
-</tr>
-<tr>
-<td style="text-align:center">calculated field</td>
-<td style="text-align:center">通过使用公式修改数据源中的现有字段创建的新字段。</td>
-</tr>
-<tr>
-<td style="text-align:center">crosstab</td>
-<td style="text-align:center">文本表视图。 使用文本表显示与维成员关联的数字。</td>
-</tr>
-<tr>
-<td style="text-align:center">dashboard</td>
-<td style="text-align:center">在单个页面上排列的几个视图的组合。 使用仪表板同时比较和监视各种数据。</td>
-</tr>
-<tr>
-<td style="text-align:center">data pane</td>
-<td style="text-align:center">工作簿左侧的窗格，其中显示与Tableau连接的数据源的字段。 字段分为维和度量的数据窗格还显示自定义字段，如计算，合并字段和组。 通过将字段从“数据”窗格拖动到作为每个工作表的一部分的各个货架上，可以构建数据视图。</td>
-</tr>
-<tr>
-<td style="text-align:center">data Source page</td>
-<td style="text-align:center">可在其中设置数据源的页面。 “数据源”页面通常由四个主要区域组成:左窗格，联接区域，预览区域和元数据区域。</td>
-</tr>
-<tr>
-<td style="text-align:center">dimension</td>
-<td style="text-align:center">分类数据字段。 维度通常保存离散数据，例如无法聚合的层次结构和成员。 维度的示例包括日期，客户名称和客户群。</td>
-</tr>
-<tr>
-<td style="text-align:center">extract</td>
-<td style="text-align:center">可用于提高性能和离线分析的数据源的已保存子集。 您可以通过定义包含提取中所需数据的过滤器和限制来创建提取。</td>
-</tr>
-<tr>
-<td style="text-align:center">filters shelf</td>
-<td style="text-align:center">工作簿左侧的架子，您可以使用它通过使用度量和维度过滤视图来从视图中排除数据。</td>
-</tr>
-<tr>
-<td style="text-align:center">format pane</td>
-<td style="text-align:center">一个窗格，其中包含控制整个工作表的格式设置，以及视图中的各个字段。 打开时，“格式”窗格将显示在工作簿的左侧。</td>
-</tr>
-<tr>
-<td style="text-align:center">level of detail (LOD) expression</td>
-<td style="text-align:center">支持除视图级别之外的维度上的聚合的语法。 使用详细信息表达式级别，可以将一个或多个维附加到任何聚合表达式。</td>
-</tr>
-<tr>
-<td style="text-align:center">marks</td>
-<td style="text-align:center">视图的一部分，可视地表示数据源中的一行或多行。 标记可以是例如条，线或正方形。 您可以控制标记的类型，颜色和大小。</td>
-</tr>
-<tr>
-<td style="text-align:center">marks card</td>
-<td style="text-align:center">视图左侧的卡片，您可以拖动字段以控制标记属性，如类型，颜色，大小，形状，标签，工具提示和详细信息。</td>
-</tr>
-<tr>
-<td style="text-align:center">pages shelf</td>
-<td style="text-align:center">视图左侧的架子，可用于根据离散或连续字段中的成员和值将视图拆分为一系列页面。 向页面货架添加字段就像在Rows货架上添加一个字段，只是为每个新行创建了一个新页面。</td>
-</tr>
-<tr>
-<td style="text-align:center">rows shelf</td>
-<td style="text-align:center">工作簿顶部的架子，可用于创建数据表的行。 货架接受任何数量的尺寸和措施。 在“行”功能区上放置尺寸时，Tableaus会为该尺寸的成员创建标题。 将度量放在“行”功能区上时，Tableau会为该度量创建定量轴。</td>
-</tr>
-<tr>
-<td style="text-align:center">shelves</td>
-<td style="text-align:center">命名区域在视图的左侧和顶部。 通过将字段放在货架上来构建视图。 有些货架仅在选择某些标记类型时可用。 例如，仅当您选择形状标记类型时，形状支架才可用。</td>
-</tr>
-<tr>
-<td style="text-align:center">workbook</td>
-<td style="text-align:center">具有.twb扩展名的文件，其中包含一个或多个工作表(可能还包括仪表板和故事)。</td>
-</tr>
-<tr>
-<td style="text-align:center">worksheet</td>
-<td style="text-align:center">通过将字段拖动到货架上来创建数据视图的工作表。</td>
-</tr>
-</tbody>
-</table>
-<h1 id="tableau-数据源"><a href="#tableau-数据源" class="headerlink" title="tableau 数据源"></a>tableau 数据源</h1><p>Tableau可以连接到广泛使用的所有常用数据源.Tableau的本机连接器可以连接到以下类型的数据源。</p>
+            <blockquote>
+<p>Visio 2013已成为目前市场中最优秀的绘图软件之一，其强大的功能与简单的操作特性受广大用户所青睐，已被广泛应用于如下众多领域中：</p>
 <ul>
-<li><strong>文件系统</strong>，如<code>CSV</code>，Excel等。</li>
-<li><strong>关系系统</strong>如Oracle，Sql Server，DB2等。</li>
-<li><strong>云系统</strong>如Windows Azure，Google BigQuery等。</li>
-<li><strong>其他源</strong>使用ODBC。<h2 id="连接Live"><a href="#连接Live" class="headerlink" title="连接Live"></a>连接Live</h2>连接实时特性用于实时数据分析。在这种情况下，Tableau连接到实时数据源并继续读取数据。所以分析的结果是第二次，最新的变化反映在结果中。但在不利方面它负担源系统，因为它必须继续发送数据到Tableau。<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2>Tableau还可以通过将内存缓存在内存中来处理内存中的数据，并在分析数据时不再连接到源。当然，根据内存的可用性，缓存的数据量将有限制。<h2 id="组合数据源"><a href="#组合数据源" class="headerlink" title="组合数据源"></a>组合数据源</h2>Tableau可以同时连接到不同的数据源。例如，在单个工作簿中，您可以通过定义多个连接来连接到平面文件和关系源。 这用于数据混合，这是Tableau中非常独特的功能。</li>
+<li>软件设计　用户可以使用Visio 2013设计软件的结构模型，一般情况下需要以流程图的样式设计非正式设计，然后开始编码，并根据实际操作修改系统设计，从而实现软件设计的整体过程。</li>
+<li>项目管理　用户可以使用时间线、甘特图、PERT图等来设计项目管理的流程。例如，制作项目进度、工作计划、学习计划等项目管理模型。</li>
+<li>企业管理　用户可以使用Visio 2013来制作组织结构图、生产流程图等企业模型或流程图。通过企业管理可以调调动员工的潜能与积极性，同时也可以使企业财务清晰、资本结构更加合理。</li>
+<li>建筑　建筑设计行业是使用Visio 2013软件最频繁的行业，用户可以利用Visio 2013软件来设计楼层平面图、楼盘宣传图、房屋装修图等。电子　在制作电子产品之前，用户可以利用Visio 2013来制作电子产品的结构模型。</li>
+<li>机械　Visio 2013软件也可应用于机械制图领域，可以制作出像AutoCAD图一样精确的机械图。而且Visio 2013还具有与AutoCAD一样强大的绘图、编辑等功能。</li>
+<li>通信　在现代文明社会中，通信是推动人类社会文明、进步与发展的巨大动力。运用Visio 2013还可制作有关“通信”方面的图表。</li>
+<li>科研　科研是为了追求知识或解决问题的一项系统活动，用户还可以使用Visio 2013来制作科研活动审核、检查或业绩考核的流程图。</li>
 </ul>
+</blockquote>
 
           
         
@@ -582,7 +406,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/">46</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -628,7 +452,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -650,7 +474,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
